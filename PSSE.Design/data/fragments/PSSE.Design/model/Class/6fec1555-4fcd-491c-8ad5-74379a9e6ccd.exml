@@ -1,0 +1,226 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="SubReaderWrapper" version="3">
+  <DEPS>
+    <ID name="SubReaderWrapper" mc="Class" uid="6fec1555-4fcd-491c-8ad5-74379a9e6ccd"/>
+    <EXTID name="LeafReader" mc="Class" uid="189eda49-0e2c-48d2-b480-6d89709926c8"/>
+    <EXTID name="List" mc="Class" uid="5987a03e-2bf7-4c91-8d16-b0b80be14149"/>
+    <FOREIGNID name="JavaClass" mc="Stereotype" uid="01ec23a8-0000-0258-0000-000000000000"/>
+    <FOREIGNID name="JavaStatic" mc="TagType" uid="007c081c-0000-1af9-0000-000000000000"/>
+    <FOREIGNID name="create" mc="Stereotype" uid="00700680-0000-0204-0000-000000000000"/>
+    <FOREIGNID name="type" mc="TagType" uid="00000000-0000-3767-0000-000000000000"/>
+  </DEPS>
+  <OBJECT>
+    <ID name="SubReaderWrapper" mc="Class" uid="6fec1555-4fcd-491c-8ad5-74379a9e6ccd"/>
+    <PID name="FilterDirectoryReader" mc="Class" uid="9e645b9b-d792-498a-9f87-788e2f8cc23b"/>
+    <ATTRIBUTES>
+      <ATT name="IsActive">false</ATT>
+      <ATT name="IsMain">false</ATT>
+      <ATT name="IsElementary">false</ATT>
+      <ATT name="IsAbstract">true</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[SubReaderWrapper]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedOperation">
+        <OBJECT>
+          <ID name="SubReaderWrapper" mc="Operation" uid="fd3c0c0a-9b2d-4680-b5f1-1cbe55f08843"/>
+          <PID name="SubReaderWrapper" mc="Class" uid="6fec1555-4fcd-491c-8ad5-74379a9e6ccd"/>
+          <ATTRIBUTES>
+            <ATT name="Concurrency">false</ATT>
+            <ATT name="Final">false</ATT>
+            <ATT name="Passing">MethodOut</ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[SubReaderWrapper]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Extension">
+              <FOREIGNID name="create" mc="Stereotype" uid="00700680-0000-0204-0000-000000000000"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="wrap" mc="Operation" uid="b431944c-932f-4748-ba6a-f41b2e1947f2"/>
+          <PID name="SubReaderWrapper" mc="Class" uid="6fec1555-4fcd-491c-8ad5-74379a9e6ccd"/>
+          <ATTRIBUTES>
+            <ATT name="Concurrency">false</ATT>
+            <ATT name="Final">false</ATT>
+            <ATT name="Passing">MethodOut</ATT>
+            <ATT name="Visibility">Private</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[wrap]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="IO">
+              <OBJECT>
+                <ID name="p0" mc="Parameter" uid="a31af311-aab1-4eb5-a79e-aed5010f3f61"/>
+                <PID name="SubReaderWrapper" mc="Class" uid="6fec1555-4fcd-491c-8ad5-74379a9e6ccd"/>
+                <ATTRIBUTES>
+                  <ATT name="ParameterPassing">In</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="DefaultValue"></ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="IsException">false</ATT>
+                  <ATT name="IsStream">false</ATT>
+                  <ATT name="Effect">ReadEffect</ATT>
+                  <ATT name="Name"><![CDATA[p0]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <ID name="List" mc="Class" uid="5987a03e-2bf7-4c91-8d16-b0b80be14149"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="Return">
+              <OBJECT>
+                <ID name="" mc="Parameter" uid="f7e01dba-14ef-4f70-8379-f2d7c4c20307"/>
+                <PID name="SubReaderWrapper" mc="Class" uid="6fec1555-4fcd-491c-8ad5-74379a9e6ccd"/>
+                <ATTRIBUTES>
+                  <ATT name="ParameterPassing">In</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[0]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[*]]></ATT>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="DefaultValue"></ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="IsException">false</ATT>
+                  <ATT name="IsStream">false</ATT>
+                  <ATT name="Effect">ReadEffect</ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <ID name="LeafReader" mc="Class" uid="189eda49-0e2c-48d2-b480-6d89709926c8"/>
+                  </LINK>
+                  <COMP relation="Tag">
+                    <OBJECT>
+                      <ID name="" mc="TaggedValue" uid="59e797fd-8b6e-40e5-a186-5f95c95ac9d1"/>
+                      <PID name="SubReaderWrapper" mc="Class" uid="6fec1555-4fcd-491c-8ad5-74379a9e6ccd"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <COMP relation="Actual">
+                          <OBJECT>
+                            <ID name="" mc="TagParameter" uid="f8e8b4da-3d42-4f08-9d54-0f7c9303b1c5"/>
+                            <PID name="SubReaderWrapper" mc="Class" uid="6fec1555-4fcd-491c-8ad5-74379a9e6ccd"/>
+                            <ATTRIBUTES>
+                              <ATT name="Value"><![CDATA[Array]]></ATT>
+                              <ATT name="status">1970354901745664</ATT>
+                            </ATTRIBUTES>
+                            <DEPENDENCIES></DEPENDENCIES>
+                          </OBJECT>
+                        </COMP>
+                        <LINK relation="Definition">
+                          <FOREIGNID name="type" mc="TagType" uid="00000000-0000-3767-0000-000000000000"/>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="wrap" mc="Operation" uid="49828c44-da50-47ad-93ab-476941b0b1fe"/>
+          <PID name="SubReaderWrapper" mc="Class" uid="6fec1555-4fcd-491c-8ad5-74379a9e6ccd"/>
+          <ATTRIBUTES>
+            <ATT name="Concurrency">false</ATT>
+            <ATT name="Final">false</ATT>
+            <ATT name="Passing">MethodOut</ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">true</ATT>
+            <ATT name="Name"><![CDATA[wrap]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="IO">
+              <OBJECT>
+                <ID name="p0" mc="Parameter" uid="89654e5c-4e2a-4fc9-991e-74ba9eb3fef8"/>
+                <PID name="SubReaderWrapper" mc="Class" uid="6fec1555-4fcd-491c-8ad5-74379a9e6ccd"/>
+                <ATTRIBUTES>
+                  <ATT name="ParameterPassing">In</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="DefaultValue"></ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="IsException">false</ATT>
+                  <ATT name="IsStream">false</ATT>
+                  <ATT name="Effect">ReadEffect</ATT>
+                  <ATT name="Name"><![CDATA[p0]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <ID name="LeafReader" mc="Class" uid="189eda49-0e2c-48d2-b480-6d89709926c8"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="Return">
+              <OBJECT>
+                <ID name="" mc="Parameter" uid="411918aa-524a-417f-949c-3c73172e7c1b"/>
+                <PID name="SubReaderWrapper" mc="Class" uid="6fec1555-4fcd-491c-8ad5-74379a9e6ccd"/>
+                <ATTRIBUTES>
+                  <ATT name="ParameterPassing">In</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="DefaultValue"></ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="IsException">false</ATT>
+                  <ATT name="IsStream">false</ATT>
+                  <ATT name="Effect">ReadEffect</ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <ID name="LeafReader" mc="Class" uid="189eda49-0e2c-48d2-b480-6d89709926c8"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+      <LINK relation="Extension">
+        <FOREIGNID name="JavaClass" mc="Stereotype" uid="01ec23a8-0000-0258-0000-000000000000"/>
+      </LINK>
+      <COMP relation="Tag">
+        <OBJECT>
+          <ID name="" mc="TaggedValue" uid="5c28c040-3589-4993-96bb-998828cff076"/>
+          <PID name="SubReaderWrapper" mc="Class" uid="6fec1555-4fcd-491c-8ad5-74379a9e6ccd"/>
+          <ATTRIBUTES>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Definition">
+              <FOREIGNID name="JavaStatic" mc="TagType" uid="007c081c-0000-1af9-0000-000000000000"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

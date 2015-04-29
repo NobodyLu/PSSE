@@ -1,0 +1,1696 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="MergeRateLimiter" version="3">
+  <DEPS>
+    <ID name="MergeRateLimiter" mc="Class" uid="c8a48e89-ef52-411b-8f6f-a0c8e7b78022"/>
+    <EXTID name="MergeAbortedException" mc="Class" uid="95339bd1-fa17-477e-a45d-e438a9eea4f5"/>
+    <EXTID name="OneMerge" mc="Class" uid="0b3b76b4-be4c-4bbd-a579-5a5b72b7a69b"/>
+    <EXTID name="RateLimiter" mc="Class" uid="3a3585f4-9b79-4a66-9f10-0aa087e6241d"/>
+    <FOREIGNID name="JavaClass" mc="Stereotype" uid="01ec23a8-0000-0258-0000-000000000000"/>
+    <FOREIGNID name="JavaEnumeration" mc="Stereotype" uid="01ec23a8-0000-0262-0000-000000000000"/>
+    <FOREIGNID name="JavaFinal" mc="TagType" uid="003800a8-0000-0161-0000-000000000000"/>
+    <FOREIGNID name="JavaFinal" mc="TagType" uid="003800a8-0000-0180-0000-000000000000"/>
+    <FOREIGNID name="JavaNoInitValue" mc="TagType" uid="00d007fc-0003-bf52-0000-000000000000"/>
+    <FOREIGNID name="JavaSynchronized" mc="TagType" uid="003800a8-0000-017b-0000-000000000000"/>
+    <FOREIGNID name="JavaVolatile" mc="TagType" uid="003800a8-0000-0163-0000-000000000000"/>
+    <FOREIGNID name="boolean" mc="DataType" uid="00000004-0000-0005-0000-000000000000"/>
+    <FOREIGNID name="create" mc="Stereotype" uid="00700680-0000-0204-0000-000000000000"/>
+    <FOREIGNID name="double" mc="DataType" uid="00000004-0000-0010-0000-000000000000"/>
+    <FOREIGNID name="integer" mc="DataType" uid="00000004-0000-0009-0000-000000000000"/>
+    <FOREIGNID name="long" mc="DataType" uid="00000004-0000-0011-0000-000000000000"/>
+    <FOREIGNID name="string" mc="DataType" uid="00000004-0000-000d-0000-000000000000"/>
+    <FOREIGNID name="type" mc="TagType" uid="00000000-0000-3767-0000-000000000000"/>
+  </DEPS>
+  <OBJECT>
+    <ID name="MergeRateLimiter" mc="Class" uid="c8a48e89-ef52-411b-8f6f-a0c8e7b78022"/>
+    <PID name="index" mc="Package" uid="7e818d5b-060b-4645-bc8d-6ccb62ca18dc"/>
+    <ATTRIBUTES>
+      <ATT name="IsActive">false</ATT>
+      <ATT name="IsMain">false</ATT>
+      <ATT name="IsElementary">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[MergeRateLimiter]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedOperation">
+        <OBJECT>
+          <ID name="MergeRateLimiter" mc="Operation" uid="4ad53f25-8b96-4ebe-8a0a-54cfbc9558cf"/>
+          <PID name="MergeRateLimiter" mc="Class" uid="c8a48e89-ef52-411b-8f6f-a0c8e7b78022"/>
+          <ATTRIBUTES>
+            <ATT name="Concurrency">false</ATT>
+            <ATT name="Final">false</ATT>
+            <ATT name="Passing">MethodOut</ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[MergeRateLimiter]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="IO">
+              <OBJECT>
+                <ID name="p0" mc="Parameter" uid="7e2bf1cc-e09c-4f63-a17a-21aac1d97e58"/>
+                <PID name="MergeRateLimiter" mc="Class" uid="c8a48e89-ef52-411b-8f6f-a0c8e7b78022"/>
+                <ATTRIBUTES>
+                  <ATT name="ParameterPassing">In</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="DefaultValue"></ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="IsException">false</ATT>
+                  <ATT name="IsStream">false</ATT>
+                  <ATT name="Effect">ReadEffect</ATT>
+                  <ATT name="Name"><![CDATA[p0]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <ID name="OneMerge" mc="Class" uid="0b3b76b4-be4c-4bbd-a579-5a5b72b7a69b"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <LINK relation="Extension">
+              <FOREIGNID name="create" mc="Stereotype" uid="00700680-0000-0204-0000-000000000000"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="getTotalStoppedNS" mc="Operation" uid="0c5dcb59-3a3e-4e15-a1aa-06b9c39bb7b3"/>
+          <PID name="MergeRateLimiter" mc="Class" uid="c8a48e89-ef52-411b-8f6f-a0c8e7b78022"/>
+          <ATTRIBUTES>
+            <ATT name="Concurrency">false</ATT>
+            <ATT name="Final">false</ATT>
+            <ATT name="Passing">MethodOut</ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[getTotalStoppedNS]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="Return">
+              <OBJECT>
+                <ID name="" mc="Parameter" uid="a44a5cc0-6f1a-4fa4-831f-aaa7fd33eb48"/>
+                <PID name="MergeRateLimiter" mc="Class" uid="c8a48e89-ef52-411b-8f6f-a0c8e7b78022"/>
+                <ATTRIBUTES>
+                  <ATT name="ParameterPassing">In</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="DefaultValue"></ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="IsException">false</ATT>
+                  <ATT name="IsStream">false</ATT>
+                  <ATT name="Effect">ReadEffect</ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <FOREIGNID name="long" mc="DataType" uid="00000004-0000-0011-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="Tag">
+              <OBJECT>
+                <ID name="" mc="TaggedValue" uid="ffc983ef-2a31-4dff-a9c1-eca0eae35ba3"/>
+                <PID name="MergeRateLimiter" mc="Class" uid="c8a48e89-ef52-411b-8f6f-a0c8e7b78022"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Definition">
+                    <FOREIGNID name="JavaSynchronized" mc="TagType" uid="003800a8-0000-017b-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="setMBPerSec" mc="Operation" uid="1cbcbc59-3586-4327-b3e6-500d8c365289"/>
+          <PID name="MergeRateLimiter" mc="Class" uid="c8a48e89-ef52-411b-8f6f-a0c8e7b78022"/>
+          <ATTRIBUTES>
+            <ATT name="Concurrency">false</ATT>
+            <ATT name="Final">false</ATT>
+            <ATT name="Passing">MethodOut</ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[setMBPerSec]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="IO">
+              <OBJECT>
+                <ID name="p0" mc="Parameter" uid="f5593d67-73ca-483b-8c35-6299544f7289"/>
+                <PID name="MergeRateLimiter" mc="Class" uid="c8a48e89-ef52-411b-8f6f-a0c8e7b78022"/>
+                <ATTRIBUTES>
+                  <ATT name="ParameterPassing">In</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="DefaultValue"></ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="IsException">false</ATT>
+                  <ATT name="IsStream">false</ATT>
+                  <ATT name="Effect">ReadEffect</ATT>
+                  <ATT name="Name"><![CDATA[p0]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <FOREIGNID name="double" mc="DataType" uid="00000004-0000-0010-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="Tag">
+              <OBJECT>
+                <ID name="" mc="TaggedValue" uid="2c01b5e2-0358-4395-b329-10dd30399793"/>
+                <PID name="MergeRateLimiter" mc="Class" uid="c8a48e89-ef52-411b-8f6f-a0c8e7b78022"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Definition">
+                    <FOREIGNID name="JavaSynchronized" mc="TagType" uid="003800a8-0000-017b-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="getAbort" mc="Operation" uid="4cb5e214-3c31-4e0d-a43c-f81b9d7d35d5"/>
+          <PID name="MergeRateLimiter" mc="Class" uid="c8a48e89-ef52-411b-8f6f-a0c8e7b78022"/>
+          <ATTRIBUTES>
+            <ATT name="Concurrency">false</ATT>
+            <ATT name="Final">false</ATT>
+            <ATT name="Passing">MethodOut</ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[getAbort]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="Return">
+              <OBJECT>
+                <ID name="" mc="Parameter" uid="f4f26e4c-5433-4067-bfd2-c43b05c11783"/>
+                <PID name="MergeRateLimiter" mc="Class" uid="c8a48e89-ef52-411b-8f6f-a0c8e7b78022"/>
+                <ATTRIBUTES>
+                  <ATT name="ParameterPassing">In</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="DefaultValue"></ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="IsException">false</ATT>
+                  <ATT name="IsStream">false</ATT>
+                  <ATT name="Effect">ReadEffect</ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <FOREIGNID name="boolean" mc="DataType" uid="00000004-0000-0005-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="Tag">
+              <OBJECT>
+                <ID name="" mc="TaggedValue" uid="1413bcaa-94d5-4b12-a520-90aee09aad40"/>
+                <PID name="MergeRateLimiter" mc="Class" uid="c8a48e89-ef52-411b-8f6f-a0c8e7b78022"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Definition">
+                    <FOREIGNID name="JavaSynchronized" mc="TagType" uid="003800a8-0000-017b-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="getTotalPausedNS" mc="Operation" uid="4699e0b2-e7c4-447d-b23d-937050859573"/>
+          <PID name="MergeRateLimiter" mc="Class" uid="c8a48e89-ef52-411b-8f6f-a0c8e7b78022"/>
+          <ATTRIBUTES>
+            <ATT name="Concurrency">false</ATT>
+            <ATT name="Final">false</ATT>
+            <ATT name="Passing">MethodOut</ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[getTotalPausedNS]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="Return">
+              <OBJECT>
+                <ID name="" mc="Parameter" uid="0e77d761-136b-4ebc-a610-fe210abef9ea"/>
+                <PID name="MergeRateLimiter" mc="Class" uid="c8a48e89-ef52-411b-8f6f-a0c8e7b78022"/>
+                <ATTRIBUTES>
+                  <ATT name="ParameterPassing">In</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="DefaultValue"></ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="IsException">false</ATT>
+                  <ATT name="IsStream">false</ATT>
+                  <ATT name="Effect">ReadEffect</ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <FOREIGNID name="long" mc="DataType" uid="00000004-0000-0011-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="Tag">
+              <OBJECT>
+                <ID name="" mc="TaggedValue" uid="f1900b44-e159-4128-9447-5b515bf0eb0a"/>
+                <PID name="MergeRateLimiter" mc="Class" uid="c8a48e89-ef52-411b-8f6f-a0c8e7b78022"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Definition">
+                    <FOREIGNID name="JavaSynchronized" mc="TagType" uid="003800a8-0000-017b-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="getMBPerSec" mc="Operation" uid="ff8825bf-7d50-463f-b99b-95a7c4325e8d"/>
+          <PID name="MergeRateLimiter" mc="Class" uid="c8a48e89-ef52-411b-8f6f-a0c8e7b78022"/>
+          <ATTRIBUTES>
+            <ATT name="Concurrency">false</ATT>
+            <ATT name="Final">false</ATT>
+            <ATT name="Passing">MethodOut</ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[getMBPerSec]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="Return">
+              <OBJECT>
+                <ID name="" mc="Parameter" uid="109775eb-8267-4eb0-bae1-76bd7ae746f1"/>
+                <PID name="MergeRateLimiter" mc="Class" uid="c8a48e89-ef52-411b-8f6f-a0c8e7b78022"/>
+                <ATTRIBUTES>
+                  <ATT name="ParameterPassing">In</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="DefaultValue"></ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="IsException">false</ATT>
+                  <ATT name="IsStream">false</ATT>
+                  <ATT name="Effect">ReadEffect</ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <FOREIGNID name="double" mc="DataType" uid="00000004-0000-0010-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="Tag">
+              <OBJECT>
+                <ID name="" mc="TaggedValue" uid="8a54a70e-a1fe-4396-88ac-eda281bbf550"/>
+                <PID name="MergeRateLimiter" mc="Class" uid="c8a48e89-ef52-411b-8f6f-a0c8e7b78022"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Definition">
+                    <FOREIGNID name="JavaSynchronized" mc="TagType" uid="003800a8-0000-017b-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="setAbort" mc="Operation" uid="4ebb236f-673c-4e30-8045-543b2b4aa694"/>
+          <PID name="MergeRateLimiter" mc="Class" uid="c8a48e89-ef52-411b-8f6f-a0c8e7b78022"/>
+          <ATTRIBUTES>
+            <ATT name="Concurrency">false</ATT>
+            <ATT name="Final">false</ATT>
+            <ATT name="Passing">MethodOut</ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[setAbort]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="Tag">
+              <OBJECT>
+                <ID name="" mc="TaggedValue" uid="d4da0f12-36ac-467a-b5b8-e8ab7109b662"/>
+                <PID name="MergeRateLimiter" mc="Class" uid="c8a48e89-ef52-411b-8f6f-a0c8e7b78022"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Definition">
+                    <FOREIGNID name="JavaSynchronized" mc="TagType" uid="003800a8-0000-017b-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="checkAbort" mc="Operation" uid="68f9d3cc-c39c-47fb-ad93-a6152f582aa0"/>
+          <PID name="MergeRateLimiter" mc="Class" uid="c8a48e89-ef52-411b-8f6f-a0c8e7b78022"/>
+          <ATTRIBUTES>
+            <ATT name="Concurrency">false</ATT>
+            <ATT name="Final">false</ATT>
+            <ATT name="Passing">MethodOut</ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[checkAbort]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="Thrown">
+              <OBJECT>
+                <ID name="" mc="RaisedException" uid="b5c2deb3-ad9f-48e4-ad44-0d3ebcfcece9"/>
+                <PID name="MergeRateLimiter" mc="Class" uid="c8a48e89-ef52-411b-8f6f-a0c8e7b78022"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="ThrownType">
+                    <ID name="MergeAbortedException" mc="Class" uid="95339bd1-fa17-477e-a45d-e438a9eea4f5"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="Tag">
+              <OBJECT>
+                <ID name="" mc="TaggedValue" uid="37382943-812c-433f-af8f-c1f759923dce"/>
+                <PID name="MergeRateLimiter" mc="Class" uid="c8a48e89-ef52-411b-8f6f-a0c8e7b78022"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Definition">
+                    <FOREIGNID name="JavaSynchronized" mc="TagType" uid="003800a8-0000-017b-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="maybePause" mc="Operation" uid="cb219bab-5a40-428b-800f-f43ccb482428"/>
+          <PID name="MergeRateLimiter" mc="Class" uid="c8a48e89-ef52-411b-8f6f-a0c8e7b78022"/>
+          <ATTRIBUTES>
+            <ATT name="Concurrency">false</ATT>
+            <ATT name="Final">false</ATT>
+            <ATT name="Passing">MethodOut</ATT>
+            <ATT name="Visibility">Private</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[maybePause]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="Thrown">
+              <OBJECT>
+                <ID name="" mc="RaisedException" uid="5c8ee0a9-3d77-4c00-a25e-63527fe684f6"/>
+                <PID name="MergeRateLimiter" mc="Class" uid="c8a48e89-ef52-411b-8f6f-a0c8e7b78022"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="ThrownType">
+                    <ID name="MergeAbortedException" mc="Class" uid="95339bd1-fa17-477e-a45d-e438a9eea4f5"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="IO">
+              <OBJECT>
+                <ID name="p0" mc="Parameter" uid="0c839389-669d-423f-a351-b796a57c6ec5"/>
+                <PID name="MergeRateLimiter" mc="Class" uid="c8a48e89-ef52-411b-8f6f-a0c8e7b78022"/>
+                <ATTRIBUTES>
+                  <ATT name="ParameterPassing">In</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="DefaultValue"></ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="IsException">false</ATT>
+                  <ATT name="IsStream">false</ATT>
+                  <ATT name="Effect">ReadEffect</ATT>
+                  <ATT name="Name"><![CDATA[p0]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <FOREIGNID name="long" mc="DataType" uid="00000004-0000-0011-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="p1" mc="Parameter" uid="0981c63e-cd3d-44fe-bab5-24864ebf54d9"/>
+                <PID name="MergeRateLimiter" mc="Class" uid="c8a48e89-ef52-411b-8f6f-a0c8e7b78022"/>
+                <ATTRIBUTES>
+                  <ATT name="ParameterPassing">In</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="DefaultValue"></ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="IsException">false</ATT>
+                  <ATT name="IsStream">false</ATT>
+                  <ATT name="Effect">ReadEffect</ATT>
+                  <ATT name="Name"><![CDATA[p1]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <FOREIGNID name="long" mc="DataType" uid="00000004-0000-0011-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="Return">
+              <OBJECT>
+                <ID name="" mc="Parameter" uid="c6bdb51d-a423-411a-a979-1c05d76b64da"/>
+                <PID name="MergeRateLimiter" mc="Class" uid="c8a48e89-ef52-411b-8f6f-a0c8e7b78022"/>
+                <ATTRIBUTES>
+                  <ATT name="ParameterPassing">In</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="DefaultValue"></ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="IsException">false</ATT>
+                  <ATT name="IsStream">false</ATT>
+                  <ATT name="Effect">ReadEffect</ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <REFOBJ>
+                      <ID name="PauseResult" mc="Enumeration" uid="3132439a-69bf-4470-9ce2-c1a3b9140104"/>
+                      <PID name="MergeRateLimiter" mc="Class" uid="c8a48e89-ef52-411b-8f6f-a0c8e7b78022"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="Tag">
+              <OBJECT>
+                <ID name="" mc="TaggedValue" uid="94027487-e100-4c6d-8435-6b67b191a1bd"/>
+                <PID name="MergeRateLimiter" mc="Class" uid="c8a48e89-ef52-411b-8f6f-a0c8e7b78022"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Definition">
+                    <FOREIGNID name="JavaSynchronized" mc="TagType" uid="003800a8-0000-017b-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="pause" mc="Operation" uid="332c0f18-6b6f-4510-b4b7-a9e77c2bb754"/>
+          <PID name="MergeRateLimiter" mc="Class" uid="c8a48e89-ef52-411b-8f6f-a0c8e7b78022"/>
+          <ATTRIBUTES>
+            <ATT name="Concurrency">false</ATT>
+            <ATT name="Final">false</ATT>
+            <ATT name="Passing">MethodOut</ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[pause]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="Thrown">
+              <OBJECT>
+                <ID name="" mc="RaisedException" uid="36dfaa0c-d45d-4722-aedb-59c2a9c4cf03"/>
+                <PID name="MergeRateLimiter" mc="Class" uid="c8a48e89-ef52-411b-8f6f-a0c8e7b78022"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="ThrownType">
+                    <ID name="MergeAbortedException" mc="Class" uid="95339bd1-fa17-477e-a45d-e438a9eea4f5"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="IO">
+              <OBJECT>
+                <ID name="p0" mc="Parameter" uid="17a52b32-0540-46c1-a03a-8d3a84b45bc7"/>
+                <PID name="MergeRateLimiter" mc="Class" uid="c8a48e89-ef52-411b-8f6f-a0c8e7b78022"/>
+                <ATTRIBUTES>
+                  <ATT name="ParameterPassing">In</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="DefaultValue"></ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="IsException">false</ATT>
+                  <ATT name="IsStream">false</ATT>
+                  <ATT name="Effect">ReadEffect</ATT>
+                  <ATT name="Name"><![CDATA[p0]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <FOREIGNID name="long" mc="DataType" uid="00000004-0000-0011-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="Return">
+              <OBJECT>
+                <ID name="" mc="Parameter" uid="5d96dbe6-44ca-44ba-8526-b4e49cf57254"/>
+                <PID name="MergeRateLimiter" mc="Class" uid="c8a48e89-ef52-411b-8f6f-a0c8e7b78022"/>
+                <ATTRIBUTES>
+                  <ATT name="ParameterPassing">In</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="DefaultValue"></ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="IsException">false</ATT>
+                  <ATT name="IsStream">false</ATT>
+                  <ATT name="Effect">ReadEffect</ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <FOREIGNID name="long" mc="DataType" uid="00000004-0000-0011-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="getTotalBytesWritten" mc="Operation" uid="f7aa12c4-1989-4202-8d75-94065d72b39f"/>
+          <PID name="MergeRateLimiter" mc="Class" uid="c8a48e89-ef52-411b-8f6f-a0c8e7b78022"/>
+          <ATTRIBUTES>
+            <ATT name="Concurrency">false</ATT>
+            <ATT name="Final">false</ATT>
+            <ATT name="Passing">MethodOut</ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[getTotalBytesWritten]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="Return">
+              <OBJECT>
+                <ID name="" mc="Parameter" uid="6c080ca8-dce5-44ae-85dc-c953f5d46ea8"/>
+                <PID name="MergeRateLimiter" mc="Class" uid="c8a48e89-ef52-411b-8f6f-a0c8e7b78022"/>
+                <ATTRIBUTES>
+                  <ATT name="ParameterPassing">In</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="DefaultValue"></ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="IsException">false</ATT>
+                  <ATT name="IsStream">false</ATT>
+                  <ATT name="Effect">ReadEffect</ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <FOREIGNID name="long" mc="DataType" uid="00000004-0000-0011-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="getMinPauseCheckBytes" mc="Operation" uid="0d304e21-6f0f-4afd-aedf-9782d652e025"/>
+          <PID name="MergeRateLimiter" mc="Class" uid="c8a48e89-ef52-411b-8f6f-a0c8e7b78022"/>
+          <ATTRIBUTES>
+            <ATT name="Concurrency">false</ATT>
+            <ATT name="Final">false</ATT>
+            <ATT name="Passing">MethodOut</ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[getMinPauseCheckBytes]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="Return">
+              <OBJECT>
+                <ID name="" mc="Parameter" uid="2f5aa25b-a10f-48b2-aa6d-91b793b31cec"/>
+                <PID name="MergeRateLimiter" mc="Class" uid="c8a48e89-ef52-411b-8f6f-a0c8e7b78022"/>
+                <ATTRIBUTES>
+                  <ATT name="ParameterPassing">In</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="DefaultValue"></ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="IsException">false</ATT>
+                  <ATT name="IsStream">false</ATT>
+                  <ATT name="Effect">ReadEffect</ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <FOREIGNID name="long" mc="DataType" uid="00000004-0000-0011-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+      <COMP relation="OwnedAttribute">
+        <OBJECT>
+          <ID name="MIN_PAUSE_CHECK_MSEC" mc="Attribute" uid="8ba8caf9-8d7e-489a-a067-fb8c8dd49479"/>
+          <PID name="MergeRateLimiter" mc="Class" uid="c8a48e89-ef52-411b-8f6f-a0c8e7b78022"/>
+          <ATTRIBUTES>
+            <ATT name="TypeConstraint"></ATT>
+            <ATT name="Value"></ATT>
+            <ATT name="TargetIsClass">false</ATT>
+            <ATT name="Changeable">AccesNone</ATT>
+            <ATT name="IsDerived">false</ATT>
+            <ATT name="IsOrdered">false</ATT>
+            <ATT name="IsUnique">false</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+            <ATT name="Visibility">Private</ATT>
+            <ATT name="IsClass">true</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[MIN_PAUSE_CHECK_MSEC]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Type">
+              <FOREIGNID name="integer" mc="DataType" uid="00000004-0000-0009-0000-000000000000"/>
+            </LINK>
+            <COMP relation="Tag">
+              <OBJECT>
+                <ID name="" mc="TaggedValue" uid="0af8cba7-ceed-4a07-a576-adff132815b3"/>
+                <PID name="MergeRateLimiter" mc="Class" uid="c8a48e89-ef52-411b-8f6f-a0c8e7b78022"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Definition">
+                    <FOREIGNID name="JavaFinal" mc="TagType" uid="003800a8-0000-0161-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="" mc="TaggedValue" uid="eed2ae91-8c16-4f94-834c-a8c4f4e67e6a"/>
+                <PID name="MergeRateLimiter" mc="Class" uid="c8a48e89-ef52-411b-8f6f-a0c8e7b78022"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Definition">
+                    <FOREIGNID name="JavaNoInitValue" mc="TagType" uid="00d007fc-0003-bf52-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="totalBytesWritten" mc="Attribute" uid="33b44b63-aed3-477d-84d1-e994ba80f32e"/>
+          <PID name="MergeRateLimiter" mc="Class" uid="c8a48e89-ef52-411b-8f6f-a0c8e7b78022"/>
+          <ATTRIBUTES>
+            <ATT name="TypeConstraint"></ATT>
+            <ATT name="Value"></ATT>
+            <ATT name="TargetIsClass">false</ATT>
+            <ATT name="Changeable">AccesNone</ATT>
+            <ATT name="IsDerived">false</ATT>
+            <ATT name="IsOrdered">false</ATT>
+            <ATT name="IsUnique">false</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+            <ATT name="Visibility">VisibilityUndefined</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[totalBytesWritten]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Type">
+              <FOREIGNID name="long" mc="DataType" uid="00000004-0000-0011-0000-000000000000"/>
+            </LINK>
+            <COMP relation="Tag">
+              <OBJECT>
+                <ID name="" mc="TaggedValue" uid="73f7e7dd-9830-413a-a56e-7065a981fc19"/>
+                <PID name="MergeRateLimiter" mc="Class" uid="c8a48e89-ef52-411b-8f6f-a0c8e7b78022"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Definition">
+                    <FOREIGNID name="JavaVolatile" mc="TagType" uid="003800a8-0000-0163-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="" mc="TaggedValue" uid="7776c53a-8de6-4c23-aec5-27524bf7a294"/>
+                <PID name="MergeRateLimiter" mc="Class" uid="c8a48e89-ef52-411b-8f6f-a0c8e7b78022"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Definition">
+                    <FOREIGNID name="JavaNoInitValue" mc="TagType" uid="00d007fc-0003-bf52-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="mbPerSec" mc="Attribute" uid="1e293aee-8d5a-4482-ae25-bf2c20449679"/>
+          <PID name="MergeRateLimiter" mc="Class" uid="c8a48e89-ef52-411b-8f6f-a0c8e7b78022"/>
+          <ATTRIBUTES>
+            <ATT name="TypeConstraint"></ATT>
+            <ATT name="Value"></ATT>
+            <ATT name="TargetIsClass">false</ATT>
+            <ATT name="Changeable">AccesNone</ATT>
+            <ATT name="IsDerived">false</ATT>
+            <ATT name="IsOrdered">false</ATT>
+            <ATT name="IsUnique">false</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+            <ATT name="Visibility">VisibilityUndefined</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[mbPerSec]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Type">
+              <FOREIGNID name="double" mc="DataType" uid="00000004-0000-0010-0000-000000000000"/>
+            </LINK>
+            <COMP relation="Tag">
+              <OBJECT>
+                <ID name="" mc="TaggedValue" uid="7136c351-640f-49b7-9e2d-5cf5350059a0"/>
+                <PID name="MergeRateLimiter" mc="Class" uid="c8a48e89-ef52-411b-8f6f-a0c8e7b78022"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Definition">
+                    <FOREIGNID name="JavaNoInitValue" mc="TagType" uid="00d007fc-0003-bf52-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="lastNS" mc="Attribute" uid="f8f3e3c1-f1f4-4141-91ef-b3f0356de43a"/>
+          <PID name="MergeRateLimiter" mc="Class" uid="c8a48e89-ef52-411b-8f6f-a0c8e7b78022"/>
+          <ATTRIBUTES>
+            <ATT name="TypeConstraint"></ATT>
+            <ATT name="Value"></ATT>
+            <ATT name="TargetIsClass">false</ATT>
+            <ATT name="Changeable">AccesNone</ATT>
+            <ATT name="IsDerived">false</ATT>
+            <ATT name="IsOrdered">false</ATT>
+            <ATT name="IsUnique">false</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+            <ATT name="Visibility">Private</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[lastNS]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Type">
+              <FOREIGNID name="long" mc="DataType" uid="00000004-0000-0011-0000-000000000000"/>
+            </LINK>
+            <COMP relation="Tag">
+              <OBJECT>
+                <ID name="" mc="TaggedValue" uid="cc4716f8-a2a1-4600-8c0a-e45f21b38f9d"/>
+                <PID name="MergeRateLimiter" mc="Class" uid="c8a48e89-ef52-411b-8f6f-a0c8e7b78022"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Definition">
+                    <FOREIGNID name="JavaNoInitValue" mc="TagType" uid="00d007fc-0003-bf52-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="minPauseCheckBytes" mc="Attribute" uid="0a7d5b04-039f-4c02-b1e2-a806b822b007"/>
+          <PID name="MergeRateLimiter" mc="Class" uid="c8a48e89-ef52-411b-8f6f-a0c8e7b78022"/>
+          <ATTRIBUTES>
+            <ATT name="TypeConstraint"></ATT>
+            <ATT name="Value"></ATT>
+            <ATT name="TargetIsClass">false</ATT>
+            <ATT name="Changeable">AccesNone</ATT>
+            <ATT name="IsDerived">false</ATT>
+            <ATT name="IsOrdered">false</ATT>
+            <ATT name="IsUnique">false</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+            <ATT name="Visibility">Private</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[minPauseCheckBytes]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Type">
+              <FOREIGNID name="long" mc="DataType" uid="00000004-0000-0011-0000-000000000000"/>
+            </LINK>
+            <COMP relation="Tag">
+              <OBJECT>
+                <ID name="" mc="TaggedValue" uid="9f383116-5c56-4129-92cd-828af404722c"/>
+                <PID name="MergeRateLimiter" mc="Class" uid="c8a48e89-ef52-411b-8f6f-a0c8e7b78022"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Definition">
+                    <FOREIGNID name="JavaNoInitValue" mc="TagType" uid="00d007fc-0003-bf52-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="abort" mc="Attribute" uid="05ec90da-6415-42ca-b064-5abf2d6b778e"/>
+          <PID name="MergeRateLimiter" mc="Class" uid="c8a48e89-ef52-411b-8f6f-a0c8e7b78022"/>
+          <ATTRIBUTES>
+            <ATT name="TypeConstraint"></ATT>
+            <ATT name="Value"></ATT>
+            <ATT name="TargetIsClass">false</ATT>
+            <ATT name="Changeable">AccesNone</ATT>
+            <ATT name="IsDerived">false</ATT>
+            <ATT name="IsOrdered">false</ATT>
+            <ATT name="IsUnique">false</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+            <ATT name="Visibility">Private</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[abort]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Type">
+              <FOREIGNID name="boolean" mc="DataType" uid="00000004-0000-0005-0000-000000000000"/>
+            </LINK>
+            <COMP relation="Tag">
+              <OBJECT>
+                <ID name="" mc="TaggedValue" uid="57dd2c73-37b1-4d11-abcf-58b7eaf9e1dd"/>
+                <PID name="MergeRateLimiter" mc="Class" uid="c8a48e89-ef52-411b-8f6f-a0c8e7b78022"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Definition">
+                    <FOREIGNID name="JavaNoInitValue" mc="TagType" uid="00d007fc-0003-bf52-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="totalPausedNS" mc="Attribute" uid="5d3518bb-1eca-491f-ba1d-9b24d032fdc6"/>
+          <PID name="MergeRateLimiter" mc="Class" uid="c8a48e89-ef52-411b-8f6f-a0c8e7b78022"/>
+          <ATTRIBUTES>
+            <ATT name="TypeConstraint"></ATT>
+            <ATT name="Value"></ATT>
+            <ATT name="TargetIsClass">false</ATT>
+            <ATT name="Changeable">AccesNone</ATT>
+            <ATT name="IsDerived">false</ATT>
+            <ATT name="IsOrdered">false</ATT>
+            <ATT name="IsUnique">false</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+            <ATT name="Visibility">VisibilityUndefined</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[totalPausedNS]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Type">
+              <FOREIGNID name="long" mc="DataType" uid="00000004-0000-0011-0000-000000000000"/>
+            </LINK>
+            <COMP relation="Tag">
+              <OBJECT>
+                <ID name="" mc="TaggedValue" uid="00380e70-d056-4a9c-a5c1-0091b642294c"/>
+                <PID name="MergeRateLimiter" mc="Class" uid="c8a48e89-ef52-411b-8f6f-a0c8e7b78022"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Definition">
+                    <FOREIGNID name="JavaNoInitValue" mc="TagType" uid="00d007fc-0003-bf52-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="totalStoppedNS" mc="Attribute" uid="f1a720db-6e38-4259-9f54-a7e7e99039a7"/>
+          <PID name="MergeRateLimiter" mc="Class" uid="c8a48e89-ef52-411b-8f6f-a0c8e7b78022"/>
+          <ATTRIBUTES>
+            <ATT name="TypeConstraint"></ATT>
+            <ATT name="Value"></ATT>
+            <ATT name="TargetIsClass">false</ATT>
+            <ATT name="Changeable">AccesNone</ATT>
+            <ATT name="IsDerived">false</ATT>
+            <ATT name="IsOrdered">false</ATT>
+            <ATT name="IsUnique">false</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+            <ATT name="Visibility">VisibilityUndefined</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[totalStoppedNS]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Type">
+              <FOREIGNID name="long" mc="DataType" uid="00000004-0000-0011-0000-000000000000"/>
+            </LINK>
+            <COMP relation="Tag">
+              <OBJECT>
+                <ID name="" mc="TaggedValue" uid="fc140621-ef04-4121-85a8-e05908b4f50b"/>
+                <PID name="MergeRateLimiter" mc="Class" uid="c8a48e89-ef52-411b-8f6f-a0c8e7b78022"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Definition">
+                    <FOREIGNID name="JavaNoInitValue" mc="TagType" uid="00d007fc-0003-bf52-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="$assertionsDisabled" mc="Attribute" uid="4643a88b-1fd7-421e-8a32-ab42ea5c822a"/>
+          <PID name="MergeRateLimiter" mc="Class" uid="c8a48e89-ef52-411b-8f6f-a0c8e7b78022"/>
+          <ATTRIBUTES>
+            <ATT name="TypeConstraint"></ATT>
+            <ATT name="Value"></ATT>
+            <ATT name="TargetIsClass">false</ATT>
+            <ATT name="Changeable">AccesNone</ATT>
+            <ATT name="IsDerived">false</ATT>
+            <ATT name="IsOrdered">false</ATT>
+            <ATT name="IsUnique">false</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+            <ATT name="Visibility">VisibilityUndefined</ATT>
+            <ATT name="IsClass">true</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[$assertionsDisabled]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Type">
+              <FOREIGNID name="boolean" mc="DataType" uid="00000004-0000-0005-0000-000000000000"/>
+            </LINK>
+            <COMP relation="Tag">
+              <OBJECT>
+                <ID name="" mc="TaggedValue" uid="9cdec244-a584-415e-8cbc-4bf9471f06fa"/>
+                <PID name="MergeRateLimiter" mc="Class" uid="c8a48e89-ef52-411b-8f6f-a0c8e7b78022"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Definition">
+                    <FOREIGNID name="JavaFinal" mc="TagType" uid="003800a8-0000-0161-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="" mc="TaggedValue" uid="b5b44665-90e6-469a-a893-16606bc536dd"/>
+                <PID name="MergeRateLimiter" mc="Class" uid="c8a48e89-ef52-411b-8f6f-a0c8e7b78022"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Definition">
+                    <FOREIGNID name="JavaNoInitValue" mc="TagType" uid="00d007fc-0003-bf52-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+      <COMP relation="OwnedEnd">
+        <OBJECT>
+          <ID name="merge" mc="AssociationEnd" uid="fdce1634-f203-4eff-8bad-b913653b56fe"/>
+          <PID name="MergeRateLimiter" mc="Class" uid="c8a48e89-ef52-411b-8f6f-a0c8e7b78022"/>
+          <ATTRIBUTES>
+            <ATT name="Aggregation">KindIsAssociation</ATT>
+            <ATT name="IsChangeable">true</ATT>
+            <ATT name="Changeable">AccesNone</ATT>
+            <ATT name="IsDerived">false</ATT>
+            <ATT name="IsOrdered">false</ATT>
+            <ATT name="IsUnique">false</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[0]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+            <ATT name="Visibility">VisibilityUndefined</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[merge]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Target">
+              <ID name="OneMerge" mc="Class" uid="0b3b76b4-be4c-4bbd-a579-5a5b72b7a69b"/>
+            </LINK>
+            <COMP relation="Opposite">
+              <OBJECT>
+                <ID name="" mc="AssociationEnd" uid="16469c52-b3b5-4965-a390-46810c55bd40"/>
+                <PID name="MergeRateLimiter" mc="Class" uid="c8a48e89-ef52-411b-8f6f-a0c8e7b78022"/>
+                <ATTRIBUTES>
+                  <ATT name="Aggregation">KindIsAssociation</ATT>
+                  <ATT name="IsChangeable">true</ATT>
+                  <ATT name="Changeable">ReadWrite</ATT>
+                  <ATT name="IsDerived">false</ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[0]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="Visibility">Public</ATT>
+                  <ATT name="IsClass">false</ATT>
+                  <ATT name="IsAbstract">false</ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="Opposite">
+                    <COMPID name="merge" mc="AssociationEnd" uid="fdce1634-f203-4eff-8bad-b913653b56fe"/>
+                  </COMP>
+                  <COMP relation="Association">
+                    <OBJECT>
+                      <ID name="" mc="Association" uid="ca28ac7f-c6fd-4dc7-b997-233a2b5c00aa"/>
+                      <PID name="MergeRateLimiter" mc="Class" uid="c8a48e89-ef52-411b-8f6f-a0c8e7b78022"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES></DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="Association">
+              <COMPID name="" mc="Association" uid="ca28ac7f-c6fd-4dc7-b997-233a2b5c00aa"/>
+            </COMP>
+            <COMP relation="Tag">
+              <OBJECT>
+                <ID name="" mc="TaggedValue" uid="4cca6d4d-4a1f-46d1-8c5e-7841648ebbe2"/>
+                <PID name="MergeRateLimiter" mc="Class" uid="c8a48e89-ef52-411b-8f6f-a0c8e7b78022"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Definition">
+                    <FOREIGNID name="JavaFinal" mc="TagType" uid="003800a8-0000-0180-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="" mc="TaggedValue" uid="b2bae676-a694-4704-ac5a-10750faebd36"/>
+                <PID name="MergeRateLimiter" mc="Class" uid="c8a48e89-ef52-411b-8f6f-a0c8e7b78022"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Definition">
+                    <FOREIGNID name="JavaNoInitValue" mc="TagType" uid="00d007fc-0003-bf52-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+      <COMP relation="Parent">
+        <OBJECT>
+          <ID name="" mc="Generalization" uid="14dec13a-6e6a-4217-9b1c-8a8808cf64d2"/>
+          <PID name="MergeRateLimiter" mc="Class" uid="c8a48e89-ef52-411b-8f6f-a0c8e7b78022"/>
+          <ATTRIBUTES>
+            <ATT name="Discriminator"></ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="SuperType">
+              <ID name="RateLimiter" mc="Class" uid="3a3585f4-9b79-4a66-9f10-0aa087e6241d"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+      <COMP relation="OwnedElement">
+        <OBJECT>
+          <ID name="PauseResult" mc="Enumeration" uid="3132439a-69bf-4470-9ce2-c1a3b9140104"/>
+          <PID name="MergeRateLimiter" mc="Class" uid="c8a48e89-ef52-411b-8f6f-a0c8e7b78022"/>
+          <ATTRIBUTES>
+            <ATT name="IsElementary">true</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="IsLeaf">true</ATT>
+            <ATT name="IsRoot">false</ATT>
+            <ATT name="Visibility">Private</ATT>
+            <ATT name="Name"><![CDATA[PauseResult]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="OwnedOperation">
+              <OBJECT>
+                <ID name="PauseResult" mc="Operation" uid="a613e29a-9a47-45c1-9081-1c1e7a9e1f0d"/>
+                <PID name="MergeRateLimiter" mc="Class" uid="c8a48e89-ef52-411b-8f6f-a0c8e7b78022"/>
+                <ATTRIBUTES>
+                  <ATT name="Concurrency">false</ATT>
+                  <ATT name="Final">false</ATT>
+                  <ATT name="Passing">MethodOut</ATT>
+                  <ATT name="Visibility">Private</ATT>
+                  <ATT name="IsClass">false</ATT>
+                  <ATT name="IsAbstract">false</ATT>
+                  <ATT name="Name"><![CDATA[PauseResult]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="IO">
+                    <OBJECT>
+                      <ID name="p0" mc="Parameter" uid="788f829a-b3f0-45f3-bc13-b8ea4207f38f"/>
+                      <PID name="MergeRateLimiter" mc="Class" uid="c8a48e89-ef52-411b-8f6f-a0c8e7b78022"/>
+                      <ATTRIBUTES>
+                        <ATT name="ParameterPassing">In</ATT>
+                        <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                        <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                        <ATT name="TypeConstraint"></ATT>
+                        <ATT name="DefaultValue"></ATT>
+                        <ATT name="IsOrdered">false</ATT>
+                        <ATT name="IsUnique">false</ATT>
+                        <ATT name="IsException">false</ATT>
+                        <ATT name="IsStream">false</ATT>
+                        <ATT name="Effect">ReadEffect</ATT>
+                        <ATT name="Name"><![CDATA[p0]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Type">
+                          <FOREIGNID name="string" mc="DataType" uid="00000004-0000-000d-0000-000000000000"/>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                    <OBJECT>
+                      <ID name="p1" mc="Parameter" uid="68df30f9-18d2-4c56-b18a-3692b0e44c5b"/>
+                      <PID name="MergeRateLimiter" mc="Class" uid="c8a48e89-ef52-411b-8f6f-a0c8e7b78022"/>
+                      <ATTRIBUTES>
+                        <ATT name="ParameterPassing">In</ATT>
+                        <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                        <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                        <ATT name="TypeConstraint"></ATT>
+                        <ATT name="DefaultValue"></ATT>
+                        <ATT name="IsOrdered">false</ATT>
+                        <ATT name="IsUnique">false</ATT>
+                        <ATT name="IsException">false</ATT>
+                        <ATT name="IsStream">false</ATT>
+                        <ATT name="Effect">ReadEffect</ATT>
+                        <ATT name="Name"><![CDATA[p1]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Type">
+                          <FOREIGNID name="integer" mc="DataType" uid="00000004-0000-0009-0000-000000000000"/>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                  <LINK relation="Extension">
+                    <FOREIGNID name="create" mc="Stereotype" uid="00700680-0000-0204-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="values" mc="Operation" uid="2f6bc2b1-95c2-410e-a1ea-cb44e96e532d"/>
+                <PID name="MergeRateLimiter" mc="Class" uid="c8a48e89-ef52-411b-8f6f-a0c8e7b78022"/>
+                <ATTRIBUTES>
+                  <ATT name="Concurrency">false</ATT>
+                  <ATT name="Final">false</ATT>
+                  <ATT name="Passing">MethodOut</ATT>
+                  <ATT name="Visibility">Public</ATT>
+                  <ATT name="IsClass">true</ATT>
+                  <ATT name="IsAbstract">false</ATT>
+                  <ATT name="Name"><![CDATA[values]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="Return">
+                    <OBJECT>
+                      <ID name="" mc="Parameter" uid="f3860146-78e8-43ec-840e-3610eb0866fa"/>
+                      <PID name="MergeRateLimiter" mc="Class" uid="c8a48e89-ef52-411b-8f6f-a0c8e7b78022"/>
+                      <ATTRIBUTES>
+                        <ATT name="ParameterPassing">In</ATT>
+                        <ATT name="MultiplicityMin"><![CDATA[0]]></ATT>
+                        <ATT name="MultiplicityMax"><![CDATA[*]]></ATT>
+                        <ATT name="TypeConstraint"></ATT>
+                        <ATT name="DefaultValue"></ATT>
+                        <ATT name="IsOrdered">false</ATT>
+                        <ATT name="IsUnique">false</ATT>
+                        <ATT name="IsException">false</ATT>
+                        <ATT name="IsStream">false</ATT>
+                        <ATT name="Effect">ReadEffect</ATT>
+                        <ATT name="Name"></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Type">
+                          <REFOBJ>
+                            <ID name="PauseResult" mc="Enumeration" uid="3132439a-69bf-4470-9ce2-c1a3b9140104"/>
+                            <PID name="MergeRateLimiter" mc="Class" uid="c8a48e89-ef52-411b-8f6f-a0c8e7b78022"/>
+                          </REFOBJ>
+                        </LINK>
+                        <COMP relation="Tag">
+                          <OBJECT>
+                            <ID name="" mc="TaggedValue" uid="cf4d3cc2-2e0a-4a44-8702-3412cc70a149"/>
+                            <PID name="MergeRateLimiter" mc="Class" uid="c8a48e89-ef52-411b-8f6f-a0c8e7b78022"/>
+                            <ATTRIBUTES>
+                              <ATT name="Name"></ATT>
+                              <ATT name="status">1970354901745664</ATT>
+                            </ATTRIBUTES>
+                            <DEPENDENCIES>
+                              <COMP relation="Actual">
+                                <OBJECT>
+                                  <ID name="" mc="TagParameter" uid="b74fa5cb-8da8-4adb-a679-5bc9c1610cf0"/>
+                                  <PID name="MergeRateLimiter" mc="Class" uid="c8a48e89-ef52-411b-8f6f-a0c8e7b78022"/>
+                                  <ATTRIBUTES>
+                                    <ATT name="Value"><![CDATA[Array]]></ATT>
+                                    <ATT name="status">1970354901745664</ATT>
+                                  </ATTRIBUTES>
+                                  <DEPENDENCIES></DEPENDENCIES>
+                                </OBJECT>
+                              </COMP>
+                              <LINK relation="Definition">
+                                <FOREIGNID name="type" mc="TagType" uid="00000000-0000-3767-0000-000000000000"/>
+                              </LINK>
+                            </DEPENDENCIES>
+                          </OBJECT>
+                        </COMP>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="valueOf" mc="Operation" uid="c6c7a7d3-bd17-49d7-a6ce-100364a8e3d3"/>
+                <PID name="MergeRateLimiter" mc="Class" uid="c8a48e89-ef52-411b-8f6f-a0c8e7b78022"/>
+                <ATTRIBUTES>
+                  <ATT name="Concurrency">false</ATT>
+                  <ATT name="Final">false</ATT>
+                  <ATT name="Passing">MethodOut</ATT>
+                  <ATT name="Visibility">Public</ATT>
+                  <ATT name="IsClass">true</ATT>
+                  <ATT name="IsAbstract">false</ATT>
+                  <ATT name="Name"><![CDATA[valueOf]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="IO">
+                    <OBJECT>
+                      <ID name="p0" mc="Parameter" uid="8bf4a559-d7c0-4074-9f84-a813ac987f80"/>
+                      <PID name="MergeRateLimiter" mc="Class" uid="c8a48e89-ef52-411b-8f6f-a0c8e7b78022"/>
+                      <ATTRIBUTES>
+                        <ATT name="ParameterPassing">In</ATT>
+                        <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                        <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                        <ATT name="TypeConstraint"></ATT>
+                        <ATT name="DefaultValue"></ATT>
+                        <ATT name="IsOrdered">false</ATT>
+                        <ATT name="IsUnique">false</ATT>
+                        <ATT name="IsException">false</ATT>
+                        <ATT name="IsStream">false</ATT>
+                        <ATT name="Effect">ReadEffect</ATT>
+                        <ATT name="Name"><![CDATA[p0]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Type">
+                          <FOREIGNID name="string" mc="DataType" uid="00000004-0000-000d-0000-000000000000"/>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                  <COMP relation="Return">
+                    <OBJECT>
+                      <ID name="" mc="Parameter" uid="d5ce5cb4-f56f-4f4e-aa37-c9f88d8fec64"/>
+                      <PID name="MergeRateLimiter" mc="Class" uid="c8a48e89-ef52-411b-8f6f-a0c8e7b78022"/>
+                      <ATTRIBUTES>
+                        <ATT name="ParameterPassing">In</ATT>
+                        <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                        <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                        <ATT name="TypeConstraint"></ATT>
+                        <ATT name="DefaultValue"></ATT>
+                        <ATT name="IsOrdered">false</ATT>
+                        <ATT name="IsUnique">false</ATT>
+                        <ATT name="IsException">false</ATT>
+                        <ATT name="IsStream">false</ATT>
+                        <ATT name="Effect">ReadEffect</ATT>
+                        <ATT name="Name"></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Type">
+                          <REFOBJ>
+                            <ID name="PauseResult" mc="Enumeration" uid="3132439a-69bf-4470-9ce2-c1a3b9140104"/>
+                            <PID name="MergeRateLimiter" mc="Class" uid="c8a48e89-ef52-411b-8f6f-a0c8e7b78022"/>
+                          </REFOBJ>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="OwnedAttribute">
+              <OBJECT>
+                <ID name="NO" mc="Attribute" uid="1fa0db42-e725-4270-a58c-70fa8341c5ac"/>
+                <PID name="MergeRateLimiter" mc="Class" uid="c8a48e89-ef52-411b-8f6f-a0c8e7b78022"/>
+                <ATTRIBUTES>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="Value"></ATT>
+                  <ATT name="TargetIsClass">false</ATT>
+                  <ATT name="Changeable">AccesNone</ATT>
+                  <ATT name="IsDerived">false</ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[0]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="Visibility">Public</ATT>
+                  <ATT name="IsClass">true</ATT>
+                  <ATT name="IsAbstract">false</ATT>
+                  <ATT name="Name"><![CDATA[NO]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <REFOBJ>
+                      <ID name="PauseResult" mc="Enumeration" uid="3132439a-69bf-4470-9ce2-c1a3b9140104"/>
+                      <PID name="MergeRateLimiter" mc="Class" uid="c8a48e89-ef52-411b-8f6f-a0c8e7b78022"/>
+                    </REFOBJ>
+                  </LINK>
+                  <COMP relation="Tag">
+                    <OBJECT>
+                      <ID name="" mc="TaggedValue" uid="7965acfb-5a53-413f-bae5-b72d68992cb7"/>
+                      <PID name="MergeRateLimiter" mc="Class" uid="c8a48e89-ef52-411b-8f6f-a0c8e7b78022"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Definition">
+                          <FOREIGNID name="JavaFinal" mc="TagType" uid="003800a8-0000-0161-0000-000000000000"/>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                    <OBJECT>
+                      <ID name="" mc="TaggedValue" uid="43312c03-4a9c-4b25-96be-126f380fb9a5"/>
+                      <PID name="MergeRateLimiter" mc="Class" uid="c8a48e89-ef52-411b-8f6f-a0c8e7b78022"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Definition">
+                          <FOREIGNID name="JavaNoInitValue" mc="TagType" uid="00d007fc-0003-bf52-0000-000000000000"/>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="STOPPED" mc="Attribute" uid="b8a00a82-9228-41a7-a6e4-c9c66c3e89fa"/>
+                <PID name="MergeRateLimiter" mc="Class" uid="c8a48e89-ef52-411b-8f6f-a0c8e7b78022"/>
+                <ATTRIBUTES>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="Value"></ATT>
+                  <ATT name="TargetIsClass">false</ATT>
+                  <ATT name="Changeable">AccesNone</ATT>
+                  <ATT name="IsDerived">false</ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[0]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="Visibility">Public</ATT>
+                  <ATT name="IsClass">true</ATT>
+                  <ATT name="IsAbstract">false</ATT>
+                  <ATT name="Name"><![CDATA[STOPPED]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <REFOBJ>
+                      <ID name="PauseResult" mc="Enumeration" uid="3132439a-69bf-4470-9ce2-c1a3b9140104"/>
+                      <PID name="MergeRateLimiter" mc="Class" uid="c8a48e89-ef52-411b-8f6f-a0c8e7b78022"/>
+                    </REFOBJ>
+                  </LINK>
+                  <COMP relation="Tag">
+                    <OBJECT>
+                      <ID name="" mc="TaggedValue" uid="1faec99e-aca7-4e80-9823-f38e84ed1c34"/>
+                      <PID name="MergeRateLimiter" mc="Class" uid="c8a48e89-ef52-411b-8f6f-a0c8e7b78022"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Definition">
+                          <FOREIGNID name="JavaFinal" mc="TagType" uid="003800a8-0000-0161-0000-000000000000"/>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                    <OBJECT>
+                      <ID name="" mc="TaggedValue" uid="477dbcfa-1022-4822-b11a-e13f49a100e5"/>
+                      <PID name="MergeRateLimiter" mc="Class" uid="c8a48e89-ef52-411b-8f6f-a0c8e7b78022"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Definition">
+                          <FOREIGNID name="JavaNoInitValue" mc="TagType" uid="00d007fc-0003-bf52-0000-000000000000"/>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="PAUSED" mc="Attribute" uid="1e61e894-0e1c-4b45-b493-96d9a590586d"/>
+                <PID name="MergeRateLimiter" mc="Class" uid="c8a48e89-ef52-411b-8f6f-a0c8e7b78022"/>
+                <ATTRIBUTES>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="Value"></ATT>
+                  <ATT name="TargetIsClass">false</ATT>
+                  <ATT name="Changeable">AccesNone</ATT>
+                  <ATT name="IsDerived">false</ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[0]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="Visibility">Public</ATT>
+                  <ATT name="IsClass">true</ATT>
+                  <ATT name="IsAbstract">false</ATT>
+                  <ATT name="Name"><![CDATA[PAUSED]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <REFOBJ>
+                      <ID name="PauseResult" mc="Enumeration" uid="3132439a-69bf-4470-9ce2-c1a3b9140104"/>
+                      <PID name="MergeRateLimiter" mc="Class" uid="c8a48e89-ef52-411b-8f6f-a0c8e7b78022"/>
+                    </REFOBJ>
+                  </LINK>
+                  <COMP relation="Tag">
+                    <OBJECT>
+                      <ID name="" mc="TaggedValue" uid="a15da89e-b7cb-4e7d-aa4a-c1fb497ba8ea"/>
+                      <PID name="MergeRateLimiter" mc="Class" uid="c8a48e89-ef52-411b-8f6f-a0c8e7b78022"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Definition">
+                          <FOREIGNID name="JavaFinal" mc="TagType" uid="003800a8-0000-0161-0000-000000000000"/>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                    <OBJECT>
+                      <ID name="" mc="TaggedValue" uid="977d391f-47cd-4473-b69e-9cdf372e20dc"/>
+                      <PID name="MergeRateLimiter" mc="Class" uid="c8a48e89-ef52-411b-8f6f-a0c8e7b78022"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Definition">
+                          <FOREIGNID name="JavaNoInitValue" mc="TagType" uid="00d007fc-0003-bf52-0000-000000000000"/>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="$VALUES" mc="Attribute" uid="2d5aca29-8c2a-4412-8feb-ab678841afe0"/>
+                <PID name="MergeRateLimiter" mc="Class" uid="c8a48e89-ef52-411b-8f6f-a0c8e7b78022"/>
+                <ATTRIBUTES>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="Value"></ATT>
+                  <ATT name="TargetIsClass">false</ATT>
+                  <ATT name="Changeable">AccesNone</ATT>
+                  <ATT name="IsDerived">false</ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[0]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[*]]></ATT>
+                  <ATT name="Visibility">Private</ATT>
+                  <ATT name="IsClass">true</ATT>
+                  <ATT name="IsAbstract">false</ATT>
+                  <ATT name="Name"><![CDATA[$VALUES]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <REFOBJ>
+                      <ID name="PauseResult" mc="Enumeration" uid="3132439a-69bf-4470-9ce2-c1a3b9140104"/>
+                      <PID name="MergeRateLimiter" mc="Class" uid="c8a48e89-ef52-411b-8f6f-a0c8e7b78022"/>
+                    </REFOBJ>
+                  </LINK>
+                  <COMP relation="Tag">
+                    <OBJECT>
+                      <ID name="" mc="TaggedValue" uid="def77401-da20-45b3-acf9-35c6d89709b1"/>
+                      <PID name="MergeRateLimiter" mc="Class" uid="c8a48e89-ef52-411b-8f6f-a0c8e7b78022"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Definition">
+                          <FOREIGNID name="JavaFinal" mc="TagType" uid="003800a8-0000-0161-0000-000000000000"/>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                    <OBJECT>
+                      <ID name="" mc="TaggedValue" uid="bcdc8185-6820-4244-a078-9785287498c8"/>
+                      <PID name="MergeRateLimiter" mc="Class" uid="c8a48e89-ef52-411b-8f6f-a0c8e7b78022"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Definition">
+                          <FOREIGNID name="JavaNoInitValue" mc="TagType" uid="00d007fc-0003-bf52-0000-000000000000"/>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <LINK relation="Extension">
+              <FOREIGNID name="JavaEnumeration" mc="Stereotype" uid="01ec23a8-0000-0262-0000-000000000000"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+      <LINK relation="Extension">
+        <FOREIGNID name="JavaClass" mc="Stereotype" uid="01ec23a8-0000-0258-0000-000000000000"/>
+      </LINK>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

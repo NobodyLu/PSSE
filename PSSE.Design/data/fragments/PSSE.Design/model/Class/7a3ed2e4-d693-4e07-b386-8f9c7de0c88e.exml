@@ -1,0 +1,1759 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="DateTools" version="3">
+  <DEPS>
+    <ID name="DateTools" mc="Class" uid="7a3ed2e4-d693-4e07-b386-8f9c7de0c88e"/>
+    <EXTID name="ParseException" mc="Class" uid="2cdd3101-cec6-4e85-abf9-046f9a6fe9a5"/>
+    <EXTID name="SimpleDateFormat" mc="Class" uid="d3c13c2b-8088-4e72-91a6-2b3a17e227d0"/>
+    <EXTID name="ThreadLocal" mc="Class" uid="a1865c2b-457b-4532-a71b-d32d652de888"/>
+    <EXTID name="TimeZone" mc="Class" uid="5ce273d5-3d4d-4d4f-a728-9930f9ea660e"/>
+    <FOREIGNID name="JavaClass" mc="Stereotype" uid="01ec23a8-0000-0258-0000-000000000000"/>
+    <FOREIGNID name="JavaEnumeration" mc="Stereotype" uid="01ec23a8-0000-0262-0000-000000000000"/>
+    <FOREIGNID name="JavaFinal" mc="TagType" uid="003800a8-0000-0161-0000-000000000000"/>
+    <FOREIGNID name="JavaFinal" mc="TagType" uid="003800a8-0000-0180-0000-000000000000"/>
+    <FOREIGNID name="JavaNoInitValue" mc="TagType" uid="00d007fc-0003-bf52-0000-000000000000"/>
+    <FOREIGNID name="create" mc="Stereotype" uid="00700680-0000-0204-0000-000000000000"/>
+    <FOREIGNID name="date" mc="DataType" uid="00000004-0000-0014-0000-000000000000"/>
+    <FOREIGNID name="integer" mc="DataType" uid="00000004-0000-0009-0000-000000000000"/>
+    <FOREIGNID name="long" mc="DataType" uid="00000004-0000-0011-0000-000000000000"/>
+    <FOREIGNID name="string" mc="DataType" uid="00000004-0000-000d-0000-000000000000"/>
+    <FOREIGNID name="type" mc="TagType" uid="00000000-0000-3767-0000-000000000000"/>
+  </DEPS>
+  <OBJECT>
+    <ID name="DateTools" mc="Class" uid="7a3ed2e4-d693-4e07-b386-8f9c7de0c88e"/>
+    <PID name="document" mc="Package" uid="aa99e130-df31-4419-bd92-bbd4ea01b22c"/>
+    <ATTRIBUTES>
+      <ATT name="IsActive">false</ATT>
+      <ATT name="IsMain">false</ATT>
+      <ATT name="IsElementary">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[DateTools]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedOperation">
+        <OBJECT>
+          <ID name="DateTools" mc="Operation" uid="39165f00-a801-415b-869e-6928fedf04cb"/>
+          <PID name="DateTools" mc="Class" uid="7a3ed2e4-d693-4e07-b386-8f9c7de0c88e"/>
+          <ATTRIBUTES>
+            <ATT name="Concurrency">false</ATT>
+            <ATT name="Final">false</ATT>
+            <ATT name="Passing">MethodOut</ATT>
+            <ATT name="Visibility">Private</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[DateTools]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Extension">
+              <FOREIGNID name="create" mc="Stereotype" uid="00700680-0000-0204-0000-000000000000"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="round" mc="Operation" uid="6ac7fb82-bc83-458f-aa42-10daafec9f5c"/>
+          <PID name="DateTools" mc="Class" uid="7a3ed2e4-d693-4e07-b386-8f9c7de0c88e"/>
+          <ATTRIBUTES>
+            <ATT name="Concurrency">false</ATT>
+            <ATT name="Final">false</ATT>
+            <ATT name="Passing">MethodOut</ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="IsClass">true</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[round]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="IO">
+              <OBJECT>
+                <ID name="p0" mc="Parameter" uid="d9e8aa3e-bed7-4e2f-9832-34c0656e9889"/>
+                <PID name="DateTools" mc="Class" uid="7a3ed2e4-d693-4e07-b386-8f9c7de0c88e"/>
+                <ATTRIBUTES>
+                  <ATT name="ParameterPassing">In</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="DefaultValue"></ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="IsException">false</ATT>
+                  <ATT name="IsStream">false</ATT>
+                  <ATT name="Effect">ReadEffect</ATT>
+                  <ATT name="Name"><![CDATA[p0]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <FOREIGNID name="long" mc="DataType" uid="00000004-0000-0011-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="p1" mc="Parameter" uid="1cfc0954-354e-464e-91fd-e134875b644b"/>
+                <PID name="DateTools" mc="Class" uid="7a3ed2e4-d693-4e07-b386-8f9c7de0c88e"/>
+                <ATTRIBUTES>
+                  <ATT name="ParameterPassing">In</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="DefaultValue"></ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="IsException">false</ATT>
+                  <ATT name="IsStream">false</ATT>
+                  <ATT name="Effect">ReadEffect</ATT>
+                  <ATT name="Name"><![CDATA[p1]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <REFOBJ>
+                      <ID name="Resolution" mc="Enumeration" uid="22887bba-6c26-47a1-9e3e-b737c0ec23cf"/>
+                      <PID name="DateTools" mc="Class" uid="7a3ed2e4-d693-4e07-b386-8f9c7de0c88e"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="Return">
+              <OBJECT>
+                <ID name="" mc="Parameter" uid="c5aa6767-e544-42af-b48d-b80d8ed5be72"/>
+                <PID name="DateTools" mc="Class" uid="7a3ed2e4-d693-4e07-b386-8f9c7de0c88e"/>
+                <ATTRIBUTES>
+                  <ATT name="ParameterPassing">In</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="DefaultValue"></ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="IsException">false</ATT>
+                  <ATT name="IsStream">false</ATT>
+                  <ATT name="Effect">ReadEffect</ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <FOREIGNID name="long" mc="DataType" uid="00000004-0000-0011-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="round" mc="Operation" uid="b9ee7290-9b1e-435f-8026-a154e166ab6b"/>
+          <PID name="DateTools" mc="Class" uid="7a3ed2e4-d693-4e07-b386-8f9c7de0c88e"/>
+          <ATTRIBUTES>
+            <ATT name="Concurrency">false</ATT>
+            <ATT name="Final">false</ATT>
+            <ATT name="Passing">MethodOut</ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="IsClass">true</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[round]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="IO">
+              <OBJECT>
+                <ID name="p0" mc="Parameter" uid="5f4930b8-1223-4cfa-b988-fd0958a6aceb"/>
+                <PID name="DateTools" mc="Class" uid="7a3ed2e4-d693-4e07-b386-8f9c7de0c88e"/>
+                <ATTRIBUTES>
+                  <ATT name="ParameterPassing">In</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="DefaultValue"></ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="IsException">false</ATT>
+                  <ATT name="IsStream">false</ATT>
+                  <ATT name="Effect">ReadEffect</ATT>
+                  <ATT name="Name"><![CDATA[p0]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <FOREIGNID name="date" mc="DataType" uid="00000004-0000-0014-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="p1" mc="Parameter" uid="c2dcaf02-af49-4d33-b259-e754f464b172"/>
+                <PID name="DateTools" mc="Class" uid="7a3ed2e4-d693-4e07-b386-8f9c7de0c88e"/>
+                <ATTRIBUTES>
+                  <ATT name="ParameterPassing">In</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="DefaultValue"></ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="IsException">false</ATT>
+                  <ATT name="IsStream">false</ATT>
+                  <ATT name="Effect">ReadEffect</ATT>
+                  <ATT name="Name"><![CDATA[p1]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <REFOBJ>
+                      <ID name="Resolution" mc="Enumeration" uid="22887bba-6c26-47a1-9e3e-b737c0ec23cf"/>
+                      <PID name="DateTools" mc="Class" uid="7a3ed2e4-d693-4e07-b386-8f9c7de0c88e"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="Return">
+              <OBJECT>
+                <ID name="" mc="Parameter" uid="5974b6d7-912e-4c1f-9404-2bf4e2ad747f"/>
+                <PID name="DateTools" mc="Class" uid="7a3ed2e4-d693-4e07-b386-8f9c7de0c88e"/>
+                <ATTRIBUTES>
+                  <ATT name="ParameterPassing">In</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="DefaultValue"></ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="IsException">false</ATT>
+                  <ATT name="IsStream">false</ATT>
+                  <ATT name="Effect">ReadEffect</ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <FOREIGNID name="date" mc="DataType" uid="00000004-0000-0014-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="stringToTime" mc="Operation" uid="6e448cdb-1af5-4177-af6e-25bf2501072a"/>
+          <PID name="DateTools" mc="Class" uid="7a3ed2e4-d693-4e07-b386-8f9c7de0c88e"/>
+          <ATTRIBUTES>
+            <ATT name="Concurrency">false</ATT>
+            <ATT name="Final">false</ATT>
+            <ATT name="Passing">MethodOut</ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="IsClass">true</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[stringToTime]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="Thrown">
+              <OBJECT>
+                <ID name="" mc="RaisedException" uid="126c429f-3f09-4d94-88ed-97f135cf6beb"/>
+                <PID name="DateTools" mc="Class" uid="7a3ed2e4-d693-4e07-b386-8f9c7de0c88e"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="ThrownType">
+                    <ID name="ParseException" mc="Class" uid="2cdd3101-cec6-4e85-abf9-046f9a6fe9a5"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="IO">
+              <OBJECT>
+                <ID name="p0" mc="Parameter" uid="5a656b4b-2ff3-40ef-8a08-5a6dde1671bb"/>
+                <PID name="DateTools" mc="Class" uid="7a3ed2e4-d693-4e07-b386-8f9c7de0c88e"/>
+                <ATTRIBUTES>
+                  <ATT name="ParameterPassing">In</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="DefaultValue"></ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="IsException">false</ATT>
+                  <ATT name="IsStream">false</ATT>
+                  <ATT name="Effect">ReadEffect</ATT>
+                  <ATT name="Name"><![CDATA[p0]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <FOREIGNID name="string" mc="DataType" uid="00000004-0000-000d-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="Return">
+              <OBJECT>
+                <ID name="" mc="Parameter" uid="8f6c7003-d6b7-4606-8be5-8b83cf65d37f"/>
+                <PID name="DateTools" mc="Class" uid="7a3ed2e4-d693-4e07-b386-8f9c7de0c88e"/>
+                <ATTRIBUTES>
+                  <ATT name="ParameterPassing">In</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="DefaultValue"></ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="IsException">false</ATT>
+                  <ATT name="IsStream">false</ATT>
+                  <ATT name="Effect">ReadEffect</ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <FOREIGNID name="long" mc="DataType" uid="00000004-0000-0011-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="timeToString" mc="Operation" uid="55656c9e-b49e-4239-8a8a-3ce2b6ca21d5"/>
+          <PID name="DateTools" mc="Class" uid="7a3ed2e4-d693-4e07-b386-8f9c7de0c88e"/>
+          <ATTRIBUTES>
+            <ATT name="Concurrency">false</ATT>
+            <ATT name="Final">false</ATT>
+            <ATT name="Passing">MethodOut</ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="IsClass">true</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[timeToString]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="IO">
+              <OBJECT>
+                <ID name="p0" mc="Parameter" uid="eaf2f687-d09a-447f-8bd7-e88ff22399eb"/>
+                <PID name="DateTools" mc="Class" uid="7a3ed2e4-d693-4e07-b386-8f9c7de0c88e"/>
+                <ATTRIBUTES>
+                  <ATT name="ParameterPassing">In</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="DefaultValue"></ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="IsException">false</ATT>
+                  <ATT name="IsStream">false</ATT>
+                  <ATT name="Effect">ReadEffect</ATT>
+                  <ATT name="Name"><![CDATA[p0]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <FOREIGNID name="long" mc="DataType" uid="00000004-0000-0011-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="p1" mc="Parameter" uid="06ffefd8-1bde-42fb-a76e-54f321d14f4b"/>
+                <PID name="DateTools" mc="Class" uid="7a3ed2e4-d693-4e07-b386-8f9c7de0c88e"/>
+                <ATTRIBUTES>
+                  <ATT name="ParameterPassing">In</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="DefaultValue"></ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="IsException">false</ATT>
+                  <ATT name="IsStream">false</ATT>
+                  <ATT name="Effect">ReadEffect</ATT>
+                  <ATT name="Name"><![CDATA[p1]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <REFOBJ>
+                      <ID name="Resolution" mc="Enumeration" uid="22887bba-6c26-47a1-9e3e-b737c0ec23cf"/>
+                      <PID name="DateTools" mc="Class" uid="7a3ed2e4-d693-4e07-b386-8f9c7de0c88e"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="Return">
+              <OBJECT>
+                <ID name="" mc="Parameter" uid="525a2d65-00a6-4f92-87fe-923d90634e69"/>
+                <PID name="DateTools" mc="Class" uid="7a3ed2e4-d693-4e07-b386-8f9c7de0c88e"/>
+                <ATTRIBUTES>
+                  <ATT name="ParameterPassing">In</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="DefaultValue"></ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="IsException">false</ATT>
+                  <ATT name="IsStream">false</ATT>
+                  <ATT name="Effect">ReadEffect</ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <FOREIGNID name="string" mc="DataType" uid="00000004-0000-000d-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="stringToDate" mc="Operation" uid="956b941a-2095-41a8-92d6-9bd8d7b35418"/>
+          <PID name="DateTools" mc="Class" uid="7a3ed2e4-d693-4e07-b386-8f9c7de0c88e"/>
+          <ATTRIBUTES>
+            <ATT name="Concurrency">false</ATT>
+            <ATT name="Final">false</ATT>
+            <ATT name="Passing">MethodOut</ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="IsClass">true</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[stringToDate]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="Thrown">
+              <OBJECT>
+                <ID name="" mc="RaisedException" uid="3abc3536-5cac-4e4c-9f9b-fecd3848ba53"/>
+                <PID name="DateTools" mc="Class" uid="7a3ed2e4-d693-4e07-b386-8f9c7de0c88e"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="ThrownType">
+                    <ID name="ParseException" mc="Class" uid="2cdd3101-cec6-4e85-abf9-046f9a6fe9a5"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="IO">
+              <OBJECT>
+                <ID name="p0" mc="Parameter" uid="f8dfcffe-e605-4dac-90cc-f570fa70c175"/>
+                <PID name="DateTools" mc="Class" uid="7a3ed2e4-d693-4e07-b386-8f9c7de0c88e"/>
+                <ATTRIBUTES>
+                  <ATT name="ParameterPassing">In</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="DefaultValue"></ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="IsException">false</ATT>
+                  <ATT name="IsStream">false</ATT>
+                  <ATT name="Effect">ReadEffect</ATT>
+                  <ATT name="Name"><![CDATA[p0]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <FOREIGNID name="string" mc="DataType" uid="00000004-0000-000d-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="Return">
+              <OBJECT>
+                <ID name="" mc="Parameter" uid="81a7c010-f13c-4ed3-beb4-ad2a3e3482a3"/>
+                <PID name="DateTools" mc="Class" uid="7a3ed2e4-d693-4e07-b386-8f9c7de0c88e"/>
+                <ATTRIBUTES>
+                  <ATT name="ParameterPassing">In</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="DefaultValue"></ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="IsException">false</ATT>
+                  <ATT name="IsStream">false</ATT>
+                  <ATT name="Effect">ReadEffect</ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <FOREIGNID name="date" mc="DataType" uid="00000004-0000-0014-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="dateToString" mc="Operation" uid="a09645b3-254a-4e63-9fc8-f541d93b0e64"/>
+          <PID name="DateTools" mc="Class" uid="7a3ed2e4-d693-4e07-b386-8f9c7de0c88e"/>
+          <ATTRIBUTES>
+            <ATT name="Concurrency">false</ATT>
+            <ATT name="Final">false</ATT>
+            <ATT name="Passing">MethodOut</ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="IsClass">true</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[dateToString]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="IO">
+              <OBJECT>
+                <ID name="p0" mc="Parameter" uid="84864843-f6a5-43be-879f-50aec1bf811c"/>
+                <PID name="DateTools" mc="Class" uid="7a3ed2e4-d693-4e07-b386-8f9c7de0c88e"/>
+                <ATTRIBUTES>
+                  <ATT name="ParameterPassing">In</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="DefaultValue"></ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="IsException">false</ATT>
+                  <ATT name="IsStream">false</ATT>
+                  <ATT name="Effect">ReadEffect</ATT>
+                  <ATT name="Name"><![CDATA[p0]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <FOREIGNID name="date" mc="DataType" uid="00000004-0000-0014-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="p1" mc="Parameter" uid="ca6d55b8-a9ac-4a29-ba05-217b34fc5363"/>
+                <PID name="DateTools" mc="Class" uid="7a3ed2e4-d693-4e07-b386-8f9c7de0c88e"/>
+                <ATTRIBUTES>
+                  <ATT name="ParameterPassing">In</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="DefaultValue"></ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="IsException">false</ATT>
+                  <ATT name="IsStream">false</ATT>
+                  <ATT name="Effect">ReadEffect</ATT>
+                  <ATT name="Name"><![CDATA[p1]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <REFOBJ>
+                      <ID name="Resolution" mc="Enumeration" uid="22887bba-6c26-47a1-9e3e-b737c0ec23cf"/>
+                      <PID name="DateTools" mc="Class" uid="7a3ed2e4-d693-4e07-b386-8f9c7de0c88e"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="Return">
+              <OBJECT>
+                <ID name="" mc="Parameter" uid="2a53861f-500b-4465-9ba9-f47be50b01d9"/>
+                <PID name="DateTools" mc="Class" uid="7a3ed2e4-d693-4e07-b386-8f9c7de0c88e"/>
+                <ATTRIBUTES>
+                  <ATT name="ParameterPassing">In</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="DefaultValue"></ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="IsException">false</ATT>
+                  <ATT name="IsStream">false</ATT>
+                  <ATT name="Effect">ReadEffect</ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <FOREIGNID name="string" mc="DataType" uid="00000004-0000-000d-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+      <COMP relation="OwnedEnd">
+        <OBJECT>
+          <ID name="GMT" mc="AssociationEnd" uid="7da9d0e4-2ddd-4e96-a6e7-878d43d2097e"/>
+          <PID name="DateTools" mc="Class" uid="7a3ed2e4-d693-4e07-b386-8f9c7de0c88e"/>
+          <ATTRIBUTES>
+            <ATT name="Aggregation">KindIsAssociation</ATT>
+            <ATT name="IsChangeable">true</ATT>
+            <ATT name="Changeable">AccesNone</ATT>
+            <ATT name="IsDerived">false</ATT>
+            <ATT name="IsOrdered">false</ATT>
+            <ATT name="IsUnique">false</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[0]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+            <ATT name="Visibility">VisibilityUndefined</ATT>
+            <ATT name="IsClass">true</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[GMT]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Target">
+              <ID name="TimeZone" mc="Class" uid="5ce273d5-3d4d-4d4f-a728-9930f9ea660e"/>
+            </LINK>
+            <COMP relation="Opposite">
+              <OBJECT>
+                <ID name="" mc="AssociationEnd" uid="89943936-6feb-450f-88a4-8a558d85a4e0"/>
+                <PID name="DateTools" mc="Class" uid="7a3ed2e4-d693-4e07-b386-8f9c7de0c88e"/>
+                <ATTRIBUTES>
+                  <ATT name="Aggregation">KindIsAssociation</ATT>
+                  <ATT name="IsChangeable">true</ATT>
+                  <ATT name="Changeable">ReadWrite</ATT>
+                  <ATT name="IsDerived">false</ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[0]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="Visibility">Public</ATT>
+                  <ATT name="IsClass">false</ATT>
+                  <ATT name="IsAbstract">false</ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="Opposite">
+                    <COMPID name="GMT" mc="AssociationEnd" uid="7da9d0e4-2ddd-4e96-a6e7-878d43d2097e"/>
+                  </COMP>
+                  <COMP relation="Association">
+                    <OBJECT>
+                      <ID name="" mc="Association" uid="54718301-f5a5-41c1-8c4c-991f0971af21"/>
+                      <PID name="DateTools" mc="Class" uid="7a3ed2e4-d693-4e07-b386-8f9c7de0c88e"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES></DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="Association">
+              <COMPID name="" mc="Association" uid="54718301-f5a5-41c1-8c4c-991f0971af21"/>
+            </COMP>
+            <COMP relation="Tag">
+              <OBJECT>
+                <ID name="" mc="TaggedValue" uid="c7f04cc4-0d85-48ee-bac3-95bebd66a00e"/>
+                <PID name="DateTools" mc="Class" uid="7a3ed2e4-d693-4e07-b386-8f9c7de0c88e"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Definition">
+                    <FOREIGNID name="JavaFinal" mc="TagType" uid="003800a8-0000-0180-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="" mc="TaggedValue" uid="e84c3ced-5bf4-4f40-9f3d-0bc8bfbd4b6e"/>
+                <PID name="DateTools" mc="Class" uid="7a3ed2e4-d693-4e07-b386-8f9c7de0c88e"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Definition">
+                    <FOREIGNID name="JavaNoInitValue" mc="TagType" uid="00d007fc-0003-bf52-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="TL_CAL" mc="AssociationEnd" uid="b2ef6365-2405-49e3-a552-756abceebbba"/>
+          <PID name="DateTools" mc="Class" uid="7a3ed2e4-d693-4e07-b386-8f9c7de0c88e"/>
+          <ATTRIBUTES>
+            <ATT name="Aggregation">KindIsAssociation</ATT>
+            <ATT name="IsChangeable">true</ATT>
+            <ATT name="Changeable">AccesNone</ATT>
+            <ATT name="IsDerived">false</ATT>
+            <ATT name="IsOrdered">false</ATT>
+            <ATT name="IsUnique">false</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[0]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+            <ATT name="Visibility">Private</ATT>
+            <ATT name="IsClass">true</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[TL_CAL]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Target">
+              <ID name="ThreadLocal" mc="Class" uid="a1865c2b-457b-4532-a71b-d32d652de888"/>
+            </LINK>
+            <COMP relation="Opposite">
+              <OBJECT>
+                <ID name="" mc="AssociationEnd" uid="aa56e7e4-f1e5-4a76-9145-c88005dc94e6"/>
+                <PID name="DateTools" mc="Class" uid="7a3ed2e4-d693-4e07-b386-8f9c7de0c88e"/>
+                <ATTRIBUTES>
+                  <ATT name="Aggregation">KindIsAssociation</ATT>
+                  <ATT name="IsChangeable">true</ATT>
+                  <ATT name="Changeable">ReadWrite</ATT>
+                  <ATT name="IsDerived">false</ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[0]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="Visibility">Public</ATT>
+                  <ATT name="IsClass">false</ATT>
+                  <ATT name="IsAbstract">false</ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="Opposite">
+                    <COMPID name="TL_CAL" mc="AssociationEnd" uid="b2ef6365-2405-49e3-a552-756abceebbba"/>
+                  </COMP>
+                  <COMP relation="Association">
+                    <OBJECT>
+                      <ID name="" mc="Association" uid="5f206312-cda5-460d-ba6e-7bf088a761f3"/>
+                      <PID name="DateTools" mc="Class" uid="7a3ed2e4-d693-4e07-b386-8f9c7de0c88e"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES></DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="Association">
+              <COMPID name="" mc="Association" uid="5f206312-cda5-460d-ba6e-7bf088a761f3"/>
+            </COMP>
+            <COMP relation="Tag">
+              <OBJECT>
+                <ID name="" mc="TaggedValue" uid="f27b184f-7386-4667-8cdc-bbf2f2c09893"/>
+                <PID name="DateTools" mc="Class" uid="7a3ed2e4-d693-4e07-b386-8f9c7de0c88e"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Definition">
+                    <FOREIGNID name="JavaFinal" mc="TagType" uid="003800a8-0000-0180-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="" mc="TaggedValue" uid="012ea876-8d2a-4555-80b7-653ca7069f55"/>
+                <PID name="DateTools" mc="Class" uid="7a3ed2e4-d693-4e07-b386-8f9c7de0c88e"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Definition">
+                    <FOREIGNID name="JavaNoInitValue" mc="TagType" uid="00d007fc-0003-bf52-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="TL_FORMATS" mc="AssociationEnd" uid="4aa6fb69-cb11-4f39-8ab8-089067c55569"/>
+          <PID name="DateTools" mc="Class" uid="7a3ed2e4-d693-4e07-b386-8f9c7de0c88e"/>
+          <ATTRIBUTES>
+            <ATT name="Aggregation">KindIsAssociation</ATT>
+            <ATT name="IsChangeable">true</ATT>
+            <ATT name="Changeable">AccesNone</ATT>
+            <ATT name="IsDerived">false</ATT>
+            <ATT name="IsOrdered">false</ATT>
+            <ATT name="IsUnique">false</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[0]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+            <ATT name="Visibility">Private</ATT>
+            <ATT name="IsClass">true</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[TL_FORMATS]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Target">
+              <ID name="ThreadLocal" mc="Class" uid="a1865c2b-457b-4532-a71b-d32d652de888"/>
+            </LINK>
+            <COMP relation="Opposite">
+              <OBJECT>
+                <ID name="" mc="AssociationEnd" uid="0c8c02b6-dd0e-4725-8d6a-c5f8b4127550"/>
+                <PID name="DateTools" mc="Class" uid="7a3ed2e4-d693-4e07-b386-8f9c7de0c88e"/>
+                <ATTRIBUTES>
+                  <ATT name="Aggregation">KindIsAssociation</ATT>
+                  <ATT name="IsChangeable">true</ATT>
+                  <ATT name="Changeable">ReadWrite</ATT>
+                  <ATT name="IsDerived">false</ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[0]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="Visibility">Public</ATT>
+                  <ATT name="IsClass">false</ATT>
+                  <ATT name="IsAbstract">false</ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="Opposite">
+                    <COMPID name="TL_FORMATS" mc="AssociationEnd" uid="4aa6fb69-cb11-4f39-8ab8-089067c55569"/>
+                  </COMP>
+                  <COMP relation="Association">
+                    <OBJECT>
+                      <ID name="" mc="Association" uid="b069fe15-5f23-42f7-9219-35af901aae17"/>
+                      <PID name="DateTools" mc="Class" uid="7a3ed2e4-d693-4e07-b386-8f9c7de0c88e"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES></DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="Association">
+              <COMPID name="" mc="Association" uid="b069fe15-5f23-42f7-9219-35af901aae17"/>
+            </COMP>
+            <COMP relation="Tag">
+              <OBJECT>
+                <ID name="" mc="TaggedValue" uid="902d138e-9ec7-4127-8103-b9a8004b7dc8"/>
+                <PID name="DateTools" mc="Class" uid="7a3ed2e4-d693-4e07-b386-8f9c7de0c88e"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Definition">
+                    <FOREIGNID name="JavaFinal" mc="TagType" uid="003800a8-0000-0180-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="" mc="TaggedValue" uid="64b54e22-b90e-4259-8ee5-48d422a45c8c"/>
+                <PID name="DateTools" mc="Class" uid="7a3ed2e4-d693-4e07-b386-8f9c7de0c88e"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Definition">
+                    <FOREIGNID name="JavaNoInitValue" mc="TagType" uid="00d007fc-0003-bf52-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+      <COMP relation="OwnedElement">
+        <OBJECT>
+          <ID name="Resolution" mc="Enumeration" uid="22887bba-6c26-47a1-9e3e-b737c0ec23cf"/>
+          <PID name="DateTools" mc="Class" uid="7a3ed2e4-d693-4e07-b386-8f9c7de0c88e"/>
+          <ATTRIBUTES>
+            <ATT name="IsElementary">true</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="IsLeaf">true</ATT>
+            <ATT name="IsRoot">false</ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="Name"><![CDATA[Resolution]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="OwnedOperation">
+              <OBJECT>
+                <ID name="Resolution" mc="Operation" uid="57da17f9-b014-4cc6-ade5-70f56edec43e"/>
+                <PID name="DateTools" mc="Class" uid="7a3ed2e4-d693-4e07-b386-8f9c7de0c88e"/>
+                <ATTRIBUTES>
+                  <ATT name="Concurrency">false</ATT>
+                  <ATT name="Final">false</ATT>
+                  <ATT name="Passing">MethodOut</ATT>
+                  <ATT name="Visibility">Private</ATT>
+                  <ATT name="IsClass">false</ATT>
+                  <ATT name="IsAbstract">false</ATT>
+                  <ATT name="Name"><![CDATA[Resolution]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="IO">
+                    <OBJECT>
+                      <ID name="p0" mc="Parameter" uid="7bc95646-690c-4442-b0f6-dd627c353503"/>
+                      <PID name="DateTools" mc="Class" uid="7a3ed2e4-d693-4e07-b386-8f9c7de0c88e"/>
+                      <ATTRIBUTES>
+                        <ATT name="ParameterPassing">In</ATT>
+                        <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                        <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                        <ATT name="TypeConstraint"></ATT>
+                        <ATT name="DefaultValue"></ATT>
+                        <ATT name="IsOrdered">false</ATT>
+                        <ATT name="IsUnique">false</ATT>
+                        <ATT name="IsException">false</ATT>
+                        <ATT name="IsStream">false</ATT>
+                        <ATT name="Effect">ReadEffect</ATT>
+                        <ATT name="Name"><![CDATA[p0]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Type">
+                          <FOREIGNID name="string" mc="DataType" uid="00000004-0000-000d-0000-000000000000"/>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                    <OBJECT>
+                      <ID name="p1" mc="Parameter" uid="e694c184-1d1a-4775-b17c-96574401fc49"/>
+                      <PID name="DateTools" mc="Class" uid="7a3ed2e4-d693-4e07-b386-8f9c7de0c88e"/>
+                      <ATTRIBUTES>
+                        <ATT name="ParameterPassing">In</ATT>
+                        <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                        <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                        <ATT name="TypeConstraint"></ATT>
+                        <ATT name="DefaultValue"></ATT>
+                        <ATT name="IsOrdered">false</ATT>
+                        <ATT name="IsUnique">false</ATT>
+                        <ATT name="IsException">false</ATT>
+                        <ATT name="IsStream">false</ATT>
+                        <ATT name="Effect">ReadEffect</ATT>
+                        <ATT name="Name"><![CDATA[p1]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Type">
+                          <FOREIGNID name="integer" mc="DataType" uid="00000004-0000-0009-0000-000000000000"/>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                    <OBJECT>
+                      <ID name="p2" mc="Parameter" uid="fb722149-05dd-4fd3-b1ee-2818391d2a37"/>
+                      <PID name="DateTools" mc="Class" uid="7a3ed2e4-d693-4e07-b386-8f9c7de0c88e"/>
+                      <ATTRIBUTES>
+                        <ATT name="ParameterPassing">In</ATT>
+                        <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                        <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                        <ATT name="TypeConstraint"></ATT>
+                        <ATT name="DefaultValue"></ATT>
+                        <ATT name="IsOrdered">false</ATT>
+                        <ATT name="IsUnique">false</ATT>
+                        <ATT name="IsException">false</ATT>
+                        <ATT name="IsStream">false</ATT>
+                        <ATT name="Effect">ReadEffect</ATT>
+                        <ATT name="Name"><![CDATA[p2]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Type">
+                          <FOREIGNID name="integer" mc="DataType" uid="00000004-0000-0009-0000-000000000000"/>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                  <LINK relation="Extension">
+                    <FOREIGNID name="create" mc="Stereotype" uid="00700680-0000-0204-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="toString" mc="Operation" uid="db8bb594-2a9d-425b-b933-dce261516bc6"/>
+                <PID name="DateTools" mc="Class" uid="7a3ed2e4-d693-4e07-b386-8f9c7de0c88e"/>
+                <ATTRIBUTES>
+                  <ATT name="Concurrency">false</ATT>
+                  <ATT name="Final">false</ATT>
+                  <ATT name="Passing">MethodOut</ATT>
+                  <ATT name="Visibility">Public</ATT>
+                  <ATT name="IsClass">false</ATT>
+                  <ATT name="IsAbstract">false</ATT>
+                  <ATT name="Name"><![CDATA[toString]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="Return">
+                    <OBJECT>
+                      <ID name="" mc="Parameter" uid="e5ef2865-a33a-4474-8e06-6845284499e1"/>
+                      <PID name="DateTools" mc="Class" uid="7a3ed2e4-d693-4e07-b386-8f9c7de0c88e"/>
+                      <ATTRIBUTES>
+                        <ATT name="ParameterPassing">In</ATT>
+                        <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                        <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                        <ATT name="TypeConstraint"></ATT>
+                        <ATT name="DefaultValue"></ATT>
+                        <ATT name="IsOrdered">false</ATT>
+                        <ATT name="IsUnique">false</ATT>
+                        <ATT name="IsException">false</ATT>
+                        <ATT name="IsStream">false</ATT>
+                        <ATT name="Effect">ReadEffect</ATT>
+                        <ATT name="Name"></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Type">
+                          <FOREIGNID name="string" mc="DataType" uid="00000004-0000-000d-0000-000000000000"/>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="values" mc="Operation" uid="889be1e6-59d4-4e9d-b807-d4dd2030b560"/>
+                <PID name="DateTools" mc="Class" uid="7a3ed2e4-d693-4e07-b386-8f9c7de0c88e"/>
+                <ATTRIBUTES>
+                  <ATT name="Concurrency">false</ATT>
+                  <ATT name="Final">false</ATT>
+                  <ATT name="Passing">MethodOut</ATT>
+                  <ATT name="Visibility">Public</ATT>
+                  <ATT name="IsClass">true</ATT>
+                  <ATT name="IsAbstract">false</ATT>
+                  <ATT name="Name"><![CDATA[values]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="Return">
+                    <OBJECT>
+                      <ID name="" mc="Parameter" uid="7eef802f-bb05-4fc7-9111-07beeae0aa18"/>
+                      <PID name="DateTools" mc="Class" uid="7a3ed2e4-d693-4e07-b386-8f9c7de0c88e"/>
+                      <ATTRIBUTES>
+                        <ATT name="ParameterPassing">In</ATT>
+                        <ATT name="MultiplicityMin"><![CDATA[0]]></ATT>
+                        <ATT name="MultiplicityMax"><![CDATA[*]]></ATT>
+                        <ATT name="TypeConstraint"></ATT>
+                        <ATT name="DefaultValue"></ATT>
+                        <ATT name="IsOrdered">false</ATT>
+                        <ATT name="IsUnique">false</ATT>
+                        <ATT name="IsException">false</ATT>
+                        <ATT name="IsStream">false</ATT>
+                        <ATT name="Effect">ReadEffect</ATT>
+                        <ATT name="Name"></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Type">
+                          <REFOBJ>
+                            <ID name="Resolution" mc="Enumeration" uid="22887bba-6c26-47a1-9e3e-b737c0ec23cf"/>
+                            <PID name="DateTools" mc="Class" uid="7a3ed2e4-d693-4e07-b386-8f9c7de0c88e"/>
+                          </REFOBJ>
+                        </LINK>
+                        <COMP relation="Tag">
+                          <OBJECT>
+                            <ID name="" mc="TaggedValue" uid="1fc3f4cf-874b-4c61-b015-24afca74956b"/>
+                            <PID name="DateTools" mc="Class" uid="7a3ed2e4-d693-4e07-b386-8f9c7de0c88e"/>
+                            <ATTRIBUTES>
+                              <ATT name="Name"></ATT>
+                              <ATT name="status">1970354901745664</ATT>
+                            </ATTRIBUTES>
+                            <DEPENDENCIES>
+                              <COMP relation="Actual">
+                                <OBJECT>
+                                  <ID name="" mc="TagParameter" uid="fe9ae90a-792e-42ea-a786-eb9bc6c9d3c9"/>
+                                  <PID name="DateTools" mc="Class" uid="7a3ed2e4-d693-4e07-b386-8f9c7de0c88e"/>
+                                  <ATTRIBUTES>
+                                    <ATT name="Value"><![CDATA[Array]]></ATT>
+                                    <ATT name="status">1970354901745664</ATT>
+                                  </ATTRIBUTES>
+                                  <DEPENDENCIES></DEPENDENCIES>
+                                </OBJECT>
+                              </COMP>
+                              <LINK relation="Definition">
+                                <FOREIGNID name="type" mc="TagType" uid="00000000-0000-3767-0000-000000000000"/>
+                              </LINK>
+                            </DEPENDENCIES>
+                          </OBJECT>
+                        </COMP>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="valueOf" mc="Operation" uid="1021bd46-4c70-46b2-a516-8542827c9705"/>
+                <PID name="DateTools" mc="Class" uid="7a3ed2e4-d693-4e07-b386-8f9c7de0c88e"/>
+                <ATTRIBUTES>
+                  <ATT name="Concurrency">false</ATT>
+                  <ATT name="Final">false</ATT>
+                  <ATT name="Passing">MethodOut</ATT>
+                  <ATT name="Visibility">Public</ATT>
+                  <ATT name="IsClass">true</ATT>
+                  <ATT name="IsAbstract">false</ATT>
+                  <ATT name="Name"><![CDATA[valueOf]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="IO">
+                    <OBJECT>
+                      <ID name="p0" mc="Parameter" uid="468eef38-d4ca-41b8-a670-26c927abbace"/>
+                      <PID name="DateTools" mc="Class" uid="7a3ed2e4-d693-4e07-b386-8f9c7de0c88e"/>
+                      <ATTRIBUTES>
+                        <ATT name="ParameterPassing">In</ATT>
+                        <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                        <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                        <ATT name="TypeConstraint"></ATT>
+                        <ATT name="DefaultValue"></ATT>
+                        <ATT name="IsOrdered">false</ATT>
+                        <ATT name="IsUnique">false</ATT>
+                        <ATT name="IsException">false</ATT>
+                        <ATT name="IsStream">false</ATT>
+                        <ATT name="Effect">ReadEffect</ATT>
+                        <ATT name="Name"><![CDATA[p0]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Type">
+                          <FOREIGNID name="string" mc="DataType" uid="00000004-0000-000d-0000-000000000000"/>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                  <COMP relation="Return">
+                    <OBJECT>
+                      <ID name="" mc="Parameter" uid="2efdb592-9cf6-4ae1-aa32-9fd9c08ba120"/>
+                      <PID name="DateTools" mc="Class" uid="7a3ed2e4-d693-4e07-b386-8f9c7de0c88e"/>
+                      <ATTRIBUTES>
+                        <ATT name="ParameterPassing">In</ATT>
+                        <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                        <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                        <ATT name="TypeConstraint"></ATT>
+                        <ATT name="DefaultValue"></ATT>
+                        <ATT name="IsOrdered">false</ATT>
+                        <ATT name="IsUnique">false</ATT>
+                        <ATT name="IsException">false</ATT>
+                        <ATT name="IsStream">false</ATT>
+                        <ATT name="Effect">ReadEffect</ATT>
+                        <ATT name="Name"></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Type">
+                          <REFOBJ>
+                            <ID name="Resolution" mc="Enumeration" uid="22887bba-6c26-47a1-9e3e-b737c0ec23cf"/>
+                            <PID name="DateTools" mc="Class" uid="7a3ed2e4-d693-4e07-b386-8f9c7de0c88e"/>
+                          </REFOBJ>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="OwnedAttribute">
+              <OBJECT>
+                <ID name="formatLen" mc="Attribute" uid="19122a74-9120-4637-aa30-b716ac0436ed"/>
+                <PID name="DateTools" mc="Class" uid="7a3ed2e4-d693-4e07-b386-8f9c7de0c88e"/>
+                <ATTRIBUTES>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="Value"></ATT>
+                  <ATT name="TargetIsClass">false</ATT>
+                  <ATT name="Changeable">AccesNone</ATT>
+                  <ATT name="IsDerived">false</ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="Visibility">VisibilityUndefined</ATT>
+                  <ATT name="IsClass">false</ATT>
+                  <ATT name="IsAbstract">false</ATT>
+                  <ATT name="Name"><![CDATA[formatLen]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <FOREIGNID name="integer" mc="DataType" uid="00000004-0000-0009-0000-000000000000"/>
+                  </LINK>
+                  <COMP relation="Tag">
+                    <OBJECT>
+                      <ID name="" mc="TaggedValue" uid="fdb70a47-4967-4e49-8cbf-b523026cde9a"/>
+                      <PID name="DateTools" mc="Class" uid="7a3ed2e4-d693-4e07-b386-8f9c7de0c88e"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Definition">
+                          <FOREIGNID name="JavaFinal" mc="TagType" uid="003800a8-0000-0161-0000-000000000000"/>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                    <OBJECT>
+                      <ID name="" mc="TaggedValue" uid="bcfdd949-ab04-455b-b2c6-e45c4b7d0a93"/>
+                      <PID name="DateTools" mc="Class" uid="7a3ed2e4-d693-4e07-b386-8f9c7de0c88e"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Definition">
+                          <FOREIGNID name="JavaNoInitValue" mc="TagType" uid="00d007fc-0003-bf52-0000-000000000000"/>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="YEAR" mc="Attribute" uid="dc1e98fa-86f0-41a7-9b89-eb890e5bfe04"/>
+                <PID name="DateTools" mc="Class" uid="7a3ed2e4-d693-4e07-b386-8f9c7de0c88e"/>
+                <ATTRIBUTES>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="Value"></ATT>
+                  <ATT name="TargetIsClass">false</ATT>
+                  <ATT name="Changeable">AccesNone</ATT>
+                  <ATT name="IsDerived">false</ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[0]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="Visibility">Public</ATT>
+                  <ATT name="IsClass">true</ATT>
+                  <ATT name="IsAbstract">false</ATT>
+                  <ATT name="Name"><![CDATA[YEAR]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <REFOBJ>
+                      <ID name="Resolution" mc="Enumeration" uid="22887bba-6c26-47a1-9e3e-b737c0ec23cf"/>
+                      <PID name="DateTools" mc="Class" uid="7a3ed2e4-d693-4e07-b386-8f9c7de0c88e"/>
+                    </REFOBJ>
+                  </LINK>
+                  <COMP relation="Tag">
+                    <OBJECT>
+                      <ID name="" mc="TaggedValue" uid="821af0bd-517a-4eef-858e-2ecd58f8756d"/>
+                      <PID name="DateTools" mc="Class" uid="7a3ed2e4-d693-4e07-b386-8f9c7de0c88e"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Definition">
+                          <FOREIGNID name="JavaFinal" mc="TagType" uid="003800a8-0000-0161-0000-000000000000"/>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                    <OBJECT>
+                      <ID name="" mc="TaggedValue" uid="22eae7d6-1b57-4bd9-98a2-172b02bb9663"/>
+                      <PID name="DateTools" mc="Class" uid="7a3ed2e4-d693-4e07-b386-8f9c7de0c88e"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Definition">
+                          <FOREIGNID name="JavaNoInitValue" mc="TagType" uid="00d007fc-0003-bf52-0000-000000000000"/>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="MONTH" mc="Attribute" uid="7894f250-c4b6-4858-8d3d-1c9a21173cde"/>
+                <PID name="DateTools" mc="Class" uid="7a3ed2e4-d693-4e07-b386-8f9c7de0c88e"/>
+                <ATTRIBUTES>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="Value"></ATT>
+                  <ATT name="TargetIsClass">false</ATT>
+                  <ATT name="Changeable">AccesNone</ATT>
+                  <ATT name="IsDerived">false</ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[0]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="Visibility">Public</ATT>
+                  <ATT name="IsClass">true</ATT>
+                  <ATT name="IsAbstract">false</ATT>
+                  <ATT name="Name"><![CDATA[MONTH]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <REFOBJ>
+                      <ID name="Resolution" mc="Enumeration" uid="22887bba-6c26-47a1-9e3e-b737c0ec23cf"/>
+                      <PID name="DateTools" mc="Class" uid="7a3ed2e4-d693-4e07-b386-8f9c7de0c88e"/>
+                    </REFOBJ>
+                  </LINK>
+                  <COMP relation="Tag">
+                    <OBJECT>
+                      <ID name="" mc="TaggedValue" uid="0065bd09-e62b-4b8a-beae-ac06b9f62650"/>
+                      <PID name="DateTools" mc="Class" uid="7a3ed2e4-d693-4e07-b386-8f9c7de0c88e"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Definition">
+                          <FOREIGNID name="JavaFinal" mc="TagType" uid="003800a8-0000-0161-0000-000000000000"/>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                    <OBJECT>
+                      <ID name="" mc="TaggedValue" uid="27a8b61e-a260-4545-8973-c7e8fc1b8b76"/>
+                      <PID name="DateTools" mc="Class" uid="7a3ed2e4-d693-4e07-b386-8f9c7de0c88e"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Definition">
+                          <FOREIGNID name="JavaNoInitValue" mc="TagType" uid="00d007fc-0003-bf52-0000-000000000000"/>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="DAY" mc="Attribute" uid="1c4a5855-c9a4-457a-9987-f3635932a0f4"/>
+                <PID name="DateTools" mc="Class" uid="7a3ed2e4-d693-4e07-b386-8f9c7de0c88e"/>
+                <ATTRIBUTES>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="Value"></ATT>
+                  <ATT name="TargetIsClass">false</ATT>
+                  <ATT name="Changeable">AccesNone</ATT>
+                  <ATT name="IsDerived">false</ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[0]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="Visibility">Public</ATT>
+                  <ATT name="IsClass">true</ATT>
+                  <ATT name="IsAbstract">false</ATT>
+                  <ATT name="Name"><![CDATA[DAY]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <REFOBJ>
+                      <ID name="Resolution" mc="Enumeration" uid="22887bba-6c26-47a1-9e3e-b737c0ec23cf"/>
+                      <PID name="DateTools" mc="Class" uid="7a3ed2e4-d693-4e07-b386-8f9c7de0c88e"/>
+                    </REFOBJ>
+                  </LINK>
+                  <COMP relation="Tag">
+                    <OBJECT>
+                      <ID name="" mc="TaggedValue" uid="b04e582b-b5c9-44dc-8228-cbdd857cb61f"/>
+                      <PID name="DateTools" mc="Class" uid="7a3ed2e4-d693-4e07-b386-8f9c7de0c88e"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Definition">
+                          <FOREIGNID name="JavaFinal" mc="TagType" uid="003800a8-0000-0161-0000-000000000000"/>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                    <OBJECT>
+                      <ID name="" mc="TaggedValue" uid="5da03aa6-6eef-4f6a-bfac-b401c0ba2f5d"/>
+                      <PID name="DateTools" mc="Class" uid="7a3ed2e4-d693-4e07-b386-8f9c7de0c88e"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Definition">
+                          <FOREIGNID name="JavaNoInitValue" mc="TagType" uid="00d007fc-0003-bf52-0000-000000000000"/>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="HOUR" mc="Attribute" uid="43243262-064f-4ed1-86a2-ff48d33938ec"/>
+                <PID name="DateTools" mc="Class" uid="7a3ed2e4-d693-4e07-b386-8f9c7de0c88e"/>
+                <ATTRIBUTES>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="Value"></ATT>
+                  <ATT name="TargetIsClass">false</ATT>
+                  <ATT name="Changeable">AccesNone</ATT>
+                  <ATT name="IsDerived">false</ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[0]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="Visibility">Public</ATT>
+                  <ATT name="IsClass">true</ATT>
+                  <ATT name="IsAbstract">false</ATT>
+                  <ATT name="Name"><![CDATA[HOUR]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <REFOBJ>
+                      <ID name="Resolution" mc="Enumeration" uid="22887bba-6c26-47a1-9e3e-b737c0ec23cf"/>
+                      <PID name="DateTools" mc="Class" uid="7a3ed2e4-d693-4e07-b386-8f9c7de0c88e"/>
+                    </REFOBJ>
+                  </LINK>
+                  <COMP relation="Tag">
+                    <OBJECT>
+                      <ID name="" mc="TaggedValue" uid="3809905a-2a2b-4404-ad94-4a2a168b56be"/>
+                      <PID name="DateTools" mc="Class" uid="7a3ed2e4-d693-4e07-b386-8f9c7de0c88e"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Definition">
+                          <FOREIGNID name="JavaFinal" mc="TagType" uid="003800a8-0000-0161-0000-000000000000"/>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                    <OBJECT>
+                      <ID name="" mc="TaggedValue" uid="37cbddf8-2b88-45ec-b0f7-4253803d7ac3"/>
+                      <PID name="DateTools" mc="Class" uid="7a3ed2e4-d693-4e07-b386-8f9c7de0c88e"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Definition">
+                          <FOREIGNID name="JavaNoInitValue" mc="TagType" uid="00d007fc-0003-bf52-0000-000000000000"/>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="MINUTE" mc="Attribute" uid="da6ea4c5-18a8-4bf6-adf9-634d30921530"/>
+                <PID name="DateTools" mc="Class" uid="7a3ed2e4-d693-4e07-b386-8f9c7de0c88e"/>
+                <ATTRIBUTES>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="Value"></ATT>
+                  <ATT name="TargetIsClass">false</ATT>
+                  <ATT name="Changeable">AccesNone</ATT>
+                  <ATT name="IsDerived">false</ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[0]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="Visibility">Public</ATT>
+                  <ATT name="IsClass">true</ATT>
+                  <ATT name="IsAbstract">false</ATT>
+                  <ATT name="Name"><![CDATA[MINUTE]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <REFOBJ>
+                      <ID name="Resolution" mc="Enumeration" uid="22887bba-6c26-47a1-9e3e-b737c0ec23cf"/>
+                      <PID name="DateTools" mc="Class" uid="7a3ed2e4-d693-4e07-b386-8f9c7de0c88e"/>
+                    </REFOBJ>
+                  </LINK>
+                  <COMP relation="Tag">
+                    <OBJECT>
+                      <ID name="" mc="TaggedValue" uid="681c15ed-0811-460b-adea-f8743eca568c"/>
+                      <PID name="DateTools" mc="Class" uid="7a3ed2e4-d693-4e07-b386-8f9c7de0c88e"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Definition">
+                          <FOREIGNID name="JavaFinal" mc="TagType" uid="003800a8-0000-0161-0000-000000000000"/>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                    <OBJECT>
+                      <ID name="" mc="TaggedValue" uid="1ceb2293-2a5e-4f22-8f0f-f7a1563535c5"/>
+                      <PID name="DateTools" mc="Class" uid="7a3ed2e4-d693-4e07-b386-8f9c7de0c88e"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Definition">
+                          <FOREIGNID name="JavaNoInitValue" mc="TagType" uid="00d007fc-0003-bf52-0000-000000000000"/>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="SECOND" mc="Attribute" uid="e697cfc5-7ffb-4065-af4b-d9b92eae9a5b"/>
+                <PID name="DateTools" mc="Class" uid="7a3ed2e4-d693-4e07-b386-8f9c7de0c88e"/>
+                <ATTRIBUTES>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="Value"></ATT>
+                  <ATT name="TargetIsClass">false</ATT>
+                  <ATT name="Changeable">AccesNone</ATT>
+                  <ATT name="IsDerived">false</ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[0]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="Visibility">Public</ATT>
+                  <ATT name="IsClass">true</ATT>
+                  <ATT name="IsAbstract">false</ATT>
+                  <ATT name="Name"><![CDATA[SECOND]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <REFOBJ>
+                      <ID name="Resolution" mc="Enumeration" uid="22887bba-6c26-47a1-9e3e-b737c0ec23cf"/>
+                      <PID name="DateTools" mc="Class" uid="7a3ed2e4-d693-4e07-b386-8f9c7de0c88e"/>
+                    </REFOBJ>
+                  </LINK>
+                  <COMP relation="Tag">
+                    <OBJECT>
+                      <ID name="" mc="TaggedValue" uid="cdddd06a-2d6b-4733-8c0c-d3e6b6685b8c"/>
+                      <PID name="DateTools" mc="Class" uid="7a3ed2e4-d693-4e07-b386-8f9c7de0c88e"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Definition">
+                          <FOREIGNID name="JavaFinal" mc="TagType" uid="003800a8-0000-0161-0000-000000000000"/>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                    <OBJECT>
+                      <ID name="" mc="TaggedValue" uid="8e4394cc-cb1b-48ef-a6fb-96599d3495f9"/>
+                      <PID name="DateTools" mc="Class" uid="7a3ed2e4-d693-4e07-b386-8f9c7de0c88e"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Definition">
+                          <FOREIGNID name="JavaNoInitValue" mc="TagType" uid="00d007fc-0003-bf52-0000-000000000000"/>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="MILLISECOND" mc="Attribute" uid="a8b30ed5-4a04-4cae-b952-ecaadccf1fff"/>
+                <PID name="DateTools" mc="Class" uid="7a3ed2e4-d693-4e07-b386-8f9c7de0c88e"/>
+                <ATTRIBUTES>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="Value"></ATT>
+                  <ATT name="TargetIsClass">false</ATT>
+                  <ATT name="Changeable">AccesNone</ATT>
+                  <ATT name="IsDerived">false</ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[0]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="Visibility">Public</ATT>
+                  <ATT name="IsClass">true</ATT>
+                  <ATT name="IsAbstract">false</ATT>
+                  <ATT name="Name"><![CDATA[MILLISECOND]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <REFOBJ>
+                      <ID name="Resolution" mc="Enumeration" uid="22887bba-6c26-47a1-9e3e-b737c0ec23cf"/>
+                      <PID name="DateTools" mc="Class" uid="7a3ed2e4-d693-4e07-b386-8f9c7de0c88e"/>
+                    </REFOBJ>
+                  </LINK>
+                  <COMP relation="Tag">
+                    <OBJECT>
+                      <ID name="" mc="TaggedValue" uid="b31d2fa5-1e61-4a85-a3af-f0f4112988c3"/>
+                      <PID name="DateTools" mc="Class" uid="7a3ed2e4-d693-4e07-b386-8f9c7de0c88e"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Definition">
+                          <FOREIGNID name="JavaFinal" mc="TagType" uid="003800a8-0000-0161-0000-000000000000"/>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                    <OBJECT>
+                      <ID name="" mc="TaggedValue" uid="b2afc7b0-1a54-4ce0-bdcd-3f05adfccdad"/>
+                      <PID name="DateTools" mc="Class" uid="7a3ed2e4-d693-4e07-b386-8f9c7de0c88e"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Definition">
+                          <FOREIGNID name="JavaNoInitValue" mc="TagType" uid="00d007fc-0003-bf52-0000-000000000000"/>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="$VALUES" mc="Attribute" uid="4678c9c1-d016-4e58-a7e0-c9d14dfd7440"/>
+                <PID name="DateTools" mc="Class" uid="7a3ed2e4-d693-4e07-b386-8f9c7de0c88e"/>
+                <ATTRIBUTES>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="Value"></ATT>
+                  <ATT name="TargetIsClass">false</ATT>
+                  <ATT name="Changeable">AccesNone</ATT>
+                  <ATT name="IsDerived">false</ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[0]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[*]]></ATT>
+                  <ATT name="Visibility">Private</ATT>
+                  <ATT name="IsClass">true</ATT>
+                  <ATT name="IsAbstract">false</ATT>
+                  <ATT name="Name"><![CDATA[$VALUES]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <REFOBJ>
+                      <ID name="Resolution" mc="Enumeration" uid="22887bba-6c26-47a1-9e3e-b737c0ec23cf"/>
+                      <PID name="DateTools" mc="Class" uid="7a3ed2e4-d693-4e07-b386-8f9c7de0c88e"/>
+                    </REFOBJ>
+                  </LINK>
+                  <COMP relation="Tag">
+                    <OBJECT>
+                      <ID name="" mc="TaggedValue" uid="deb80d37-7bf6-486c-aa57-59428a84b042"/>
+                      <PID name="DateTools" mc="Class" uid="7a3ed2e4-d693-4e07-b386-8f9c7de0c88e"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Definition">
+                          <FOREIGNID name="JavaFinal" mc="TagType" uid="003800a8-0000-0161-0000-000000000000"/>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                    <OBJECT>
+                      <ID name="" mc="TaggedValue" uid="8fc45c1c-68f0-480f-acbd-f2fe44c1c4e6"/>
+                      <PID name="DateTools" mc="Class" uid="7a3ed2e4-d693-4e07-b386-8f9c7de0c88e"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Definition">
+                          <FOREIGNID name="JavaNoInitValue" mc="TagType" uid="00d007fc-0003-bf52-0000-000000000000"/>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="OwnedEnd">
+              <OBJECT>
+                <ID name="format" mc="AssociationEnd" uid="e2a728a1-b25c-4880-ab36-1a9f8a07d620"/>
+                <PID name="DateTools" mc="Class" uid="7a3ed2e4-d693-4e07-b386-8f9c7de0c88e"/>
+                <ATTRIBUTES>
+                  <ATT name="Aggregation">KindIsAssociation</ATT>
+                  <ATT name="IsChangeable">true</ATT>
+                  <ATT name="Changeable">AccesNone</ATT>
+                  <ATT name="IsDerived">false</ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[0]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="Visibility">VisibilityUndefined</ATT>
+                  <ATT name="IsClass">false</ATT>
+                  <ATT name="IsAbstract">false</ATT>
+                  <ATT name="Name"><![CDATA[format]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Target">
+                    <ID name="SimpleDateFormat" mc="Class" uid="d3c13c2b-8088-4e72-91a6-2b3a17e227d0"/>
+                  </LINK>
+                  <COMP relation="Opposite">
+                    <OBJECT>
+                      <ID name="" mc="AssociationEnd" uid="362fc0e2-80fb-479c-8682-8496ab78b0fc"/>
+                      <PID name="DateTools" mc="Class" uid="7a3ed2e4-d693-4e07-b386-8f9c7de0c88e"/>
+                      <ATTRIBUTES>
+                        <ATT name="Aggregation">KindIsAssociation</ATT>
+                        <ATT name="IsChangeable">true</ATT>
+                        <ATT name="Changeable">ReadWrite</ATT>
+                        <ATT name="IsDerived">false</ATT>
+                        <ATT name="IsOrdered">false</ATT>
+                        <ATT name="IsUnique">false</ATT>
+                        <ATT name="MultiplicityMin"><![CDATA[0]]></ATT>
+                        <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                        <ATT name="Visibility">Public</ATT>
+                        <ATT name="IsClass">false</ATT>
+                        <ATT name="IsAbstract">false</ATT>
+                        <ATT name="Name"></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <COMP relation="Opposite">
+                          <COMPID name="format" mc="AssociationEnd" uid="e2a728a1-b25c-4880-ab36-1a9f8a07d620"/>
+                        </COMP>
+                        <COMP relation="Association">
+                          <OBJECT>
+                            <ID name="" mc="Association" uid="70f02a70-e698-485c-9417-28197838cb25"/>
+                            <PID name="DateTools" mc="Class" uid="7a3ed2e4-d693-4e07-b386-8f9c7de0c88e"/>
+                            <ATTRIBUTES>
+                              <ATT name="Name"></ATT>
+                              <ATT name="status">1970354901745664</ATT>
+                            </ATTRIBUTES>
+                            <DEPENDENCIES></DEPENDENCIES>
+                          </OBJECT>
+                        </COMP>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                  <COMP relation="Association">
+                    <COMPID name="" mc="Association" uid="70f02a70-e698-485c-9417-28197838cb25"/>
+                  </COMP>
+                  <COMP relation="Tag">
+                    <OBJECT>
+                      <ID name="" mc="TaggedValue" uid="45affe6e-776f-41a6-909a-b2311af0254e"/>
+                      <PID name="DateTools" mc="Class" uid="7a3ed2e4-d693-4e07-b386-8f9c7de0c88e"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Definition">
+                          <FOREIGNID name="JavaFinal" mc="TagType" uid="003800a8-0000-0180-0000-000000000000"/>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                    <OBJECT>
+                      <ID name="" mc="TaggedValue" uid="6d490521-573d-4437-b225-acf88f47fb41"/>
+                      <PID name="DateTools" mc="Class" uid="7a3ed2e4-d693-4e07-b386-8f9c7de0c88e"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Definition">
+                          <FOREIGNID name="JavaNoInitValue" mc="TagType" uid="00d007fc-0003-bf52-0000-000000000000"/>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <LINK relation="Extension">
+              <FOREIGNID name="JavaEnumeration" mc="Stereotype" uid="01ec23a8-0000-0262-0000-000000000000"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+      <LINK relation="Extension">
+        <FOREIGNID name="JavaClass" mc="Stereotype" uid="01ec23a8-0000-0258-0000-000000000000"/>
+      </LINK>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

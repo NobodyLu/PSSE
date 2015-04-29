@@ -1,0 +1,667 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="SortedSetSelector" version="3">
+  <DEPS>
+    <ID name="SortedSetSelector" mc="Class" uid="a9c3c244-ab9c-4af4-9987-f0d6bd9e7d25"/>
+    <COMPID name="MaxValue" mc="Class" uid="a9d7ca37-b74f-4adb-b542-d631916d4258"/>
+    <COMPID name="MiddleMaxValue" mc="Class" uid="2f555dd2-bfec-4fa2-a485-4ecfe4547c40"/>
+    <COMPID name="MiddleMinValue" mc="Class" uid="3979e350-af91-464c-8826-24d4330b4708"/>
+    <COMPID name="MinValue" mc="Class" uid="3b13636e-f8be-42e4-ba06-ebcddb80d4b6"/>
+    <EXTID name="SortedDocValues" mc="Class" uid="4f9f34e8-3f13-4309-9e0c-f6da30b72393"/>
+    <EXTID name="SortedSetDocValues" mc="Class" uid="0d29f662-f134-4d83-b5ab-8a415e28cd5d"/>
+    <FOREIGNID name="JavaClass" mc="Stereotype" uid="01ec23a8-0000-0258-0000-000000000000"/>
+    <FOREIGNID name="JavaEnumeration" mc="Stereotype" uid="01ec23a8-0000-0262-0000-000000000000"/>
+    <FOREIGNID name="JavaFinal" mc="TagType" uid="003800a8-0000-0161-0000-000000000000"/>
+    <FOREIGNID name="JavaNoInitValue" mc="TagType" uid="00d007fc-0003-bf52-0000-000000000000"/>
+    <FOREIGNID name="create" mc="Stereotype" uid="00700680-0000-0204-0000-000000000000"/>
+    <FOREIGNID name="integer" mc="DataType" uid="00000004-0000-0009-0000-000000000000"/>
+    <FOREIGNID name="string" mc="DataType" uid="00000004-0000-000d-0000-000000000000"/>
+    <FOREIGNID name="type" mc="TagType" uid="00000000-0000-3767-0000-000000000000"/>
+  </DEPS>
+  <OBJECT>
+    <ID name="SortedSetSelector" mc="Class" uid="a9c3c244-ab9c-4af4-9987-f0d6bd9e7d25"/>
+    <PID name="search" mc="Package" uid="7c6e5395-15d8-423b-9f5b-c2338b00cd10"/>
+    <ATTRIBUTES>
+      <ATT name="IsActive">false</ATT>
+      <ATT name="IsMain">false</ATT>
+      <ATT name="IsElementary">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[SortedSetSelector]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedOperation">
+        <OBJECT>
+          <ID name="SortedSetSelector" mc="Operation" uid="1ea63afe-ebdc-4d0d-b8f7-0191a160f468"/>
+          <PID name="SortedSetSelector" mc="Class" uid="a9c3c244-ab9c-4af4-9987-f0d6bd9e7d25"/>
+          <ATTRIBUTES>
+            <ATT name="Concurrency">false</ATT>
+            <ATT name="Final">false</ATT>
+            <ATT name="Passing">MethodOut</ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[SortedSetSelector]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Extension">
+              <FOREIGNID name="create" mc="Stereotype" uid="00700680-0000-0204-0000-000000000000"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="wrap" mc="Operation" uid="81f11e8f-3928-45ce-864c-aad44426180d"/>
+          <PID name="SortedSetSelector" mc="Class" uid="a9c3c244-ab9c-4af4-9987-f0d6bd9e7d25"/>
+          <ATTRIBUTES>
+            <ATT name="Concurrency">false</ATT>
+            <ATT name="Final">false</ATT>
+            <ATT name="Passing">MethodOut</ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="IsClass">true</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[wrap]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="IO">
+              <OBJECT>
+                <ID name="p0" mc="Parameter" uid="1955d60e-85c7-4f00-b057-ac2c0ec5b8fb"/>
+                <PID name="SortedSetSelector" mc="Class" uid="a9c3c244-ab9c-4af4-9987-f0d6bd9e7d25"/>
+                <ATTRIBUTES>
+                  <ATT name="ParameterPassing">In</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="DefaultValue"></ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="IsException">false</ATT>
+                  <ATT name="IsStream">false</ATT>
+                  <ATT name="Effect">ReadEffect</ATT>
+                  <ATT name="Name"><![CDATA[p0]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <ID name="SortedSetDocValues" mc="Class" uid="0d29f662-f134-4d83-b5ab-8a415e28cd5d"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="p1" mc="Parameter" uid="3bf31d91-de2a-4ed1-bcf7-c3dfea34af58"/>
+                <PID name="SortedSetSelector" mc="Class" uid="a9c3c244-ab9c-4af4-9987-f0d6bd9e7d25"/>
+                <ATTRIBUTES>
+                  <ATT name="ParameterPassing">In</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="DefaultValue"></ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="IsException">false</ATT>
+                  <ATT name="IsStream">false</ATT>
+                  <ATT name="Effect">ReadEffect</ATT>
+                  <ATT name="Name"><![CDATA[p1]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <REFOBJ>
+                      <ID name="Type" mc="Enumeration" uid="eb0dafb7-2300-4aab-b90e-9274d725586e"/>
+                      <PID name="SortedSetSelector" mc="Class" uid="a9c3c244-ab9c-4af4-9987-f0d6bd9e7d25"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="Return">
+              <OBJECT>
+                <ID name="" mc="Parameter" uid="33aedf33-ea6b-4492-a06c-ef0f14f03bf5"/>
+                <PID name="SortedSetSelector" mc="Class" uid="a9c3c244-ab9c-4af4-9987-f0d6bd9e7d25"/>
+                <ATTRIBUTES>
+                  <ATT name="ParameterPassing">In</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="DefaultValue"></ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="IsException">false</ATT>
+                  <ATT name="IsStream">false</ATT>
+                  <ATT name="Effect">ReadEffect</ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <ID name="SortedDocValues" mc="Class" uid="4f9f34e8-3f13-4309-9e0c-f6da30b72393"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+      <COMP relation="OwnedElement">
+        <COMPID name="MiddleMaxValue" mc="Class" uid="2f555dd2-bfec-4fa2-a485-4ecfe4547c40"/>
+        <COMPID name="MiddleMinValue" mc="Class" uid="3979e350-af91-464c-8826-24d4330b4708"/>
+        <COMPID name="MaxValue" mc="Class" uid="a9d7ca37-b74f-4adb-b542-d631916d4258"/>
+        <COMPID name="MinValue" mc="Class" uid="3b13636e-f8be-42e4-ba06-ebcddb80d4b6"/>
+        <OBJECT>
+          <ID name="Type" mc="Enumeration" uid="eb0dafb7-2300-4aab-b90e-9274d725586e"/>
+          <PID name="SortedSetSelector" mc="Class" uid="a9c3c244-ab9c-4af4-9987-f0d6bd9e7d25"/>
+          <ATTRIBUTES>
+            <ATT name="IsElementary">true</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="IsLeaf">true</ATT>
+            <ATT name="IsRoot">false</ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="Name"><![CDATA[Type]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="OwnedOperation">
+              <OBJECT>
+                <ID name="Type" mc="Operation" uid="fced6cb1-a34f-4c78-a765-8ec28988c9b4"/>
+                <PID name="SortedSetSelector" mc="Class" uid="a9c3c244-ab9c-4af4-9987-f0d6bd9e7d25"/>
+                <ATTRIBUTES>
+                  <ATT name="Concurrency">false</ATT>
+                  <ATT name="Final">false</ATT>
+                  <ATT name="Passing">MethodOut</ATT>
+                  <ATT name="Visibility">Private</ATT>
+                  <ATT name="IsClass">false</ATT>
+                  <ATT name="IsAbstract">false</ATT>
+                  <ATT name="Name"><![CDATA[Type]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="IO">
+                    <OBJECT>
+                      <ID name="p0" mc="Parameter" uid="a84e6614-30c8-433a-85a2-082da78411ca"/>
+                      <PID name="SortedSetSelector" mc="Class" uid="a9c3c244-ab9c-4af4-9987-f0d6bd9e7d25"/>
+                      <ATTRIBUTES>
+                        <ATT name="ParameterPassing">In</ATT>
+                        <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                        <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                        <ATT name="TypeConstraint"></ATT>
+                        <ATT name="DefaultValue"></ATT>
+                        <ATT name="IsOrdered">false</ATT>
+                        <ATT name="IsUnique">false</ATT>
+                        <ATT name="IsException">false</ATT>
+                        <ATT name="IsStream">false</ATT>
+                        <ATT name="Effect">ReadEffect</ATT>
+                        <ATT name="Name"><![CDATA[p0]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Type">
+                          <FOREIGNID name="string" mc="DataType" uid="00000004-0000-000d-0000-000000000000"/>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                    <OBJECT>
+                      <ID name="p1" mc="Parameter" uid="889b217a-f1fe-4d0e-b4eb-3577e724c454"/>
+                      <PID name="SortedSetSelector" mc="Class" uid="a9c3c244-ab9c-4af4-9987-f0d6bd9e7d25"/>
+                      <ATTRIBUTES>
+                        <ATT name="ParameterPassing">In</ATT>
+                        <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                        <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                        <ATT name="TypeConstraint"></ATT>
+                        <ATT name="DefaultValue"></ATT>
+                        <ATT name="IsOrdered">false</ATT>
+                        <ATT name="IsUnique">false</ATT>
+                        <ATT name="IsException">false</ATT>
+                        <ATT name="IsStream">false</ATT>
+                        <ATT name="Effect">ReadEffect</ATT>
+                        <ATT name="Name"><![CDATA[p1]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Type">
+                          <FOREIGNID name="integer" mc="DataType" uid="00000004-0000-0009-0000-000000000000"/>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                  <LINK relation="Extension">
+                    <FOREIGNID name="create" mc="Stereotype" uid="00700680-0000-0204-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="values" mc="Operation" uid="2074b8c2-8a01-4933-bdd1-0fdd97b639e1"/>
+                <PID name="SortedSetSelector" mc="Class" uid="a9c3c244-ab9c-4af4-9987-f0d6bd9e7d25"/>
+                <ATTRIBUTES>
+                  <ATT name="Concurrency">false</ATT>
+                  <ATT name="Final">false</ATT>
+                  <ATT name="Passing">MethodOut</ATT>
+                  <ATT name="Visibility">Public</ATT>
+                  <ATT name="IsClass">true</ATT>
+                  <ATT name="IsAbstract">false</ATT>
+                  <ATT name="Name"><![CDATA[values]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="Return">
+                    <OBJECT>
+                      <ID name="" mc="Parameter" uid="2f38e496-8d6e-4b7e-b767-811fb153a392"/>
+                      <PID name="SortedSetSelector" mc="Class" uid="a9c3c244-ab9c-4af4-9987-f0d6bd9e7d25"/>
+                      <ATTRIBUTES>
+                        <ATT name="ParameterPassing">In</ATT>
+                        <ATT name="MultiplicityMin"><![CDATA[0]]></ATT>
+                        <ATT name="MultiplicityMax"><![CDATA[*]]></ATT>
+                        <ATT name="TypeConstraint"></ATT>
+                        <ATT name="DefaultValue"></ATT>
+                        <ATT name="IsOrdered">false</ATT>
+                        <ATT name="IsUnique">false</ATT>
+                        <ATT name="IsException">false</ATT>
+                        <ATT name="IsStream">false</ATT>
+                        <ATT name="Effect">ReadEffect</ATT>
+                        <ATT name="Name"></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Type">
+                          <REFOBJ>
+                            <ID name="Type" mc="Enumeration" uid="eb0dafb7-2300-4aab-b90e-9274d725586e"/>
+                            <PID name="SortedSetSelector" mc="Class" uid="a9c3c244-ab9c-4af4-9987-f0d6bd9e7d25"/>
+                          </REFOBJ>
+                        </LINK>
+                        <COMP relation="Tag">
+                          <OBJECT>
+                            <ID name="" mc="TaggedValue" uid="7c2d837e-b087-4518-ad86-f46d95d0f969"/>
+                            <PID name="SortedSetSelector" mc="Class" uid="a9c3c244-ab9c-4af4-9987-f0d6bd9e7d25"/>
+                            <ATTRIBUTES>
+                              <ATT name="Name"></ATT>
+                              <ATT name="status">1970354901745664</ATT>
+                            </ATTRIBUTES>
+                            <DEPENDENCIES>
+                              <COMP relation="Actual">
+                                <OBJECT>
+                                  <ID name="" mc="TagParameter" uid="9f655cb6-a390-48c2-8a26-7dd984d7549f"/>
+                                  <PID name="SortedSetSelector" mc="Class" uid="a9c3c244-ab9c-4af4-9987-f0d6bd9e7d25"/>
+                                  <ATTRIBUTES>
+                                    <ATT name="Value"><![CDATA[Array]]></ATT>
+                                    <ATT name="status">1970354901745664</ATT>
+                                  </ATTRIBUTES>
+                                  <DEPENDENCIES></DEPENDENCIES>
+                                </OBJECT>
+                              </COMP>
+                              <LINK relation="Definition">
+                                <FOREIGNID name="type" mc="TagType" uid="00000000-0000-3767-0000-000000000000"/>
+                              </LINK>
+                            </DEPENDENCIES>
+                          </OBJECT>
+                        </COMP>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="valueOf" mc="Operation" uid="238facbd-f81c-4fce-8aec-be4ed1e7788c"/>
+                <PID name="SortedSetSelector" mc="Class" uid="a9c3c244-ab9c-4af4-9987-f0d6bd9e7d25"/>
+                <ATTRIBUTES>
+                  <ATT name="Concurrency">false</ATT>
+                  <ATT name="Final">false</ATT>
+                  <ATT name="Passing">MethodOut</ATT>
+                  <ATT name="Visibility">Public</ATT>
+                  <ATT name="IsClass">true</ATT>
+                  <ATT name="IsAbstract">false</ATT>
+                  <ATT name="Name"><![CDATA[valueOf]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="IO">
+                    <OBJECT>
+                      <ID name="p0" mc="Parameter" uid="54cb3838-c0c0-44b2-a928-3c2f0c860ea0"/>
+                      <PID name="SortedSetSelector" mc="Class" uid="a9c3c244-ab9c-4af4-9987-f0d6bd9e7d25"/>
+                      <ATTRIBUTES>
+                        <ATT name="ParameterPassing">In</ATT>
+                        <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                        <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                        <ATT name="TypeConstraint"></ATT>
+                        <ATT name="DefaultValue"></ATT>
+                        <ATT name="IsOrdered">false</ATT>
+                        <ATT name="IsUnique">false</ATT>
+                        <ATT name="IsException">false</ATT>
+                        <ATT name="IsStream">false</ATT>
+                        <ATT name="Effect">ReadEffect</ATT>
+                        <ATT name="Name"><![CDATA[p0]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Type">
+                          <FOREIGNID name="string" mc="DataType" uid="00000004-0000-000d-0000-000000000000"/>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                  <COMP relation="Return">
+                    <OBJECT>
+                      <ID name="" mc="Parameter" uid="6ccd4028-3afe-46fd-bf81-1a8f5ac85d81"/>
+                      <PID name="SortedSetSelector" mc="Class" uid="a9c3c244-ab9c-4af4-9987-f0d6bd9e7d25"/>
+                      <ATTRIBUTES>
+                        <ATT name="ParameterPassing">In</ATT>
+                        <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                        <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                        <ATT name="TypeConstraint"></ATT>
+                        <ATT name="DefaultValue"></ATT>
+                        <ATT name="IsOrdered">false</ATT>
+                        <ATT name="IsUnique">false</ATT>
+                        <ATT name="IsException">false</ATT>
+                        <ATT name="IsStream">false</ATT>
+                        <ATT name="Effect">ReadEffect</ATT>
+                        <ATT name="Name"></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Type">
+                          <REFOBJ>
+                            <ID name="Type" mc="Enumeration" uid="eb0dafb7-2300-4aab-b90e-9274d725586e"/>
+                            <PID name="SortedSetSelector" mc="Class" uid="a9c3c244-ab9c-4af4-9987-f0d6bd9e7d25"/>
+                          </REFOBJ>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="OwnedAttribute">
+              <OBJECT>
+                <ID name="MIN" mc="Attribute" uid="31633880-7db1-4d3e-9872-1a475db990a8"/>
+                <PID name="SortedSetSelector" mc="Class" uid="a9c3c244-ab9c-4af4-9987-f0d6bd9e7d25"/>
+                <ATTRIBUTES>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="Value"></ATT>
+                  <ATT name="TargetIsClass">false</ATT>
+                  <ATT name="Changeable">AccesNone</ATT>
+                  <ATT name="IsDerived">false</ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[0]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="Visibility">Public</ATT>
+                  <ATT name="IsClass">true</ATT>
+                  <ATT name="IsAbstract">false</ATT>
+                  <ATT name="Name"><![CDATA[MIN]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <REFOBJ>
+                      <ID name="Type" mc="Enumeration" uid="eb0dafb7-2300-4aab-b90e-9274d725586e"/>
+                      <PID name="SortedSetSelector" mc="Class" uid="a9c3c244-ab9c-4af4-9987-f0d6bd9e7d25"/>
+                    </REFOBJ>
+                  </LINK>
+                  <COMP relation="Tag">
+                    <OBJECT>
+                      <ID name="" mc="TaggedValue" uid="9977406a-b5ba-45de-8fa8-dd256e58199c"/>
+                      <PID name="SortedSetSelector" mc="Class" uid="a9c3c244-ab9c-4af4-9987-f0d6bd9e7d25"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Definition">
+                          <FOREIGNID name="JavaFinal" mc="TagType" uid="003800a8-0000-0161-0000-000000000000"/>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                    <OBJECT>
+                      <ID name="" mc="TaggedValue" uid="4a7974f2-8bb1-4353-b507-9ea25d51cc0f"/>
+                      <PID name="SortedSetSelector" mc="Class" uid="a9c3c244-ab9c-4af4-9987-f0d6bd9e7d25"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Definition">
+                          <FOREIGNID name="JavaNoInitValue" mc="TagType" uid="00d007fc-0003-bf52-0000-000000000000"/>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="MAX" mc="Attribute" uid="4e05db1e-082d-4b76-8a45-9a00410f8373"/>
+                <PID name="SortedSetSelector" mc="Class" uid="a9c3c244-ab9c-4af4-9987-f0d6bd9e7d25"/>
+                <ATTRIBUTES>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="Value"></ATT>
+                  <ATT name="TargetIsClass">false</ATT>
+                  <ATT name="Changeable">AccesNone</ATT>
+                  <ATT name="IsDerived">false</ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[0]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="Visibility">Public</ATT>
+                  <ATT name="IsClass">true</ATT>
+                  <ATT name="IsAbstract">false</ATT>
+                  <ATT name="Name"><![CDATA[MAX]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <REFOBJ>
+                      <ID name="Type" mc="Enumeration" uid="eb0dafb7-2300-4aab-b90e-9274d725586e"/>
+                      <PID name="SortedSetSelector" mc="Class" uid="a9c3c244-ab9c-4af4-9987-f0d6bd9e7d25"/>
+                    </REFOBJ>
+                  </LINK>
+                  <COMP relation="Tag">
+                    <OBJECT>
+                      <ID name="" mc="TaggedValue" uid="5b8ee153-625d-4bf4-8d27-4da6ed7f2a75"/>
+                      <PID name="SortedSetSelector" mc="Class" uid="a9c3c244-ab9c-4af4-9987-f0d6bd9e7d25"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Definition">
+                          <FOREIGNID name="JavaFinal" mc="TagType" uid="003800a8-0000-0161-0000-000000000000"/>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                    <OBJECT>
+                      <ID name="" mc="TaggedValue" uid="e2865616-0503-4a27-b4e0-d22f576d3199"/>
+                      <PID name="SortedSetSelector" mc="Class" uid="a9c3c244-ab9c-4af4-9987-f0d6bd9e7d25"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Definition">
+                          <FOREIGNID name="JavaNoInitValue" mc="TagType" uid="00d007fc-0003-bf52-0000-000000000000"/>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="MIDDLE_MIN" mc="Attribute" uid="15b9ae6d-ad02-427a-b3a7-d8ca08a923a8"/>
+                <PID name="SortedSetSelector" mc="Class" uid="a9c3c244-ab9c-4af4-9987-f0d6bd9e7d25"/>
+                <ATTRIBUTES>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="Value"></ATT>
+                  <ATT name="TargetIsClass">false</ATT>
+                  <ATT name="Changeable">AccesNone</ATT>
+                  <ATT name="IsDerived">false</ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[0]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="Visibility">Public</ATT>
+                  <ATT name="IsClass">true</ATT>
+                  <ATT name="IsAbstract">false</ATT>
+                  <ATT name="Name"><![CDATA[MIDDLE_MIN]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <REFOBJ>
+                      <ID name="Type" mc="Enumeration" uid="eb0dafb7-2300-4aab-b90e-9274d725586e"/>
+                      <PID name="SortedSetSelector" mc="Class" uid="a9c3c244-ab9c-4af4-9987-f0d6bd9e7d25"/>
+                    </REFOBJ>
+                  </LINK>
+                  <COMP relation="Tag">
+                    <OBJECT>
+                      <ID name="" mc="TaggedValue" uid="f5c3ebf7-eb2f-4bfb-b1c3-9463136c4988"/>
+                      <PID name="SortedSetSelector" mc="Class" uid="a9c3c244-ab9c-4af4-9987-f0d6bd9e7d25"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Definition">
+                          <FOREIGNID name="JavaFinal" mc="TagType" uid="003800a8-0000-0161-0000-000000000000"/>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                    <OBJECT>
+                      <ID name="" mc="TaggedValue" uid="5857962e-1a45-4edb-a9ac-59bca9086204"/>
+                      <PID name="SortedSetSelector" mc="Class" uid="a9c3c244-ab9c-4af4-9987-f0d6bd9e7d25"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Definition">
+                          <FOREIGNID name="JavaNoInitValue" mc="TagType" uid="00d007fc-0003-bf52-0000-000000000000"/>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="MIDDLE_MAX" mc="Attribute" uid="57db361b-96f5-498e-8a73-98a1bf2a5b07"/>
+                <PID name="SortedSetSelector" mc="Class" uid="a9c3c244-ab9c-4af4-9987-f0d6bd9e7d25"/>
+                <ATTRIBUTES>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="Value"></ATT>
+                  <ATT name="TargetIsClass">false</ATT>
+                  <ATT name="Changeable">AccesNone</ATT>
+                  <ATT name="IsDerived">false</ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[0]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="Visibility">Public</ATT>
+                  <ATT name="IsClass">true</ATT>
+                  <ATT name="IsAbstract">false</ATT>
+                  <ATT name="Name"><![CDATA[MIDDLE_MAX]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <REFOBJ>
+                      <ID name="Type" mc="Enumeration" uid="eb0dafb7-2300-4aab-b90e-9274d725586e"/>
+                      <PID name="SortedSetSelector" mc="Class" uid="a9c3c244-ab9c-4af4-9987-f0d6bd9e7d25"/>
+                    </REFOBJ>
+                  </LINK>
+                  <COMP relation="Tag">
+                    <OBJECT>
+                      <ID name="" mc="TaggedValue" uid="6dc9d4af-121a-4986-a19a-c5f354b11a01"/>
+                      <PID name="SortedSetSelector" mc="Class" uid="a9c3c244-ab9c-4af4-9987-f0d6bd9e7d25"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Definition">
+                          <FOREIGNID name="JavaFinal" mc="TagType" uid="003800a8-0000-0161-0000-000000000000"/>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                    <OBJECT>
+                      <ID name="" mc="TaggedValue" uid="c15ff774-f328-4a57-bd40-09ec901bf0f2"/>
+                      <PID name="SortedSetSelector" mc="Class" uid="a9c3c244-ab9c-4af4-9987-f0d6bd9e7d25"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Definition">
+                          <FOREIGNID name="JavaNoInitValue" mc="TagType" uid="00d007fc-0003-bf52-0000-000000000000"/>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="$VALUES" mc="Attribute" uid="93bd01fa-42e0-4c98-add0-8ab9c0fb699a"/>
+                <PID name="SortedSetSelector" mc="Class" uid="a9c3c244-ab9c-4af4-9987-f0d6bd9e7d25"/>
+                <ATTRIBUTES>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="Value"></ATT>
+                  <ATT name="TargetIsClass">false</ATT>
+                  <ATT name="Changeable">AccesNone</ATT>
+                  <ATT name="IsDerived">false</ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[0]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[*]]></ATT>
+                  <ATT name="Visibility">Private</ATT>
+                  <ATT name="IsClass">true</ATT>
+                  <ATT name="IsAbstract">false</ATT>
+                  <ATT name="Name"><![CDATA[$VALUES]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <REFOBJ>
+                      <ID name="Type" mc="Enumeration" uid="eb0dafb7-2300-4aab-b90e-9274d725586e"/>
+                      <PID name="SortedSetSelector" mc="Class" uid="a9c3c244-ab9c-4af4-9987-f0d6bd9e7d25"/>
+                    </REFOBJ>
+                  </LINK>
+                  <COMP relation="Tag">
+                    <OBJECT>
+                      <ID name="" mc="TaggedValue" uid="a1a69551-9444-4e4f-b010-9160da146332"/>
+                      <PID name="SortedSetSelector" mc="Class" uid="a9c3c244-ab9c-4af4-9987-f0d6bd9e7d25"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Definition">
+                          <FOREIGNID name="JavaFinal" mc="TagType" uid="003800a8-0000-0161-0000-000000000000"/>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                    <OBJECT>
+                      <ID name="" mc="TaggedValue" uid="5683a32f-95e6-4c33-bdfb-6826e23ceea1"/>
+                      <PID name="SortedSetSelector" mc="Class" uid="a9c3c244-ab9c-4af4-9987-f0d6bd9e7d25"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Definition">
+                          <FOREIGNID name="JavaNoInitValue" mc="TagType" uid="00d007fc-0003-bf52-0000-000000000000"/>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <LINK relation="Extension">
+              <FOREIGNID name="JavaEnumeration" mc="Stereotype" uid="01ec23a8-0000-0262-0000-000000000000"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+      <LINK relation="Extension">
+        <FOREIGNID name="JavaClass" mc="Stereotype" uid="01ec23a8-0000-0258-0000-000000000000"/>
+      </LINK>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

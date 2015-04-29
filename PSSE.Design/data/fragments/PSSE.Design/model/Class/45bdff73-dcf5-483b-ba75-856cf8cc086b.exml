@@ -1,0 +1,221 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="TwoPhaseCommitTool" version="3">
+  <DEPS>
+    <ID name="TwoPhaseCommitTool" mc="Class" uid="45bdff73-dcf5-483b-ba75-856cf8cc086b"/>
+    <COMPID name="CommitFailException" mc="Class" uid="81f15203-0f6a-46a9-99d8-f26c9b126794"/>
+    <COMPID name="PrepareCommitFailException" mc="Class" uid="cbb20b34-15ee-4aae-a7e7-be535f45210c"/>
+    <EXTID name="CommitFailException" mc="Class" uid="81f15203-0f6a-46a9-99d8-f26c9b126794"/>
+    <EXTID name="PrepareCommitFailException" mc="Class" uid="cbb20b34-15ee-4aae-a7e7-be535f45210c"/>
+    <EXTID name="TwoPhaseCommit" mc="Interface" uid="3ee14c74-ee44-4c9e-9e3c-a0134b64ff68"/>
+    <FOREIGNID name="JavaClass" mc="Stereotype" uid="01ec23a8-0000-0258-0000-000000000000"/>
+    <FOREIGNID name="create" mc="Stereotype" uid="00700680-0000-0204-0000-000000000000"/>
+    <FOREIGNID name="type" mc="TagType" uid="00000000-0000-3767-0000-000000000000"/>
+  </DEPS>
+  <OBJECT>
+    <ID name="TwoPhaseCommitTool" mc="Class" uid="45bdff73-dcf5-483b-ba75-856cf8cc086b"/>
+    <PID name="index" mc="Package" uid="7e818d5b-060b-4645-bc8d-6ccb62ca18dc"/>
+    <ATTRIBUTES>
+      <ATT name="IsActive">false</ATT>
+      <ATT name="IsMain">false</ATT>
+      <ATT name="IsElementary">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">true</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[TwoPhaseCommitTool]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedOperation">
+        <OBJECT>
+          <ID name="TwoPhaseCommitTool" mc="Operation" uid="e8c3c757-3838-472c-98f6-4da1f7dc2b76"/>
+          <PID name="TwoPhaseCommitTool" mc="Class" uid="45bdff73-dcf5-483b-ba75-856cf8cc086b"/>
+          <ATTRIBUTES>
+            <ATT name="Concurrency">false</ATT>
+            <ATT name="Final">false</ATT>
+            <ATT name="Passing">MethodOut</ATT>
+            <ATT name="Visibility">Private</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[TwoPhaseCommitTool]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Extension">
+              <FOREIGNID name="create" mc="Stereotype" uid="00700680-0000-0204-0000-000000000000"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="execute" mc="Operation" uid="9cecc4e4-416c-44f5-b8ac-6f0005803912"/>
+          <PID name="TwoPhaseCommitTool" mc="Class" uid="45bdff73-dcf5-483b-ba75-856cf8cc086b"/>
+          <ATTRIBUTES>
+            <ATT name="Concurrency">false</ATT>
+            <ATT name="Final">false</ATT>
+            <ATT name="Passing">MethodOut</ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="IsClass">true</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[execute]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="Thrown">
+              <OBJECT>
+                <ID name="" mc="RaisedException" uid="895c3721-c45a-4fc2-b8df-d5dc44d7707f"/>
+                <PID name="TwoPhaseCommitTool" mc="Class" uid="45bdff73-dcf5-483b-ba75-856cf8cc086b"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="ThrownType">
+                    <ID name="PrepareCommitFailException" mc="Class" uid="cbb20b34-15ee-4aae-a7e7-be535f45210c"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="" mc="RaisedException" uid="9df57bf4-0039-4dd6-8b03-e6d696ab1f4c"/>
+                <PID name="TwoPhaseCommitTool" mc="Class" uid="45bdff73-dcf5-483b-ba75-856cf8cc086b"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="ThrownType">
+                    <ID name="CommitFailException" mc="Class" uid="81f15203-0f6a-46a9-99d8-f26c9b126794"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="IO">
+              <OBJECT>
+                <ID name="p0" mc="Parameter" uid="794f4dde-d8fc-4db9-98cc-9d6573ecadb3"/>
+                <PID name="TwoPhaseCommitTool" mc="Class" uid="45bdff73-dcf5-483b-ba75-856cf8cc086b"/>
+                <ATTRIBUTES>
+                  <ATT name="ParameterPassing">In</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[0]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[*]]></ATT>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="DefaultValue"></ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="IsException">false</ATT>
+                  <ATT name="IsStream">false</ATT>
+                  <ATT name="Effect">ReadEffect</ATT>
+                  <ATT name="Name"><![CDATA[p0]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <ID name="TwoPhaseCommit" mc="Interface" uid="3ee14c74-ee44-4c9e-9e3c-a0134b64ff68"/>
+                  </LINK>
+                  <COMP relation="Tag">
+                    <OBJECT>
+                      <ID name="" mc="TaggedValue" uid="d3950e2d-b0bf-4d25-aa86-81c9d7f4c197"/>
+                      <PID name="TwoPhaseCommitTool" mc="Class" uid="45bdff73-dcf5-483b-ba75-856cf8cc086b"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <COMP relation="Actual">
+                          <OBJECT>
+                            <ID name="" mc="TagParameter" uid="11351956-33b5-4eb0-8d1e-f3a3679211e0"/>
+                            <PID name="TwoPhaseCommitTool" mc="Class" uid="45bdff73-dcf5-483b-ba75-856cf8cc086b"/>
+                            <ATTRIBUTES>
+                              <ATT name="Value"><![CDATA[Array]]></ATT>
+                              <ATT name="status">1970354901745664</ATT>
+                            </ATTRIBUTES>
+                            <DEPENDENCIES></DEPENDENCIES>
+                          </OBJECT>
+                        </COMP>
+                        <LINK relation="Definition">
+                          <FOREIGNID name="type" mc="TagType" uid="00000000-0000-3767-0000-000000000000"/>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="rollback" mc="Operation" uid="b96f4cee-a126-4ec9-839a-b3534725bf24"/>
+          <PID name="TwoPhaseCommitTool" mc="Class" uid="45bdff73-dcf5-483b-ba75-856cf8cc086b"/>
+          <ATTRIBUTES>
+            <ATT name="Concurrency">false</ATT>
+            <ATT name="Final">false</ATT>
+            <ATT name="Passing">MethodOut</ATT>
+            <ATT name="Visibility">Private</ATT>
+            <ATT name="IsClass">true</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[rollback]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="IO">
+              <OBJECT>
+                <ID name="p0" mc="Parameter" uid="63fba7f8-ffe5-4e7e-afb8-fcc837e5a15b"/>
+                <PID name="TwoPhaseCommitTool" mc="Class" uid="45bdff73-dcf5-483b-ba75-856cf8cc086b"/>
+                <ATTRIBUTES>
+                  <ATT name="ParameterPassing">In</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[0]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[*]]></ATT>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="DefaultValue"></ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="IsException">false</ATT>
+                  <ATT name="IsStream">false</ATT>
+                  <ATT name="Effect">ReadEffect</ATT>
+                  <ATT name="Name"><![CDATA[p0]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <ID name="TwoPhaseCommit" mc="Interface" uid="3ee14c74-ee44-4c9e-9e3c-a0134b64ff68"/>
+                  </LINK>
+                  <COMP relation="Tag">
+                    <OBJECT>
+                      <ID name="" mc="TaggedValue" uid="27c71d27-b01a-4073-b958-db3a5bc6d1a7"/>
+                      <PID name="TwoPhaseCommitTool" mc="Class" uid="45bdff73-dcf5-483b-ba75-856cf8cc086b"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <COMP relation="Actual">
+                          <OBJECT>
+                            <ID name="" mc="TagParameter" uid="79bad3fd-f0be-42c7-8c0c-5d07f2e7cfab"/>
+                            <PID name="TwoPhaseCommitTool" mc="Class" uid="45bdff73-dcf5-483b-ba75-856cf8cc086b"/>
+                            <ATTRIBUTES>
+                              <ATT name="Value"><![CDATA[Array]]></ATT>
+                              <ATT name="status">1970354901745664</ATT>
+                            </ATTRIBUTES>
+                            <DEPENDENCIES></DEPENDENCIES>
+                          </OBJECT>
+                        </COMP>
+                        <LINK relation="Definition">
+                          <FOREIGNID name="type" mc="TagType" uid="00000000-0000-3767-0000-000000000000"/>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+      <COMP relation="OwnedElement">
+        <COMPID name="CommitFailException" mc="Class" uid="81f15203-0f6a-46a9-99d8-f26c9b126794"/>
+        <COMPID name="PrepareCommitFailException" mc="Class" uid="cbb20b34-15ee-4aae-a7e7-be535f45210c"/>
+      </COMP>
+      <LINK relation="Extension">
+        <FOREIGNID name="JavaClass" mc="Stereotype" uid="01ec23a8-0000-0258-0000-000000000000"/>
+      </LINK>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>
