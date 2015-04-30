@@ -1,6 +1,6 @@
 package org.loccs.index;
 
-import java.io.File;
+import java.nio.file.Path;
 import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.analysis.core.SimpleAnalyzer;
 import org.apache.lucene.index.IndexWriter;
@@ -21,6 +21,7 @@ public final class IndexBuilder {
     public IndexBuilder() {
 //begin of modifiable zone................T/24edd001-b17b-4bdf-b2d0-8a7695b7b409
 
+
 //end of modifiable zone..................E/24edd001-b17b-4bdf-b2d0-8a7695b7b409
 //begin of modifiable zone................T/bb421899-200c-4b52-aeb4-6a4a104bd523
         analyzer = new SimpleAnalyzer();
@@ -28,9 +29,9 @@ public final class IndexBuilder {
     }
 
     public boolean prepareIndexDirectory(String directory) {
-//begin of modifiable zone(JavaCode)......C/42a093d6-f589-41b0-9c8b-1d48c86680a1
-		fsDirectory = FSDirectory.open(new File(directory));
-//end of modifiable zone(JavaCode)........E/42a093d6-f589-41b0-9c8b-1d48c86680a1
+//begin of modifiable zone................T/d61bada4-3b14-4c64-92af-92fe8a11dab9
+        fsDirectory = FSDirectory.open(new File(directory));
+//end of modifiable zone..................E/d61bada4-3b14-4c64-92af-92fe8a11dab9
 //begin of modifiable zone................T/e9763582-34a2-496e-8165-267cef1ac515
         return true;
 //end of modifiable zone..................E/e9763582-34a2-496e-8165-267cef1ac515
