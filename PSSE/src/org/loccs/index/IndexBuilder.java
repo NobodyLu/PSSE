@@ -47,6 +47,7 @@ public final class IndexBuilder {
         indexWriterConfig = new IndexWriterConfig(analyzer);
         indexWriterConfig.setOpenMode(IndexWriterConfig.OpenMode.CREATE);
         indexWriter = new IndexWriter(fsDirectory, indexWriterConfig);
+        indexDirectory = directory;
 //end of modifiable zone..................E/d61bada4-3b14-4c64-92af-92fe8a11dab9
     }
 
