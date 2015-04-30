@@ -1,82 +1,96 @@
 package org.loccs.index;
 
+import java.io.FileInputStream;
+import java.nio.file.DirectoryStream;
+import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.Paths;
+import org.apache.commons.io.IOUtils;
 import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.analysis.core.SimpleAnalyzer;
+import org.apache.lucene.document.Document;
+import org.apache.lucene.document.Field;
+import org.apache.lucene.document.StringField;
+import org.apache.lucene.document.TextField;
 import org.apache.lucene.index.IndexWriter;
 import org.apache.lucene.index.IndexWriterConfig;
 import org.apache.lucene.store.FSDirectory;
 
 public final class IndexBuilder {
+    public static final String FILENAME_FIELD_NAME = "filename";
+
+    public static final String CONTENT_FIELD_NAME = "content";
+
     protected String indexDirectory = "";
 
-    protected IndexWriter indexWriter;
+    private IndexWriter indexWriter;
 
-    protected IndexWriterConfig config;
+    private FSDirectory fsDirectory;
 
-    protected FSDirectory fsDirectory;
+    private IndexWriterConfig indexWriterConfig;
 
-    protected Analyzer analyzer;
+    private Analyzer analyzer;
 
     public IndexBuilder() {
-//begin of modifiable zone................T/24edd001-b17b-4bdf-b2d0-8a7695b7b409
+//begin of modifiable zone(JavaSuper).....C/1d5fd5cb-67b0-42a1-a18a-1cd903f64495
 
-
-//end of modifiable zone..................E/24edd001-b17b-4bdf-b2d0-8a7695b7b409
+//end of modifiable zone(JavaSuper).......E/1d5fd5cb-67b0-42a1-a18a-1cd903f64495
 //begin of modifiable zone................T/bb421899-200c-4b52-aeb4-6a4a104bd523
         analyzer = new SimpleAnalyzer();
 //end of modifiable zone..................E/bb421899-200c-4b52-aeb4-6a4a104bd523
     }
 
-    public boolean prepareIndexDirectory(String directory) {
+    public void prepareIndexDirectory(String directory) throws java.io.IOException {
 //begin of modifiable zone................T/d61bada4-3b14-4c64-92af-92fe8a11dab9
-        fsDirectory = FSDirectory.open(new File(directory));
+        close();
+        fsDirectory = FSDirectory.open(Paths.get(directory));
+        indexWriterConfig = new IndexWriterConfig(analyzer);
+        indexWriterConfig.setOpenMode(IndexWriterConfig.OpenMode.CREATE);
+        indexWriter = new IndexWriter(fsDirectory, indexWriterConfig);
 //end of modifiable zone..................E/d61bada4-3b14-4c64-92af-92fe8a11dab9
-//begin of modifiable zone................T/e9763582-34a2-496e-8165-267cef1ac515
-        return true;
-//end of modifiable zone..................E/e9763582-34a2-496e-8165-267cef1ac515
     }
 
     String getIndexDirectory() {
 //begin of modifiable zone................T/6ab3926d-92df-4688-8d3f-bc61e57ebc64
-        // Automatically generated method. Please delete this comment before entering specific code.
+        
 //end of modifiable zone..................E/6ab3926d-92df-4688-8d3f-bc61e57ebc64
 //begin of modifiable zone................T/22524f73-5bc5-488c-a160-8e52817ef919
         return this.indexDirectory;
 //end of modifiable zone..................E/22524f73-5bc5-488c-a160-8e52817ef919
     }
 
-    public boolean addFile(String path) {
-//begin of modifiable zone(JavaCode)......C/0a744ac6-327b-4ec0-b784-1fef7fbeaa91
-
-//end of modifiable zone(JavaCode)........E/0a744ac6-327b-4ec0-b784-1fef7fbeaa91
-//begin of modifiable zone(JavaReturned)..C/0a744ac6-327b-4ec0-b784-1fef7fbeaa91
-
-//end of modifiable zone(JavaReturned)....E/0a744ac6-327b-4ec0-b784-1fef7fbeaa91
+    public void addFile(String path) throws java.io.IOException {
+//begin of modifiable zone................T/e2c55a28-e72f-4b52-b8a1-deaf3a34d731
+        Document document = new Document();
+        document.add(new StringField(FILENAME_FIELD_NAME, path, Field.Store.YES));
+        FileInputStream input = new FileInputStream(path);
+        String content = IOUtils.toString(input);
+        document.add(new TextField(CONTENT_FIELD_NAME, content, Field.Store.YES));
+        indexWriter.addDocument(document);
+        input.close();
+//end of modifiable zone..................E/e2c55a28-e72f-4b52-b8a1-deaf3a34d731
     }
 
-    public boolean addDirectory(String path) {
-//begin of modifiable zone(JavaCode)......C/e03d4100-6954-4121-9ed8-7c0537090c4d
-
-//end of modifiable zone(JavaCode)........E/e03d4100-6954-4121-9ed8-7c0537090c4d
-//begin of modifiable zone(JavaReturned)..C/e03d4100-6954-4121-9ed8-7c0537090c4d
-
-//end of modifiable zone(JavaReturned)....E/e03d4100-6954-4121-9ed8-7c0537090c4d
+    public void addDirectory(String directory) throws java.io.IOException {
+//begin of modifiable zone................T/55fd12ab-d1c3-4687-919f-584b003a80fc
+        Path path = Paths.get(directory);
+        DirectoryStream<Path> stream = Files.newDirectoryStream(path, "*.*");
+        for (Path element: stream) {
+            if (Files.isDirectory(element))
+                addDirectory(element.toString());
+            else
+                addFile(element.toString());
+        }
+//end of modifiable zone..................E/55fd12ab-d1c3-4687-919f-584b003a80fc
     }
 
-    public boolean build() {
-//begin of modifiable zone(JavaCode)......C/fd84c382-dfc2-45b1-8c8b-a759b0f7f19f
-
-//end of modifiable zone(JavaCode)........E/fd84c382-dfc2-45b1-8c8b-a759b0f7f19f
-//begin of modifiable zone(JavaReturned)..C/fd84c382-dfc2-45b1-8c8b-a759b0f7f19f
-
-//end of modifiable zone(JavaReturned)....E/fd84c382-dfc2-45b1-8c8b-a759b0f7f19f
-    }
-
-    public void close() {
-//begin of modifiable zone(JavaCode)......C/912f8d2f-771f-4d74-9e50-ded2f88cce14
-
-//end of modifiable zone(JavaCode)........E/912f8d2f-771f-4d74-9e50-ded2f88cce14
+    public void close() throws java.io.IOException {
+//begin of modifiable zone................T/3f6bfe18-7ab8-4199-8ab5-95e1be8da2d4
+        if (indexWriter != null) {
+            indexWriter.close();
+            indexWriter = null;
+        }
+//end of modifiable zone..................E/3f6bfe18-7ab8-4199-8ab5-95e1be8da2d4
     }
 
 }

@@ -4,17 +4,17 @@
     <ID name="IndexBuilder" mc="Class" uid="5e52bad6-d5bc-438d-906a-80f8364a1905"/>
     <EXTID name="Analyzer" mc="Class" uid="77780036-c03e-49a3-9193-7f3970e67f1e"/>
     <EXTID name="FSDirectory" mc="Class" uid="e933ddf2-c237-478b-8b18-4ee2b1a61add"/>
+    <EXTID name="IOException" mc="Class" uid="f2bb4a3c-4ac3-4643-8dee-b4f3608d8cf9"/>
     <EXTID name="IndexWriter" mc="Class" uid="d083584e-1c3a-49af-8448-821dbbbf46ba"/>
     <EXTID name="IndexWriterConfig" mc="Class" uid="9ef20cb7-4099-438c-8d14-fcc73bc07994"/>
-    <EXTID name="Path" mc="Class" uid="14169e30-f1c8-472d-8c2c-b56dbd8bd120"/>
     <EXTID name="SimpleAnalyzer" mc="Class" uid="be24975f-177b-482f-97fb-8603137b5a47"/>
     <FOREIGNID name="JavaClass" mc="Stereotype" uid="01ec23a8-0000-0258-0000-000000000000"/>
     <FOREIGNID name="JavaCode" mc="NoteType" uid="003800a8-0000-018e-0000-000000000000"/>
+    <FOREIGNID name="JavaFinal" mc="TagType" uid="003800a8-0000-0161-0000-000000000000"/>
+    <FOREIGNID name="JavaFullName" mc="TagType" uid="004a0876-fb04-1f8f-b8b2-0015c53b57e1"/>
     <FOREIGNID name="JavaGetter" mc="Stereotype" uid="01ec23a8-0000-012b-0000-000000000000"/>
-    <FOREIGNID name="JavaGetter" mc="Stereotype" uid="01ec25e8-0000-00f0-0000-000000000000"/>
+    <FOREIGNID name="JavaImport" mc="TagType" uid="003800a8-0000-0155-0000-000000000000"/>
     <FOREIGNID name="JavaReturned" mc="NoteType" uid="003800a8-0000-0190-0000-000000000000"/>
-    <FOREIGNID name="JavaSuper" mc="NoteType" uid="003800a8-0000-018f-0000-000000000000"/>
-    <FOREIGNID name="boolean" mc="DataType" uid="00000004-0000-0005-0000-000000000000"/>
     <FOREIGNID name="create" mc="Stereotype" uid="00700680-0000-0204-0000-000000000000"/>
     <FOREIGNID name="description" mc="NoteType" uid="00000000-0000-3e81-0000-000000000000"/>
     <FOREIGNID name="string" mc="DataType" uid="00000004-0000-000d-0000-000000000000"/>
@@ -54,26 +54,11 @@
             </LINK>
             <COMP relation="Descriptor">
               <OBJECT>
-                <ID name="" mc="Note" uid="24edd001-b17b-4bdf-b2d0-8a7695b7b409"/>
-                <PID name="IndexBuilder" mc="Class" uid="5e52bad6-d5bc-438d-906a-80f8364a1905"/>
-                <ATTRIBUTES>
-                  <ATT name="Content"></ATT>
-                  <ATT name="MimeType"></ATT>
-                  <ATT name="Name"></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES>
-                  <LINK relation="Model">
-                    <FOREIGNID name="JavaSuper" mc="NoteType" uid="003800a8-0000-018f-0000-000000000000"/>
-                  </LINK>
-                </DEPENDENCIES>
-              </OBJECT>
-              <OBJECT>
                 <ID name="" mc="Note" uid="bb421899-200c-4b52-aeb4-6a4a104bd523"/>
                 <PID name="IndexBuilder" mc="Class" uid="5e52bad6-d5bc-438d-906a-80f8364a1905"/>
                 <ATTRIBUTES>
                   <ATT name="Content"><![CDATA[analyzer = new SimpleAnalyzer();]]></ATT>
-                  <ATT name="MimeType"></ATT>
+                  <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
                   <ATT name="Name"></ATT>
                   <ATT name="status">1970354901745664</ATT>
                 </ATTRIBUTES>
@@ -100,6 +85,36 @@
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
           <DEPENDENCIES>
+            <COMP relation="Thrown">
+              <OBJECT>
+                <ID name="" mc="RaisedException" uid="a2e3ccbf-b3b7-4bb2-9158-9c8ea1554bc7"/>
+                <PID name="IndexBuilder" mc="Class" uid="5e52bad6-d5bc-438d-906a-80f8364a1905"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="ThrownType">
+                    <ID name="IOException" mc="Class" uid="f2bb4a3c-4ac3-4643-8dee-b4f3608d8cf9"/>
+                  </LINK>
+                  <COMP relation="Tag">
+                    <OBJECT>
+                      <ID name="" mc="TaggedValue" uid="c1fa2bd1-740c-4646-bf3d-2a7f787af557"/>
+                      <PID name="IndexBuilder" mc="Class" uid="5e52bad6-d5bc-438d-906a-80f8364a1905"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Definition">
+                          <FOREIGNID name="JavaFullName" mc="TagType" uid="004a0876-fb04-1f8f-b8b2-0015c53b57e1"/>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
             <COMP relation="IO">
               <OBJECT>
                 <ID name="directory" mc="Parameter" uid="f1946efb-96ba-4a46-924f-6555ff8a4a0f"/>
@@ -125,53 +140,18 @@
                 </DEPENDENCIES>
               </OBJECT>
             </COMP>
-            <COMP relation="Return">
-              <OBJECT>
-                <ID name="" mc="Parameter" uid="38840e99-3ca9-4ac2-9be7-76e0d4d0d7db"/>
-                <PID name="IndexBuilder" mc="Class" uid="5e52bad6-d5bc-438d-906a-80f8364a1905"/>
-                <ATTRIBUTES>
-                  <ATT name="ParameterPassing">In</ATT>
-                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
-                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
-                  <ATT name="TypeConstraint"></ATT>
-                  <ATT name="DefaultValue"></ATT>
-                  <ATT name="IsOrdered">false</ATT>
-                  <ATT name="IsUnique">false</ATT>
-                  <ATT name="IsException">false</ATT>
-                  <ATT name="IsStream">false</ATT>
-                  <ATT name="Effect">ReadEffect</ATT>
-                  <ATT name="Name"></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES>
-                  <LINK relation="Type">
-                    <FOREIGNID name="boolean" mc="DataType" uid="00000004-0000-0005-0000-000000000000"/>
-                  </LINK>
-                </DEPENDENCIES>
-              </OBJECT>
-            </COMP>
             <COMP relation="Descriptor">
-              <OBJECT>
-                <ID name="" mc="Note" uid="e9763582-34a2-496e-8165-267cef1ac515"/>
-                <PID name="IndexBuilder" mc="Class" uid="5e52bad6-d5bc-438d-906a-80f8364a1905"/>
-                <ATTRIBUTES>
-                  <ATT name="Content"><![CDATA[return true;]]></ATT>
-                  <ATT name="MimeType"></ATT>
-                  <ATT name="Name"></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES>
-                  <LINK relation="Model">
-                    <FOREIGNID name="JavaReturned" mc="NoteType" uid="003800a8-0000-0190-0000-000000000000"/>
-                  </LINK>
-                </DEPENDENCIES>
-              </OBJECT>
               <OBJECT>
                 <ID name="" mc="Note" uid="d61bada4-3b14-4c64-92af-92fe8a11dab9"/>
                 <PID name="IndexBuilder" mc="Class" uid="5e52bad6-d5bc-438d-906a-80f8364a1905"/>
                 <ATTRIBUTES>
-                  <ATT name="Content"><![CDATA[fsDirectory = FSDirectory.open(new File(directory));]]></ATT>
-                  <ATT name="MimeType"></ATT>
+                  <ATT name="Content"><![CDATA[close();
+fsDirectory = FSDirectory.open(Paths.get(directory));
+indexWriterConfig = new IndexWriterConfig(analyzer);
+indexWriterConfig.setOpenMode(IndexWriterConfig.OpenMode.CREATE);
+indexWriter = new IndexWriter(fsDirectory, indexWriterConfig);
+]]></ATT>
+                  <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
                   <ATT name="Name"></ATT>
                   <ATT name="status">1970354901745664</ATT>
                 </ATTRIBUTES>
@@ -223,9 +203,6 @@
                 </DEPENDENCIES>
               </OBJECT>
             </COMP>
-            <LINK relation="Extension">
-              <FOREIGNID name="JavaGetter" mc="Stereotype" uid="01ec25e8-0000-00f0-0000-000000000000"/>
-            </LINK>
             <COMP relation="DependsOnDependency">
               <OBJECT>
                 <ID name="" mc="Dependency" uid="472041e4-aab2-44c7-9ab9-29e5aa37aebf"/>
@@ -254,8 +231,8 @@
                 <ID name="" mc="Note" uid="6ab3926d-92df-4688-8d3f-bc61e57ebc64"/>
                 <PID name="IndexBuilder" mc="Class" uid="5e52bad6-d5bc-438d-906a-80f8364a1905"/>
                 <ATTRIBUTES>
-                  <ATT name="Content"><![CDATA[// Automatically generated method. Please delete this comment before entering specific code.]]></ATT>
-                  <ATT name="MimeType"></ATT>
+                  <ATT name="Content"></ATT>
+                  <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
                   <ATT name="Name"></ATT>
                   <ATT name="status">1970354901745664</ATT>
                 </ATTRIBUTES>
@@ -270,7 +247,7 @@
                 <PID name="IndexBuilder" mc="Class" uid="5e52bad6-d5bc-438d-906a-80f8364a1905"/>
                 <ATTRIBUTES>
                   <ATT name="Content"><![CDATA[return this.indexDirectory;]]></ATT>
-                  <ATT name="MimeType"></ATT>
+                  <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
                   <ATT name="Name"></ATT>
                   <ATT name="status">1970354901745664</ATT>
                 </ATTRIBUTES>
@@ -297,6 +274,36 @@
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
           <DEPENDENCIES>
+            <COMP relation="Thrown">
+              <OBJECT>
+                <ID name="" mc="RaisedException" uid="d32d579d-339c-4c23-9090-2043c92e5ed6"/>
+                <PID name="IndexBuilder" mc="Class" uid="5e52bad6-d5bc-438d-906a-80f8364a1905"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="ThrownType">
+                    <ID name="IOException" mc="Class" uid="f2bb4a3c-4ac3-4643-8dee-b4f3608d8cf9"/>
+                  </LINK>
+                  <COMP relation="Tag">
+                    <OBJECT>
+                      <ID name="" mc="TaggedValue" uid="fd35dd47-7707-4a82-9832-8901c95cdefc"/>
+                      <PID name="IndexBuilder" mc="Class" uid="5e52bad6-d5bc-438d-906a-80f8364a1905"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Definition">
+                          <FOREIGNID name="JavaFullName" mc="TagType" uid="004a0876-fb04-1f8f-b8b2-0015c53b57e1"/>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
             <COMP relation="IO">
               <OBJECT>
                 <ID name="path" mc="Parameter" uid="a76e433b-8a66-4916-9015-169052dac794"/>
@@ -322,27 +329,26 @@
                 </DEPENDENCIES>
               </OBJECT>
             </COMP>
-            <COMP relation="Return">
+            <COMP relation="Descriptor">
               <OBJECT>
-                <ID name="" mc="Parameter" uid="8aeff6d7-1ec7-450f-b9fe-8063ae02dcd8"/>
+                <ID name="" mc="Note" uid="e2c55a28-e72f-4b52-b8a1-deaf3a34d731"/>
                 <PID name="IndexBuilder" mc="Class" uid="5e52bad6-d5bc-438d-906a-80f8364a1905"/>
                 <ATTRIBUTES>
-                  <ATT name="ParameterPassing">In</ATT>
-                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
-                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
-                  <ATT name="TypeConstraint"></ATT>
-                  <ATT name="DefaultValue"></ATT>
-                  <ATT name="IsOrdered">false</ATT>
-                  <ATT name="IsUnique">false</ATT>
-                  <ATT name="IsException">false</ATT>
-                  <ATT name="IsStream">false</ATT>
-                  <ATT name="Effect">ReadEffect</ATT>
+                  <ATT name="Content"><![CDATA[Document document = new Document();
+document.add(new StringField(FILENAME_FIELD_NAME, path, Field.Store.YES));
+FileInputStream input = new FileInputStream(path);
+String content = IOUtils.toString(input);
+document.add(new TextField(CONTENT_FIELD_NAME, content, Field.Store.YES));
+indexWriter.addDocument(document);
+input.close();
+]]></ATT>
+                  <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
                   <ATT name="Name"></ATT>
                   <ATT name="status">1970354901745664</ATT>
                 </ATTRIBUTES>
                 <DEPENDENCIES>
-                  <LINK relation="Type">
-                    <FOREIGNID name="boolean" mc="DataType" uid="00000004-0000-0005-0000-000000000000"/>
+                  <LINK relation="Model">
+                    <FOREIGNID name="JavaCode" mc="NoteType" uid="003800a8-0000-018e-0000-000000000000"/>
                   </LINK>
                 </DEPENDENCIES>
               </OBJECT>
@@ -363,9 +369,39 @@
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
           <DEPENDENCIES>
+            <COMP relation="Thrown">
+              <OBJECT>
+                <ID name="" mc="RaisedException" uid="38ad6671-3ab5-4d92-9639-39ed2a3100c2"/>
+                <PID name="IndexBuilder" mc="Class" uid="5e52bad6-d5bc-438d-906a-80f8364a1905"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="ThrownType">
+                    <ID name="IOException" mc="Class" uid="f2bb4a3c-4ac3-4643-8dee-b4f3608d8cf9"/>
+                  </LINK>
+                  <COMP relation="Tag">
+                    <OBJECT>
+                      <ID name="" mc="TaggedValue" uid="bd403522-bd1b-4b64-9430-6cd01d74e589"/>
+                      <PID name="IndexBuilder" mc="Class" uid="5e52bad6-d5bc-438d-906a-80f8364a1905"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Definition">
+                          <FOREIGNID name="JavaFullName" mc="TagType" uid="004a0876-fb04-1f8f-b8b2-0015c53b57e1"/>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
             <COMP relation="IO">
               <OBJECT>
-                <ID name="path" mc="Parameter" uid="476adb27-7c1c-4c5b-9339-ad5fdf77109e"/>
+                <ID name="directory" mc="Parameter" uid="476adb27-7c1c-4c5b-9339-ad5fdf77109e"/>
                 <PID name="IndexBuilder" mc="Class" uid="5e52bad6-d5bc-438d-906a-80f8364a1905"/>
                 <ATTRIBUTES>
                   <ATT name="ParameterPassing">In</ATT>
@@ -378,7 +414,7 @@
                   <ATT name="IsException">false</ATT>
                   <ATT name="IsStream">false</ATT>
                   <ATT name="Effect">ReadEffect</ATT>
-                  <ATT name="Name"><![CDATA[path]]></ATT>
+                  <ATT name="Name"><![CDATA[directory]]></ATT>
                   <ATT name="status">1970354901745664</ATT>
                 </ATTRIBUTES>
                 <DEPENDENCIES>
@@ -388,68 +424,27 @@
                 </DEPENDENCIES>
               </OBJECT>
             </COMP>
-            <COMP relation="Return">
+            <COMP relation="Descriptor">
               <OBJECT>
-                <ID name="" mc="Parameter" uid="e5ce2389-74c8-4ae1-a708-ef158437276f"/>
+                <ID name="" mc="Note" uid="55fd12ab-d1c3-4687-919f-584b003a80fc"/>
                 <PID name="IndexBuilder" mc="Class" uid="5e52bad6-d5bc-438d-906a-80f8364a1905"/>
                 <ATTRIBUTES>
-                  <ATT name="ParameterPassing">In</ATT>
-                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
-                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
-                  <ATT name="TypeConstraint"></ATT>
-                  <ATT name="DefaultValue"></ATT>
-                  <ATT name="IsOrdered">false</ATT>
-                  <ATT name="IsUnique">false</ATT>
-                  <ATT name="IsException">false</ATT>
-                  <ATT name="IsStream">false</ATT>
-                  <ATT name="Effect">ReadEffect</ATT>
+                  <ATT name="Content"><![CDATA[Path path = Paths.get(directory);
+DirectoryStream<Path> stream = Files.newDirectoryStream(path, "*.*");
+for (Path element: stream) {
+    if (Files.isDirectory(element))
+        addDirectory(element.toString());
+    else
+        addFile(element.toString());
+}
+]]></ATT>
+                  <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
                   <ATT name="Name"></ATT>
                   <ATT name="status">1970354901745664</ATT>
                 </ATTRIBUTES>
                 <DEPENDENCIES>
-                  <LINK relation="Type">
-                    <FOREIGNID name="boolean" mc="DataType" uid="00000004-0000-0005-0000-000000000000"/>
-                  </LINK>
-                </DEPENDENCIES>
-              </OBJECT>
-            </COMP>
-          </DEPENDENCIES>
-        </OBJECT>
-        <OBJECT>
-          <ID name="build" mc="Operation" uid="fd84c382-dfc2-45b1-8c8b-a759b0f7f19f"/>
-          <PID name="IndexBuilder" mc="Class" uid="5e52bad6-d5bc-438d-906a-80f8364a1905"/>
-          <ATTRIBUTES>
-            <ATT name="Concurrency">false</ATT>
-            <ATT name="Final">false</ATT>
-            <ATT name="Passing">MethodOut</ATT>
-            <ATT name="Visibility">Public</ATT>
-            <ATT name="IsClass">false</ATT>
-            <ATT name="IsAbstract">false</ATT>
-            <ATT name="Name"><![CDATA[build]]></ATT>
-            <ATT name="status">1970354901745664</ATT>
-          </ATTRIBUTES>
-          <DEPENDENCIES>
-            <COMP relation="Return">
-              <OBJECT>
-                <ID name="" mc="Parameter" uid="f4c61fd4-5868-4f03-b95a-11ed817fb0a3"/>
-                <PID name="IndexBuilder" mc="Class" uid="5e52bad6-d5bc-438d-906a-80f8364a1905"/>
-                <ATTRIBUTES>
-                  <ATT name="ParameterPassing">In</ATT>
-                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
-                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
-                  <ATT name="TypeConstraint"></ATT>
-                  <ATT name="DefaultValue"></ATT>
-                  <ATT name="IsOrdered">false</ATT>
-                  <ATT name="IsUnique">false</ATT>
-                  <ATT name="IsException">false</ATT>
-                  <ATT name="IsStream">false</ATT>
-                  <ATT name="Effect">ReadEffect</ATT>
-                  <ATT name="Name"></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES>
-                  <LINK relation="Type">
-                    <FOREIGNID name="boolean" mc="DataType" uid="00000004-0000-0005-0000-000000000000"/>
+                  <LINK relation="Model">
+                    <FOREIGNID name="JavaCode" mc="NoteType" uid="003800a8-0000-018e-0000-000000000000"/>
                   </LINK>
                 </DEPENDENCIES>
               </OBJECT>
@@ -469,10 +464,142 @@
             <ATT name="Name"><![CDATA[close]]></ATT>
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
-          <DEPENDENCIES></DEPENDENCIES>
+          <DEPENDENCIES>
+            <COMP relation="Thrown">
+              <OBJECT>
+                <ID name="" mc="RaisedException" uid="55a6213c-df69-499a-a8e0-451948f5ab0d"/>
+                <PID name="IndexBuilder" mc="Class" uid="5e52bad6-d5bc-438d-906a-80f8364a1905"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="ThrownType">
+                    <ID name="IOException" mc="Class" uid="f2bb4a3c-4ac3-4643-8dee-b4f3608d8cf9"/>
+                  </LINK>
+                  <COMP relation="Tag">
+                    <OBJECT>
+                      <ID name="" mc="TaggedValue" uid="6b4c1b77-a028-4fc2-8847-5180c6cc8039"/>
+                      <PID name="IndexBuilder" mc="Class" uid="5e52bad6-d5bc-438d-906a-80f8364a1905"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Definition">
+                          <FOREIGNID name="JavaFullName" mc="TagType" uid="004a0876-fb04-1f8f-b8b2-0015c53b57e1"/>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="Descriptor">
+              <OBJECT>
+                <ID name="" mc="Note" uid="3f6bfe18-7ab8-4199-8ab5-95e1be8da2d4"/>
+                <PID name="IndexBuilder" mc="Class" uid="5e52bad6-d5bc-438d-906a-80f8364a1905"/>
+                <ATTRIBUTES>
+                  <ATT name="Content"><![CDATA[if (indexWriter != null) {
+    indexWriter.close();
+    indexWriter = null;
+}
+]]></ATT>
+                  <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Model">
+                    <FOREIGNID name="JavaCode" mc="NoteType" uid="003800a8-0000-018e-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
         </OBJECT>
       </COMP>
       <COMP relation="OwnedAttribute">
+        <OBJECT>
+          <ID name="FILENAME_FIELD_NAME" mc="Attribute" uid="f9858168-f7b9-47e4-af82-8683849e833a"/>
+          <PID name="IndexBuilder" mc="Class" uid="5e52bad6-d5bc-438d-906a-80f8364a1905"/>
+          <ATTRIBUTES>
+            <ATT name="TypeConstraint"></ATT>
+            <ATT name="Value"><![CDATA["filename"]]></ATT>
+            <ATT name="TargetIsClass">false</ATT>
+            <ATT name="Changeable">AccesNone</ATT>
+            <ATT name="IsDerived">false</ATT>
+            <ATT name="IsOrdered">false</ATT>
+            <ATT name="IsUnique">false</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="IsClass">true</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[FILENAME_FIELD_NAME]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Type">
+              <FOREIGNID name="string" mc="DataType" uid="00000004-0000-000d-0000-000000000000"/>
+            </LINK>
+            <COMP relation="Tag">
+              <OBJECT>
+                <ID name="" mc="TaggedValue" uid="26032187-a26c-458f-b532-12627669edee"/>
+                <PID name="IndexBuilder" mc="Class" uid="5e52bad6-d5bc-438d-906a-80f8364a1905"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Definition">
+                    <FOREIGNID name="JavaFinal" mc="TagType" uid="003800a8-0000-0161-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="CONTENT_FIELD_NAME" mc="Attribute" uid="d2667e0a-db45-4371-9245-5054cfbfaebe"/>
+          <PID name="IndexBuilder" mc="Class" uid="5e52bad6-d5bc-438d-906a-80f8364a1905"/>
+          <ATTRIBUTES>
+            <ATT name="TypeConstraint"></ATT>
+            <ATT name="Value"><![CDATA["content"]]></ATT>
+            <ATT name="TargetIsClass">false</ATT>
+            <ATT name="Changeable">AccesNone</ATT>
+            <ATT name="IsDerived">false</ATT>
+            <ATT name="IsOrdered">false</ATT>
+            <ATT name="IsUnique">false</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="IsClass">true</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[CONTENT_FIELD_NAME]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Type">
+              <FOREIGNID name="string" mc="DataType" uid="00000004-0000-000d-0000-000000000000"/>
+            </LINK>
+            <COMP relation="Tag">
+              <OBJECT>
+                <ID name="" mc="TaggedValue" uid="4ec53913-2134-4c0d-8e35-69bf946c6288"/>
+                <PID name="IndexBuilder" mc="Class" uid="5e52bad6-d5bc-438d-906a-80f8364a1905"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Definition">
+                    <FOREIGNID name="JavaFinal" mc="TagType" uid="003800a8-0000-0161-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
         <OBJECT>
           <ID name="indexDirectory" mc="Attribute" uid="5912f594-2859-4db4-8fa0-72e3553d1965"/>
           <PID name="IndexBuilder" mc="Class" uid="5e52bad6-d5bc-438d-906a-80f8364a1905"/>
@@ -480,7 +607,7 @@
             <ATT name="TypeConstraint"></ATT>
             <ATT name="Value"><![CDATA[""]]></ATT>
             <ATT name="TargetIsClass">false</ATT>
-            <ATT name="Changeable">Read</ATT>
+            <ATT name="Changeable">AccesNone</ATT>
             <ATT name="IsDerived">false</ATT>
             <ATT name="IsOrdered">false</ATT>
             <ATT name="IsUnique">false</ATT>
@@ -518,7 +645,7 @@
       </COMP>
       <COMP relation="OwnedEnd">
         <OBJECT>
-          <ID name="indexWriter" mc="AssociationEnd" uid="cf013519-f416-4903-baaf-6c94fe9b6f18"/>
+          <ID name="indexWriter" mc="AssociationEnd" uid="aff89ee2-8b61-48e6-aab6-4f144e70ea80"/>
           <PID name="IndexBuilder" mc="Class" uid="5e52bad6-d5bc-438d-906a-80f8364a1905"/>
           <ATTRIBUTES>
             <ATT name="Aggregation">KindIsAssociation</ATT>
@@ -529,7 +656,7 @@
             <ATT name="IsUnique">false</ATT>
             <ATT name="MultiplicityMin"><![CDATA[0]]></ATT>
             <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
-            <ATT name="Visibility">Protected</ATT>
+            <ATT name="Visibility">Private</ATT>
             <ATT name="IsClass">false</ATT>
             <ATT name="IsAbstract">false</ATT>
             <ATT name="Name"><![CDATA[indexWriter]]></ATT>
@@ -541,7 +668,7 @@
             </LINK>
             <COMP relation="Opposite">
               <OBJECT>
-                <ID name="" mc="AssociationEnd" uid="e7bf40e6-6ea4-4fd1-be61-e8f02485de36"/>
+                <ID name="" mc="AssociationEnd" uid="24643b49-5dbd-4266-9783-8abe8db16c00"/>
                 <PID name="IndexBuilder" mc="Class" uid="5e52bad6-d5bc-438d-906a-80f8364a1905"/>
                 <ATTRIBUTES>
                   <ATT name="Aggregation">KindIsAssociation</ATT>
@@ -560,11 +687,11 @@
                 </ATTRIBUTES>
                 <DEPENDENCIES>
                   <COMP relation="Opposite">
-                    <COMPID name="indexWriter" mc="AssociationEnd" uid="cf013519-f416-4903-baaf-6c94fe9b6f18"/>
+                    <COMPID name="indexWriter" mc="AssociationEnd" uid="aff89ee2-8b61-48e6-aab6-4f144e70ea80"/>
                   </COMP>
                   <COMP relation="Association">
                     <OBJECT>
-                      <ID name="" mc="Association" uid="b5ce8de0-5db6-48e1-a1e0-8f1352aa9d62"/>
+                      <ID name="" mc="Association" uid="859602dd-e9f8-41f3-8975-a9edc1e9af39"/>
                       <PID name="IndexBuilder" mc="Class" uid="5e52bad6-d5bc-438d-906a-80f8364a1905"/>
                       <ATTRIBUTES>
                         <ATT name="Name"></ATT>
@@ -577,12 +704,12 @@
               </OBJECT>
             </COMP>
             <COMP relation="Association">
-              <COMPID name="" mc="Association" uid="b5ce8de0-5db6-48e1-a1e0-8f1352aa9d62"/>
+              <COMPID name="" mc="Association" uid="859602dd-e9f8-41f3-8975-a9edc1e9af39"/>
             </COMP>
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="config" mc="AssociationEnd" uid="0dd9f923-4f9f-46a3-9620-b7e2f78abdd0"/>
+          <ID name="fsDirectory" mc="AssociationEnd" uid="22d1a760-7a3c-4e2c-87ef-5d85a888e28e"/>
           <PID name="IndexBuilder" mc="Class" uid="5e52bad6-d5bc-438d-906a-80f8364a1905"/>
           <ATTRIBUTES>
             <ATT name="Aggregation">KindIsAssociation</ATT>
@@ -593,71 +720,7 @@
             <ATT name="IsUnique">false</ATT>
             <ATT name="MultiplicityMin"><![CDATA[0]]></ATT>
             <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
-            <ATT name="Visibility">Protected</ATT>
-            <ATT name="IsClass">false</ATT>
-            <ATT name="IsAbstract">false</ATT>
-            <ATT name="Name"><![CDATA[config]]></ATT>
-            <ATT name="status">1970354901745664</ATT>
-          </ATTRIBUTES>
-          <DEPENDENCIES>
-            <LINK relation="Target">
-              <ID name="IndexWriterConfig" mc="Class" uid="9ef20cb7-4099-438c-8d14-fcc73bc07994"/>
-            </LINK>
-            <COMP relation="Opposite">
-              <OBJECT>
-                <ID name="" mc="AssociationEnd" uid="67a8603e-1b4e-4cf4-bf7b-a489f30f3913"/>
-                <PID name="IndexBuilder" mc="Class" uid="5e52bad6-d5bc-438d-906a-80f8364a1905"/>
-                <ATTRIBUTES>
-                  <ATT name="Aggregation">KindIsAssociation</ATT>
-                  <ATT name="IsChangeable">true</ATT>
-                  <ATT name="Changeable">ReadWrite</ATT>
-                  <ATT name="IsDerived">false</ATT>
-                  <ATT name="IsOrdered">false</ATT>
-                  <ATT name="IsUnique">false</ATT>
-                  <ATT name="MultiplicityMin"><![CDATA[0]]></ATT>
-                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
-                  <ATT name="Visibility">Public</ATT>
-                  <ATT name="IsClass">false</ATT>
-                  <ATT name="IsAbstract">false</ATT>
-                  <ATT name="Name"></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES>
-                  <COMP relation="Opposite">
-                    <COMPID name="config" mc="AssociationEnd" uid="0dd9f923-4f9f-46a3-9620-b7e2f78abdd0"/>
-                  </COMP>
-                  <COMP relation="Association">
-                    <OBJECT>
-                      <ID name="" mc="Association" uid="cbad7144-2914-49c6-b726-917f16375ed7"/>
-                      <PID name="IndexBuilder" mc="Class" uid="5e52bad6-d5bc-438d-906a-80f8364a1905"/>
-                      <ATTRIBUTES>
-                        <ATT name="Name"></ATT>
-                        <ATT name="status">1970354901745664</ATT>
-                      </ATTRIBUTES>
-                      <DEPENDENCIES></DEPENDENCIES>
-                    </OBJECT>
-                  </COMP>
-                </DEPENDENCIES>
-              </OBJECT>
-            </COMP>
-            <COMP relation="Association">
-              <COMPID name="" mc="Association" uid="cbad7144-2914-49c6-b726-917f16375ed7"/>
-            </COMP>
-          </DEPENDENCIES>
-        </OBJECT>
-        <OBJECT>
-          <ID name="fsDirectory" mc="AssociationEnd" uid="b56501c6-bd78-431f-b356-5ea595c0abae"/>
-          <PID name="IndexBuilder" mc="Class" uid="5e52bad6-d5bc-438d-906a-80f8364a1905"/>
-          <ATTRIBUTES>
-            <ATT name="Aggregation">KindIsAssociation</ATT>
-            <ATT name="IsChangeable">true</ATT>
-            <ATT name="Changeable">ReadWrite</ATT>
-            <ATT name="IsDerived">false</ATT>
-            <ATT name="IsOrdered">false</ATT>
-            <ATT name="IsUnique">false</ATT>
-            <ATT name="MultiplicityMin"><![CDATA[0]]></ATT>
-            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
-            <ATT name="Visibility">Protected</ATT>
+            <ATT name="Visibility">Private</ATT>
             <ATT name="IsClass">false</ATT>
             <ATT name="IsAbstract">false</ATT>
             <ATT name="Name"><![CDATA[fsDirectory]]></ATT>
@@ -669,7 +732,7 @@
             </LINK>
             <COMP relation="Opposite">
               <OBJECT>
-                <ID name="" mc="AssociationEnd" uid="4f4d5e33-f365-44ec-8ad7-d68e029dc9b5"/>
+                <ID name="" mc="AssociationEnd" uid="1ccd2f7e-2f92-4ee7-baf5-7cf268c63ef6"/>
                 <PID name="IndexBuilder" mc="Class" uid="5e52bad6-d5bc-438d-906a-80f8364a1905"/>
                 <ATTRIBUTES>
                   <ATT name="Aggregation">KindIsAssociation</ATT>
@@ -688,11 +751,11 @@
                 </ATTRIBUTES>
                 <DEPENDENCIES>
                   <COMP relation="Opposite">
-                    <COMPID name="fsDirectory" mc="AssociationEnd" uid="b56501c6-bd78-431f-b356-5ea595c0abae"/>
+                    <COMPID name="fsDirectory" mc="AssociationEnd" uid="22d1a760-7a3c-4e2c-87ef-5d85a888e28e"/>
                   </COMP>
                   <COMP relation="Association">
                     <OBJECT>
-                      <ID name="" mc="Association" uid="0ec33be0-3da6-4ddd-a698-e93a460073a0"/>
+                      <ID name="" mc="Association" uid="1d886b50-2034-4975-8605-70abbe729641"/>
                       <PID name="IndexBuilder" mc="Class" uid="5e52bad6-d5bc-438d-906a-80f8364a1905"/>
                       <ATTRIBUTES>
                         <ATT name="Name"></ATT>
@@ -705,75 +768,11 @@
               </OBJECT>
             </COMP>
             <COMP relation="Association">
-              <COMPID name="" mc="Association" uid="0ec33be0-3da6-4ddd-a698-e93a460073a0"/>
-            </COMP>
-          </DEPENDENCIES>
-        </OBJECT>
-        <OBJECT>
-          <ID name="analyzer" mc="AssociationEnd" uid="c46ee925-a4d5-47a2-b3f0-71a219f449d9"/>
-          <PID name="IndexBuilder" mc="Class" uid="5e52bad6-d5bc-438d-906a-80f8364a1905"/>
-          <ATTRIBUTES>
-            <ATT name="Aggregation">KindIsAssociation</ATT>
-            <ATT name="IsChangeable">true</ATT>
-            <ATT name="Changeable">ReadWrite</ATT>
-            <ATT name="IsDerived">false</ATT>
-            <ATT name="IsOrdered">false</ATT>
-            <ATT name="IsUnique">false</ATT>
-            <ATT name="MultiplicityMin"><![CDATA[0]]></ATT>
-            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
-            <ATT name="Visibility">Protected</ATT>
-            <ATT name="IsClass">false</ATT>
-            <ATT name="IsAbstract">false</ATT>
-            <ATT name="Name"><![CDATA[analyzer]]></ATT>
-            <ATT name="status">1970354901745664</ATT>
-          </ATTRIBUTES>
-          <DEPENDENCIES>
-            <LINK relation="Target">
-              <ID name="Analyzer" mc="Class" uid="77780036-c03e-49a3-9193-7f3970e67f1e"/>
-            </LINK>
-            <COMP relation="Opposite">
-              <OBJECT>
-                <ID name="" mc="AssociationEnd" uid="9923bcdd-1dd7-455b-bcdf-bfe1a1d29bd8"/>
-                <PID name="IndexBuilder" mc="Class" uid="5e52bad6-d5bc-438d-906a-80f8364a1905"/>
-                <ATTRIBUTES>
-                  <ATT name="Aggregation">KindIsAssociation</ATT>
-                  <ATT name="IsChangeable">true</ATT>
-                  <ATT name="Changeable">ReadWrite</ATT>
-                  <ATT name="IsDerived">false</ATT>
-                  <ATT name="IsOrdered">false</ATT>
-                  <ATT name="IsUnique">false</ATT>
-                  <ATT name="MultiplicityMin"><![CDATA[0]]></ATT>
-                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
-                  <ATT name="Visibility">Public</ATT>
-                  <ATT name="IsClass">false</ATT>
-                  <ATT name="IsAbstract">false</ATT>
-                  <ATT name="Name"></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES>
-                  <COMP relation="Opposite">
-                    <COMPID name="analyzer" mc="AssociationEnd" uid="c46ee925-a4d5-47a2-b3f0-71a219f449d9"/>
-                  </COMP>
-                  <COMP relation="Association">
-                    <OBJECT>
-                      <ID name="" mc="Association" uid="84fdb741-9e0e-4c41-9b79-e51a779877db"/>
-                      <PID name="IndexBuilder" mc="Class" uid="5e52bad6-d5bc-438d-906a-80f8364a1905"/>
-                      <ATTRIBUTES>
-                        <ATT name="Name"></ATT>
-                        <ATT name="status">1970354901745664</ATT>
-                      </ATTRIBUTES>
-                      <DEPENDENCIES></DEPENDENCIES>
-                    </OBJECT>
-                  </COMP>
-                </DEPENDENCIES>
-              </OBJECT>
-            </COMP>
-            <COMP relation="Association">
-              <COMPID name="" mc="Association" uid="84fdb741-9e0e-4c41-9b79-e51a779877db"/>
+              <COMPID name="" mc="Association" uid="1d886b50-2034-4975-8605-70abbe729641"/>
             </COMP>
             <COMP relation="Descriptor">
               <OBJECT>
-                <ID name="" mc="Note" uid="17945f15-b789-409d-87ca-ea84ce5cf2be"/>
+                <ID name="" mc="Note" uid="70aeaed2-0faf-4ce1-94bd-5ddb590b9003"/>
                 <PID name="IndexBuilder" mc="Class" uid="5e52bad6-d5bc-438d-906a-80f8364a1905"/>
                 <ATTRIBUTES>
                   <ATT name="Content"><![CDATA[<Enter note text here>]]></ATT>
@@ -790,10 +789,138 @@
             </COMP>
           </DEPENDENCIES>
         </OBJECT>
+        <OBJECT>
+          <ID name="indexWriterConfig" mc="AssociationEnd" uid="d660dcb5-987a-444b-b712-ec3183af3e27"/>
+          <PID name="IndexBuilder" mc="Class" uid="5e52bad6-d5bc-438d-906a-80f8364a1905"/>
+          <ATTRIBUTES>
+            <ATT name="Aggregation">KindIsAssociation</ATT>
+            <ATT name="IsChangeable">true</ATT>
+            <ATT name="Changeable">ReadWrite</ATT>
+            <ATT name="IsDerived">false</ATT>
+            <ATT name="IsOrdered">false</ATT>
+            <ATT name="IsUnique">false</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[0]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+            <ATT name="Visibility">Private</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[indexWriterConfig]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Target">
+              <ID name="IndexWriterConfig" mc="Class" uid="9ef20cb7-4099-438c-8d14-fcc73bc07994"/>
+            </LINK>
+            <COMP relation="Opposite">
+              <OBJECT>
+                <ID name="" mc="AssociationEnd" uid="24cb64c5-4c3a-4994-af2b-debfd6703d46"/>
+                <PID name="IndexBuilder" mc="Class" uid="5e52bad6-d5bc-438d-906a-80f8364a1905"/>
+                <ATTRIBUTES>
+                  <ATT name="Aggregation">KindIsAssociation</ATT>
+                  <ATT name="IsChangeable">true</ATT>
+                  <ATT name="Changeable">ReadWrite</ATT>
+                  <ATT name="IsDerived">false</ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[0]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="Visibility">Public</ATT>
+                  <ATT name="IsClass">false</ATT>
+                  <ATT name="IsAbstract">false</ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="Opposite">
+                    <COMPID name="indexWriterConfig" mc="AssociationEnd" uid="d660dcb5-987a-444b-b712-ec3183af3e27"/>
+                  </COMP>
+                  <COMP relation="Association">
+                    <OBJECT>
+                      <ID name="" mc="Association" uid="42f909fd-664c-4542-9217-afe196b8d5f0"/>
+                      <PID name="IndexBuilder" mc="Class" uid="5e52bad6-d5bc-438d-906a-80f8364a1905"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES></DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="Association">
+              <COMPID name="" mc="Association" uid="42f909fd-664c-4542-9217-afe196b8d5f0"/>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="analyzer" mc="AssociationEnd" uid="0b85e987-7428-4553-a2ca-00dad8ee82fc"/>
+          <PID name="IndexBuilder" mc="Class" uid="5e52bad6-d5bc-438d-906a-80f8364a1905"/>
+          <ATTRIBUTES>
+            <ATT name="Aggregation">KindIsAssociation</ATT>
+            <ATT name="IsChangeable">true</ATT>
+            <ATT name="Changeable">ReadWrite</ATT>
+            <ATT name="IsDerived">false</ATT>
+            <ATT name="IsOrdered">false</ATT>
+            <ATT name="IsUnique">false</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[0]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+            <ATT name="Visibility">Private</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[analyzer]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Target">
+              <ID name="Analyzer" mc="Class" uid="77780036-c03e-49a3-9193-7f3970e67f1e"/>
+            </LINK>
+            <COMP relation="Opposite">
+              <OBJECT>
+                <ID name="" mc="AssociationEnd" uid="134b5899-c92e-4a6a-8e0b-44c9d2b61ce9"/>
+                <PID name="IndexBuilder" mc="Class" uid="5e52bad6-d5bc-438d-906a-80f8364a1905"/>
+                <ATTRIBUTES>
+                  <ATT name="Aggregation">KindIsAssociation</ATT>
+                  <ATT name="IsChangeable">true</ATT>
+                  <ATT name="Changeable">ReadWrite</ATT>
+                  <ATT name="IsDerived">false</ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[0]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="Visibility">Public</ATT>
+                  <ATT name="IsClass">false</ATT>
+                  <ATT name="IsAbstract">false</ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="Opposite">
+                    <COMPID name="analyzer" mc="AssociationEnd" uid="0b85e987-7428-4553-a2ca-00dad8ee82fc"/>
+                  </COMP>
+                  <COMP relation="Association">
+                    <OBJECT>
+                      <ID name="" mc="Association" uid="b662df3d-950a-4ad7-aea4-1d6e223391b4"/>
+                      <PID name="IndexBuilder" mc="Class" uid="5e52bad6-d5bc-438d-906a-80f8364a1905"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES></DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="Association">
+              <COMPID name="" mc="Association" uid="b662df3d-950a-4ad7-aea4-1d6e223391b4"/>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
       </COMP>
       <COMP relation="OwnedImport">
         <OBJECT>
-          <ID name="ElementImport" mc="ElementImport" uid="c44e81ed-8969-4549-8b05-3657dd796be3"/>
+          <ID name="ElementImport" mc="ElementImport" uid="542d87b9-2eb2-4a0d-8445-0b0b6ecf71eb"/>
           <PID name="IndexBuilder" mc="Class" uid="5e52bad6-d5bc-438d-906a-80f8364a1905"/>
           <ATTRIBUTES>
             <ATT name="Visibility">Private</ATT>
@@ -806,24 +933,162 @@
             </LINK>
           </DEPENDENCIES>
         </OBJECT>
-        <OBJECT>
-          <ID name="ElementImport" mc="ElementImport" uid="f130a013-b96d-492a-97da-b0bf62a490d4"/>
-          <PID name="IndexBuilder" mc="Class" uid="5e52bad6-d5bc-438d-906a-80f8364a1905"/>
-          <ATTRIBUTES>
-            <ATT name="Visibility">Private</ATT>
-            <ATT name="Name"><![CDATA[ElementImport]]></ATT>
-            <ATT name="status">1970354901745664</ATT>
-          </ATTRIBUTES>
-          <DEPENDENCIES>
-            <LINK relation="ImportedElement">
-              <ID name="Path" mc="Class" uid="14169e30-f1c8-472d-8c2c-b56dbd8bd120"/>
-            </LINK>
-          </DEPENDENCIES>
-        </OBJECT>
       </COMP>
       <LINK relation="Extension">
         <FOREIGNID name="JavaClass" mc="Stereotype" uid="01ec23a8-0000-0258-0000-000000000000"/>
       </LINK>
+      <COMP relation="Tag">
+        <OBJECT>
+          <ID name="" mc="TaggedValue" uid="9d75abbc-5e23-440f-ad2a-3899f10af456"/>
+          <PID name="IndexBuilder" mc="Class" uid="5e52bad6-d5bc-438d-906a-80f8364a1905"/>
+          <ATTRIBUTES>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="Actual">
+              <OBJECT>
+                <ID name="" mc="TagParameter" uid="d1d60b0b-3c45-43e6-8c01-0e9d8b072c79"/>
+                <PID name="IndexBuilder" mc="Class" uid="5e52bad6-d5bc-438d-906a-80f8364a1905"/>
+                <ATTRIBUTES>
+                  <ATT name="Value"><![CDATA[java.io.FileInputStream]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="" mc="TagParameter" uid="64555e9f-a51d-4350-a1c6-4ba560db6193"/>
+                <PID name="IndexBuilder" mc="Class" uid="5e52bad6-d5bc-438d-906a-80f8364a1905"/>
+                <ATTRIBUTES>
+                  <ATT name="Value"><![CDATA[java.nio.file.DirectoryStream]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="" mc="TagParameter" uid="e9ce78fe-e92e-4431-ae45-610dcf2b0cf8"/>
+                <PID name="IndexBuilder" mc="Class" uid="5e52bad6-d5bc-438d-906a-80f8364a1905"/>
+                <ATTRIBUTES>
+                  <ATT name="Value"><![CDATA[java.nio.file.Files]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="" mc="TagParameter" uid="649ef7d3-dad7-465e-bb1b-d7274f2228f3"/>
+                <PID name="IndexBuilder" mc="Class" uid="5e52bad6-d5bc-438d-906a-80f8364a1905"/>
+                <ATTRIBUTES>
+                  <ATT name="Value"><![CDATA[java.nio.file.Path]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="" mc="TagParameter" uid="b90ae867-c6ef-4e8b-a56f-447ef0ca3c29"/>
+                <PID name="IndexBuilder" mc="Class" uid="5e52bad6-d5bc-438d-906a-80f8364a1905"/>
+                <ATTRIBUTES>
+                  <ATT name="Value"><![CDATA[java.nio.file.Paths]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="" mc="TagParameter" uid="8f8d4467-ceb6-4ab1-bc25-ea839ee5a0f4"/>
+                <PID name="IndexBuilder" mc="Class" uid="5e52bad6-d5bc-438d-906a-80f8364a1905"/>
+                <ATTRIBUTES>
+                  <ATT name="Value"><![CDATA[org.apache.commons.io.IOUtils]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="" mc="TagParameter" uid="f56fcd61-f178-43d4-80d9-10742150a96d"/>
+                <PID name="IndexBuilder" mc="Class" uid="5e52bad6-d5bc-438d-906a-80f8364a1905"/>
+                <ATTRIBUTES>
+                  <ATT name="Value"><![CDATA[org.apache.lucene.analysis.Analyzer]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="" mc="TagParameter" uid="1808c42a-427c-43fd-b6aa-608440dfcad6"/>
+                <PID name="IndexBuilder" mc="Class" uid="5e52bad6-d5bc-438d-906a-80f8364a1905"/>
+                <ATTRIBUTES>
+                  <ATT name="Value"><![CDATA[org.apache.lucene.analysis.core.SimpleAnalyzer]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="" mc="TagParameter" uid="e884b958-b3df-479b-a642-addcd760a314"/>
+                <PID name="IndexBuilder" mc="Class" uid="5e52bad6-d5bc-438d-906a-80f8364a1905"/>
+                <ATTRIBUTES>
+                  <ATT name="Value"><![CDATA[org.apache.lucene.document.Document]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="" mc="TagParameter" uid="e41edbc5-53d8-4530-8d6b-e7c4c64403df"/>
+                <PID name="IndexBuilder" mc="Class" uid="5e52bad6-d5bc-438d-906a-80f8364a1905"/>
+                <ATTRIBUTES>
+                  <ATT name="Value"><![CDATA[org.apache.lucene.document.Field]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="" mc="TagParameter" uid="c7e3e795-c1dd-4b6f-a7e8-c8ec90029ecf"/>
+                <PID name="IndexBuilder" mc="Class" uid="5e52bad6-d5bc-438d-906a-80f8364a1905"/>
+                <ATTRIBUTES>
+                  <ATT name="Value"><![CDATA[org.apache.lucene.document.StringField]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="" mc="TagParameter" uid="4d2b65c2-5e77-4010-8a0d-ae0772c70bfd"/>
+                <PID name="IndexBuilder" mc="Class" uid="5e52bad6-d5bc-438d-906a-80f8364a1905"/>
+                <ATTRIBUTES>
+                  <ATT name="Value"><![CDATA[org.apache.lucene.document.TextField]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="" mc="TagParameter" uid="91bdaaa6-727a-42c0-a7fb-990fc36ce4ed"/>
+                <PID name="IndexBuilder" mc="Class" uid="5e52bad6-d5bc-438d-906a-80f8364a1905"/>
+                <ATTRIBUTES>
+                  <ATT name="Value"><![CDATA[org.apache.lucene.index.IndexWriter]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="" mc="TagParameter" uid="6fc789a1-dfc8-44a2-b023-d7840d615cfb"/>
+                <PID name="IndexBuilder" mc="Class" uid="5e52bad6-d5bc-438d-906a-80f8364a1905"/>
+                <ATTRIBUTES>
+                  <ATT name="Value"><![CDATA[org.apache.lucene.index.IndexWriterConfig]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="" mc="TagParameter" uid="3af944db-7bc9-47ab-b5be-6d7a6a15ddd9"/>
+                <PID name="IndexBuilder" mc="Class" uid="5e52bad6-d5bc-438d-906a-80f8364a1905"/>
+                <ATTRIBUTES>
+                  <ATT name="Value"><![CDATA[org.apache.lucene.store.FSDirectory]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <LINK relation="Definition">
+              <FOREIGNID name="JavaImport" mc="TagType" uid="003800a8-0000-0155-0000-000000000000"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
     </DEPENDENCIES>
   </OBJECT>
 </EXT>
