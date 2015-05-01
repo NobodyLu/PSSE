@@ -40,6 +40,15 @@ public final class IndexBuilder {
 //end of modifiable zone..................E/bb421899-200c-4b52-aeb4-6a4a104bd523
     }
 
+    Analyzer getAnalyzer() {
+//begin of modifiable zone................T/b95919d3-0f94-4f1b-9e3f-7afc3a2eba8e
+        // Automatically generated method. Please delete this comment before entering specific code.
+//end of modifiable zone..................E/b95919d3-0f94-4f1b-9e3f-7afc3a2eba8e
+//begin of modifiable zone................T/6a6e0ad6-e7f0-4f9f-9f23-213bf5a9d6f4
+        return this.analyzer;
+//end of modifiable zone..................E/6a6e0ad6-e7f0-4f9f-9f23-213bf5a9d6f4
+    }
+
     public void prepareIndexDirectory(String directory) throws java.io.IOException {
 //begin of modifiable zone................T/d61bada4-3b14-4c64-92af-92fe8a11dab9
         close();
