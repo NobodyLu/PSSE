@@ -7,17 +7,16 @@
     <EXTID name="IOException" mc="Class" uid="f2bb4a3c-4ac3-4643-8dee-b4f3608d8cf9"/>
     <EXTID name="IndexWriter" mc="Class" uid="d083584e-1c3a-49af-8448-821dbbbf46ba"/>
     <EXTID name="IndexWriterConfig" mc="Class" uid="9ef20cb7-4099-438c-8d14-fcc73bc07994"/>
-    <EXTID name="SimpleAnalyzer" mc="Class" uid="be24975f-177b-482f-97fb-8603137b5a47"/>
     <FOREIGNID name="JavaClass" mc="Stereotype" uid="01ec23a8-0000-0258-0000-000000000000"/>
     <FOREIGNID name="JavaCode" mc="NoteType" uid="003800a8-0000-018e-0000-000000000000"/>
     <FOREIGNID name="JavaFinal" mc="TagType" uid="003800a8-0000-0161-0000-000000000000"/>
     <FOREIGNID name="JavaFullName" mc="TagType" uid="004a0876-fb04-1f8f-b8b2-0015c53b57e1"/>
     <FOREIGNID name="JavaGetter" mc="Stereotype" uid="01ec23a8-0000-012b-0000-000000000000"/>
-    <FOREIGNID name="JavaGetter" mc="Stereotype" uid="01ec25e8-0000-00f0-0000-000000000000"/>
     <FOREIGNID name="JavaImport" mc="TagType" uid="003800a8-0000-0155-0000-000000000000"/>
     <FOREIGNID name="JavaReturned" mc="NoteType" uid="003800a8-0000-0190-0000-000000000000"/>
     <FOREIGNID name="create" mc="Stereotype" uid="00700680-0000-0204-0000-000000000000"/>
     <FOREIGNID name="description" mc="NoteType" uid="00000000-0000-3e81-0000-000000000000"/>
+    <FOREIGNID name="integer" mc="DataType" uid="00000004-0000-0009-0000-000000000000"/>
     <FOREIGNID name="string" mc="DataType" uid="00000004-0000-000d-0000-000000000000"/>
   </DEPS>
   <OBJECT>
@@ -50,49 +49,13 @@
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
           <DEPENDENCIES>
-            <LINK relation="Extension">
-              <FOREIGNID name="create" mc="Stereotype" uid="00700680-0000-0204-0000-000000000000"/>
-            </LINK>
-            <COMP relation="Descriptor">
+            <COMP relation="IO">
               <OBJECT>
-                <ID name="" mc="Note" uid="bb421899-200c-4b52-aeb4-6a4a104bd523"/>
-                <PID name="IndexBuilder" mc="Class" uid="5e52bad6-d5bc-438d-906a-80f8364a1905"/>
-                <ATTRIBUTES>
-                  <ATT name="Content"><![CDATA[analyzer = new SimpleAnalyzer();]]></ATT>
-                  <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
-                  <ATT name="Name"></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES>
-                  <LINK relation="Model">
-                    <FOREIGNID name="JavaCode" mc="NoteType" uid="003800a8-0000-018e-0000-000000000000"/>
-                  </LINK>
-                </DEPENDENCIES>
-              </OBJECT>
-            </COMP>
-          </DEPENDENCIES>
-        </OBJECT>
-        <OBJECT>
-          <ID name="getAnalyzer" mc="Operation" uid="7fdec0f8-6981-4dcf-86ed-66b796f1725c"/>
-          <PID name="IndexBuilder" mc="Class" uid="5e52bad6-d5bc-438d-906a-80f8364a1905"/>
-          <ATTRIBUTES>
-            <ATT name="Concurrency">false</ATT>
-            <ATT name="Final">false</ATT>
-            <ATT name="Passing">MethodOut</ATT>
-            <ATT name="Visibility">PackageVisibility</ATT>
-            <ATT name="IsClass">false</ATT>
-            <ATT name="IsAbstract">false</ATT>
-            <ATT name="Name"><![CDATA[getAnalyzer]]></ATT>
-            <ATT name="status">1970354901745664</ATT>
-          </ATTRIBUTES>
-          <DEPENDENCIES>
-            <COMP relation="Return">
-              <OBJECT>
-                <ID name="" mc="Parameter" uid="5eb94fcf-b0cb-43ca-87c0-e0b15badcdca"/>
+                <ID name="analyzer" mc="Parameter" uid="97854080-8ff7-4cff-a54e-f5b246cc1d5c"/>
                 <PID name="IndexBuilder" mc="Class" uid="5e52bad6-d5bc-438d-906a-80f8364a1905"/>
                 <ATTRIBUTES>
                   <ATT name="ParameterPassing">In</ATT>
-                  <ATT name="MultiplicityMin"><![CDATA[0]]></ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
                   <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
                   <ATT name="TypeConstraint"></ATT>
                   <ATT name="DefaultValue"></ATT>
@@ -101,7 +64,7 @@
                   <ATT name="IsException">false</ATT>
                   <ATT name="IsStream">false</ATT>
                   <ATT name="Effect">ReadEffect</ATT>
-                  <ATT name="Name"></ATT>
+                  <ATT name="Name"><![CDATA[analyzer]]></ATT>
                   <ATT name="status">1970354901745664</ATT>
                 </ATTRIBUTES>
                 <DEPENDENCIES>
@@ -112,59 +75,21 @@
               </OBJECT>
             </COMP>
             <LINK relation="Extension">
-              <FOREIGNID name="JavaGetter" mc="Stereotype" uid="01ec25e8-0000-00f0-0000-000000000000"/>
+              <FOREIGNID name="create" mc="Stereotype" uid="00700680-0000-0204-0000-000000000000"/>
             </LINK>
-            <COMP relation="DependsOnDependency">
-              <OBJECT>
-                <ID name="" mc="Dependency" uid="be15cbad-7850-41d2-847c-93519860dde5"/>
-                <PID name="IndexBuilder" mc="Class" uid="5e52bad6-d5bc-438d-906a-80f8364a1905"/>
-                <ATTRIBUTES>
-                  <ATT name="DependsOnId"></ATT>
-                  <ATT name="DependsOnName"></ATT>
-                  <ATT name="Name"></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES>
-                  <LINK relation="DependsOn">
-                    <REFOBJ>
-                      <ID name="analyzer" mc="AssociationEnd" uid="0b85e987-7428-4553-a2ca-00dad8ee82fc"/>
-                      <PID name="IndexBuilder" mc="Class" uid="5e52bad6-d5bc-438d-906a-80f8364a1905"/>
-                    </REFOBJ>
-                  </LINK>
-                  <LINK relation="Extension">
-                    <FOREIGNID name="JavaGetter" mc="Stereotype" uid="01ec23a8-0000-012b-0000-000000000000"/>
-                  </LINK>
-                </DEPENDENCIES>
-              </OBJECT>
-            </COMP>
             <COMP relation="Descriptor">
               <OBJECT>
-                <ID name="" mc="Note" uid="b95919d3-0f94-4f1b-9e3f-7afc3a2eba8e"/>
+                <ID name="" mc="Note" uid="bb421899-200c-4b52-aeb4-6a4a104bd523"/>
                 <PID name="IndexBuilder" mc="Class" uid="5e52bad6-d5bc-438d-906a-80f8364a1905"/>
                 <ATTRIBUTES>
-                  <ATT name="Content"><![CDATA[// Automatically generated method. Please delete this comment before entering specific code.]]></ATT>
-                  <ATT name="MimeType"></ATT>
+                  <ATT name="Content"><![CDATA[this.analyzer = analyzer;]]></ATT>
+                  <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
                   <ATT name="Name"></ATT>
                   <ATT name="status">1970354901745664</ATT>
                 </ATTRIBUTES>
                 <DEPENDENCIES>
                   <LINK relation="Model">
                     <FOREIGNID name="JavaCode" mc="NoteType" uid="003800a8-0000-018e-0000-000000000000"/>
-                  </LINK>
-                </DEPENDENCIES>
-              </OBJECT>
-              <OBJECT>
-                <ID name="" mc="Note" uid="6a6e0ad6-e7f0-4f9f-9f23-213bf5a9d6f4"/>
-                <PID name="IndexBuilder" mc="Class" uid="5e52bad6-d5bc-438d-906a-80f8364a1905"/>
-                <ATTRIBUTES>
-                  <ATT name="Content"><![CDATA[return this.analyzer;]]></ATT>
-                  <ATT name="MimeType"></ATT>
-                  <ATT name="Name"></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES>
-                  <LINK relation="Model">
-                    <FOREIGNID name="JavaReturned" mc="NoteType" uid="003800a8-0000-0190-0000-000000000000"/>
                   </LINK>
                 </DEPENDENCIES>
               </OBJECT>
@@ -540,6 +465,126 @@ for (Path element: stream) {
 }
 ]]></ATT>
                   <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Model">
+                    <FOREIGNID name="JavaCode" mc="NoteType" uid="003800a8-0000-018e-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="addDirectory" mc="Operation" uid="6ea1052e-6762-4aec-885b-bdc13de7793d"/>
+          <PID name="IndexBuilder" mc="Class" uid="5e52bad6-d5bc-438d-906a-80f8364a1905"/>
+          <ATTRIBUTES>
+            <ATT name="Concurrency">false</ATT>
+            <ATT name="Final">false</ATT>
+            <ATT name="Passing">MethodOut</ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[addDirectory]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="Thrown">
+              <OBJECT>
+                <ID name="" mc="RaisedException" uid="897bf33f-e109-48b1-b62e-82423dfc0d4a"/>
+                <PID name="IndexBuilder" mc="Class" uid="5e52bad6-d5bc-438d-906a-80f8364a1905"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="ThrownType">
+                    <ID name="IOException" mc="Class" uid="f2bb4a3c-4ac3-4643-8dee-b4f3608d8cf9"/>
+                  </LINK>
+                  <COMP relation="Tag">
+                    <OBJECT>
+                      <ID name="" mc="TaggedValue" uid="ea12deda-6d05-4ff9-8473-1ddb67eb606c"/>
+                      <PID name="IndexBuilder" mc="Class" uid="5e52bad6-d5bc-438d-906a-80f8364a1905"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Definition">
+                          <FOREIGNID name="JavaFullName" mc="TagType" uid="004a0876-fb04-1f8f-b8b2-0015c53b57e1"/>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="IO">
+              <OBJECT>
+                <ID name="directory" mc="Parameter" uid="9736c377-b23f-4bab-a617-af9aaee2d2f1"/>
+                <PID name="IndexBuilder" mc="Class" uid="5e52bad6-d5bc-438d-906a-80f8364a1905"/>
+                <ATTRIBUTES>
+                  <ATT name="ParameterPassing">In</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="DefaultValue"></ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="IsException">false</ATT>
+                  <ATT name="IsStream">false</ATT>
+                  <ATT name="Effect">ReadEffect</ATT>
+                  <ATT name="Name"><![CDATA[directory]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <FOREIGNID name="string" mc="DataType" uid="00000004-0000-000d-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="max" mc="Parameter" uid="a374c3ee-aa7f-406e-95b3-90fd48890247"/>
+                <PID name="IndexBuilder" mc="Class" uid="5e52bad6-d5bc-438d-906a-80f8364a1905"/>
+                <ATTRIBUTES>
+                  <ATT name="ParameterPassing">In</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="DefaultValue"></ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="IsException">false</ATT>
+                  <ATT name="IsStream">false</ATT>
+                  <ATT name="Effect">ReadEffect</ATT>
+                  <ATT name="Name"><![CDATA[max]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <FOREIGNID name="integer" mc="DataType" uid="00000004-0000-0009-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="Descriptor">
+              <OBJECT>
+                <ID name="" mc="Note" uid="47a91e59-ccd9-4292-a3f7-2f081b705a3f"/>
+                <PID name="IndexBuilder" mc="Class" uid="5e52bad6-d5bc-438d-906a-80f8364a1905"/>
+                <ATTRIBUTES>
+                  <ATT name="Content"><![CDATA[Path path = Paths.get(directory);
+DirectoryStream<Path> stream = Files.newDirectoryStream(path, "*.*");
+int count = 0;
+for (Path element: stream) {
+    if (!Files.isDirectory(element) && (count < max)) {
+        addFile(element.toString());
+        count++;
+    }
+}
+]]></ATT>
+                  <ATT name="MimeType"></ATT>
                   <ATT name="Name"></ATT>
                   <ATT name="status">1970354901745664</ATT>
                 </ATTRIBUTES>
@@ -960,7 +1005,7 @@ for (Path element: stream) {
           <ATTRIBUTES>
             <ATT name="Aggregation">KindIsAssociation</ATT>
             <ATT name="IsChangeable">true</ATT>
-            <ATT name="Changeable">Read</ATT>
+            <ATT name="Changeable">AccesNone</ATT>
             <ATT name="IsDerived">false</ATT>
             <ATT name="IsOrdered">false</ATT>
             <ATT name="IsUnique">false</ATT>
@@ -1016,22 +1061,6 @@ for (Path element: stream) {
             <COMP relation="Association">
               <COMPID name="" mc="Association" uid="b662df3d-950a-4ad7-aea4-1d6e223391b4"/>
             </COMP>
-          </DEPENDENCIES>
-        </OBJECT>
-      </COMP>
-      <COMP relation="OwnedImport">
-        <OBJECT>
-          <ID name="ElementImport" mc="ElementImport" uid="542d87b9-2eb2-4a0d-8445-0b0b6ecf71eb"/>
-          <PID name="IndexBuilder" mc="Class" uid="5e52bad6-d5bc-438d-906a-80f8364a1905"/>
-          <ATTRIBUTES>
-            <ATT name="Visibility">Private</ATT>
-            <ATT name="Name"><![CDATA[ElementImport]]></ATT>
-            <ATT name="status">1970354901745664</ATT>
-          </ATTRIBUTES>
-          <DEPENDENCIES>
-            <LINK relation="ImportedElement">
-              <ID name="SimpleAnalyzer" mc="Class" uid="be24975f-177b-482f-97fb-8603137b5a47"/>
-            </LINK>
           </DEPENDENCIES>
         </OBJECT>
       </COMP>
@@ -1115,7 +1144,7 @@ for (Path element: stream) {
                 <ID name="" mc="TagParameter" uid="1808c42a-427c-43fd-b6aa-608440dfcad6"/>
                 <PID name="IndexBuilder" mc="Class" uid="5e52bad6-d5bc-438d-906a-80f8364a1905"/>
                 <ATTRIBUTES>
-                  <ATT name="Value"><![CDATA[org.apache.lucene.analysis.core.SimpleAnalyzer]]></ATT>
+                  <ATT name="Value"><![CDATA[org.apache.lucene.document.Document]]></ATT>
                   <ATT name="status">1970354901745664</ATT>
                 </ATTRIBUTES>
                 <DEPENDENCIES></DEPENDENCIES>
@@ -1124,7 +1153,7 @@ for (Path element: stream) {
                 <ID name="" mc="TagParameter" uid="e884b958-b3df-479b-a642-addcd760a314"/>
                 <PID name="IndexBuilder" mc="Class" uid="5e52bad6-d5bc-438d-906a-80f8364a1905"/>
                 <ATTRIBUTES>
-                  <ATT name="Value"><![CDATA[org.apache.lucene.document.Document]]></ATT>
+                  <ATT name="Value"><![CDATA[org.apache.lucene.document.Field]]></ATT>
                   <ATT name="status">1970354901745664</ATT>
                 </ATTRIBUTES>
                 <DEPENDENCIES></DEPENDENCIES>
@@ -1133,7 +1162,7 @@ for (Path element: stream) {
                 <ID name="" mc="TagParameter" uid="e41edbc5-53d8-4530-8d6b-e7c4c64403df"/>
                 <PID name="IndexBuilder" mc="Class" uid="5e52bad6-d5bc-438d-906a-80f8364a1905"/>
                 <ATTRIBUTES>
-                  <ATT name="Value"><![CDATA[org.apache.lucene.document.Field]]></ATT>
+                  <ATT name="Value"><![CDATA[org.apache.lucene.document.StringField]]></ATT>
                   <ATT name="status">1970354901745664</ATT>
                 </ATTRIBUTES>
                 <DEPENDENCIES></DEPENDENCIES>
@@ -1142,7 +1171,7 @@ for (Path element: stream) {
                 <ID name="" mc="TagParameter" uid="c7e3e795-c1dd-4b6f-a7e8-c8ec90029ecf"/>
                 <PID name="IndexBuilder" mc="Class" uid="5e52bad6-d5bc-438d-906a-80f8364a1905"/>
                 <ATTRIBUTES>
-                  <ATT name="Value"><![CDATA[org.apache.lucene.document.StringField]]></ATT>
+                  <ATT name="Value"><![CDATA[org.apache.lucene.document.TextField]]></ATT>
                   <ATT name="status">1970354901745664</ATT>
                 </ATTRIBUTES>
                 <DEPENDENCIES></DEPENDENCIES>
@@ -1151,7 +1180,7 @@ for (Path element: stream) {
                 <ID name="" mc="TagParameter" uid="4d2b65c2-5e77-4010-8a0d-ae0772c70bfd"/>
                 <PID name="IndexBuilder" mc="Class" uid="5e52bad6-d5bc-438d-906a-80f8364a1905"/>
                 <ATTRIBUTES>
-                  <ATT name="Value"><![CDATA[org.apache.lucene.document.TextField]]></ATT>
+                  <ATT name="Value"><![CDATA[org.apache.lucene.index.IndexWriter]]></ATT>
                   <ATT name="status">1970354901745664</ATT>
                 </ATTRIBUTES>
                 <DEPENDENCIES></DEPENDENCIES>
@@ -1160,22 +1189,13 @@ for (Path element: stream) {
                 <ID name="" mc="TagParameter" uid="91bdaaa6-727a-42c0-a7fb-990fc36ce4ed"/>
                 <PID name="IndexBuilder" mc="Class" uid="5e52bad6-d5bc-438d-906a-80f8364a1905"/>
                 <ATTRIBUTES>
-                  <ATT name="Value"><![CDATA[org.apache.lucene.index.IndexWriter]]></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES></DEPENDENCIES>
-              </OBJECT>
-              <OBJECT>
-                <ID name="" mc="TagParameter" uid="6fc789a1-dfc8-44a2-b023-d7840d615cfb"/>
-                <PID name="IndexBuilder" mc="Class" uid="5e52bad6-d5bc-438d-906a-80f8364a1905"/>
-                <ATTRIBUTES>
                   <ATT name="Value"><![CDATA[org.apache.lucene.index.IndexWriterConfig]]></ATT>
                   <ATT name="status">1970354901745664</ATT>
                 </ATTRIBUTES>
                 <DEPENDENCIES></DEPENDENCIES>
               </OBJECT>
               <OBJECT>
-                <ID name="" mc="TagParameter" uid="3af944db-7bc9-47ab-b5be-6d7a6a15ddd9"/>
+                <ID name="" mc="TagParameter" uid="6fc789a1-dfc8-44a2-b023-d7840d615cfb"/>
                 <PID name="IndexBuilder" mc="Class" uid="5e52bad6-d5bc-438d-906a-80f8364a1905"/>
                 <ATTRIBUTES>
                   <ATT name="Value"><![CDATA[org.apache.lucene.store.FSDirectory]]></ATT>

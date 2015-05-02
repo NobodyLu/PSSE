@@ -6,6 +6,8 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Vector;
 
+import org.apache.lucene.analysis.Analyzer;
+import org.apache.lucene.analysis.core.SimpleAnalyzer;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -15,15 +17,16 @@ public class IndexQuerierTest {
 	private IndexBuilder builder;
 	
 	private IndexQuerier querier;
+	
+	private Analyzer analyzer = new SimpleAnalyzer();
 
 	@Before
 	public void setUp() throws Exception {
-		builder = new IndexBuilder();
+		builder = new IndexBuilder(analyzer);
 		builder.prepareIndexDirectory("D:\\Research\\Evaluation\\PSSE\\Data\\Index\\debug");
 		builder.addDirectory("D:\\Research\\Evaluation\\PSSE\\Data\\Documents\\debug");
 		
-		querier = new IndexQuerier("D:\\Research\\Evaluation\\PSSE\\Data\\Index\\debug");
-		querier.setAnalyzer(builder.getAnalyzer());
+		querier = new IndexQuerier("D:\\Research\\Evaluation\\PSSE\\Data\\Index\\debug", analyzer);
 	}
 
 	@After

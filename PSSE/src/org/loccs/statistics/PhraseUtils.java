@@ -15,6 +15,8 @@ public class PhraseUtils {
     public static String toString(List<String> phrase, int start, int length) {
 //begin of modifiable zone(JavaCode)......C/51acbd15-4956-4fba-b1f4-4a33ebe669f3
     	String phraseString = "";
+    	for (int i = start; i < (start + length); i++)
+    		phraseString = phraseString + phrase.get(i) + " ";
 //end of modifiable zone(JavaCode)........E/51acbd15-4956-4fba-b1f4-4a33ebe669f3
 //begin of modifiable zone(JavaReturned)..C/51acbd15-4956-4fba-b1f4-4a33ebe669f3
     	return phraseString;

@@ -31,7 +31,7 @@ public class IndexQuerier {
 
     private IndexSearcher searcher;
 
-    public IndexQuerier(String directory) throws java.io.IOException {
+    public IndexQuerier(String directory, Analyzer analyzer) throws java.io.IOException {
 //begin of modifiable zone(JavaSuper).....C/2b8973b1-fea5-4d1d-848b-aa84bc5ef60b
 
 //end of modifiable zone(JavaSuper).......E/2b8973b1-fea5-4d1d-848b-aa84bc5ef60b
@@ -39,14 +39,8 @@ public class IndexQuerier {
         fsDirectory = FSDirectory.open(Paths.get(directory));
         reader = DirectoryReader.open(fsDirectory);
         searcher = new IndexSearcher(reader);
+        this.analyzer = analyzer;
 //end of modifiable zone..................E/e7a6a039-924a-4679-8c3b-5cb2c556b3c6
-    }
-
-    void setAnalyzer(Analyzer value) {
-//begin of modifiable zone................T/4af62fcb-5ce6-4dde-8c8f-c29708de1a4d
-        // Automatically generated method. Please delete this comment before entering specific code.
-        this.analyzer = value;
-//end of modifiable zone..................E/4af62fcb-5ce6-4dde-8c8f-c29708de1a4d
     }
 
     public int getDocumentCount() {

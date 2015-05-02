@@ -10,8 +10,6 @@
     <FOREIGNID name="JavaCode" mc="NoteType" uid="003800a8-0000-018e-0000-000000000000"/>
     <FOREIGNID name="JavaImport" mc="TagType" uid="003800a8-0000-0155-0000-000000000000"/>
     <FOREIGNID name="JavaReturned" mc="NoteType" uid="003800a8-0000-0190-0000-000000000000"/>
-    <FOREIGNID name="JavaSetter" mc="Stereotype" uid="01ec23a8-0000-0130-0000-000000000000"/>
-    <FOREIGNID name="JavaSetter" mc="Stereotype" uid="01ec25e8-0000-00f5-0000-000000000000"/>
     <FOREIGNID name="JavaThrownException" mc="TagType" uid="003800a8-0000-017c-0000-000000000000"/>
     <FOREIGNID name="create" mc="Stereotype" uid="00700680-0000-0204-0000-000000000000"/>
     <FOREIGNID name="description" mc="NoteType" uid="00000000-0000-3e81-0000-000000000000"/>
@@ -73,6 +71,29 @@
                   </LINK>
                 </DEPENDENCIES>
               </OBJECT>
+              <OBJECT>
+                <ID name="analyzer" mc="Parameter" uid="883b3f82-5ea6-4ddd-980a-3042dcb7726a"/>
+                <PID name="IndexQuerier" mc="Class" uid="6bcd78c8-98d6-4b0d-9c30-9545a0202a66"/>
+                <ATTRIBUTES>
+                  <ATT name="ParameterPassing">In</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="DefaultValue"></ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="IsException">false</ATT>
+                  <ATT name="IsStream">false</ATT>
+                  <ATT name="Effect">ReadEffect</ATT>
+                  <ATT name="Name"><![CDATA[analyzer]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <ID name="Analyzer" mc="Class" uid="77780036-c03e-49a3-9193-7f3970e67f1e"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
             </COMP>
             <LINK relation="Extension">
               <FOREIGNID name="create" mc="Stereotype" uid="00700680-0000-0204-0000-000000000000"/>
@@ -111,92 +132,6 @@
                   <ATT name="Content"><![CDATA[fsDirectory = FSDirectory.open(Paths.get(directory));
 reader = DirectoryReader.open(fsDirectory);
 searcher = new IndexSearcher(reader);
-]]></ATT>
-                  <ATT name="MimeType"></ATT>
-                  <ATT name="Name"></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES>
-                  <LINK relation="Model">
-                    <FOREIGNID name="JavaCode" mc="NoteType" uid="003800a8-0000-018e-0000-000000000000"/>
-                  </LINK>
-                </DEPENDENCIES>
-              </OBJECT>
-            </COMP>
-          </DEPENDENCIES>
-        </OBJECT>
-        <OBJECT>
-          <ID name="setAnalyzer" mc="Operation" uid="e12721c7-aaa1-4863-9f12-80d75be75138"/>
-          <PID name="IndexQuerier" mc="Class" uid="6bcd78c8-98d6-4b0d-9c30-9545a0202a66"/>
-          <ATTRIBUTES>
-            <ATT name="Concurrency">false</ATT>
-            <ATT name="Final">false</ATT>
-            <ATT name="Passing">MethodOut</ATT>
-            <ATT name="Visibility">PackageVisibility</ATT>
-            <ATT name="IsClass">false</ATT>
-            <ATT name="IsAbstract">false</ATT>
-            <ATT name="Name"><![CDATA[setAnalyzer]]></ATT>
-            <ATT name="status">1970354901745664</ATT>
-          </ATTRIBUTES>
-          <DEPENDENCIES>
-            <COMP relation="IO">
-              <OBJECT>
-                <ID name="value" mc="Parameter" uid="8529c0f4-dacf-4730-abf3-be9a3827ea2e"/>
-                <PID name="IndexQuerier" mc="Class" uid="6bcd78c8-98d6-4b0d-9c30-9545a0202a66"/>
-                <ATTRIBUTES>
-                  <ATT name="ParameterPassing">In</ATT>
-                  <ATT name="MultiplicityMin"><![CDATA[0]]></ATT>
-                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
-                  <ATT name="TypeConstraint"></ATT>
-                  <ATT name="DefaultValue"></ATT>
-                  <ATT name="IsOrdered">false</ATT>
-                  <ATT name="IsUnique">false</ATT>
-                  <ATT name="IsException">false</ATT>
-                  <ATT name="IsStream">false</ATT>
-                  <ATT name="Effect">ReadEffect</ATT>
-                  <ATT name="Name"><![CDATA[value]]></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES>
-                  <LINK relation="Type">
-                    <ID name="Analyzer" mc="Class" uid="77780036-c03e-49a3-9193-7f3970e67f1e"/>
-                  </LINK>
-                </DEPENDENCIES>
-              </OBJECT>
-            </COMP>
-            <LINK relation="Extension">
-              <FOREIGNID name="JavaSetter" mc="Stereotype" uid="01ec25e8-0000-00f5-0000-000000000000"/>
-            </LINK>
-            <COMP relation="DependsOnDependency">
-              <OBJECT>
-                <ID name="" mc="Dependency" uid="bedb77af-33a4-42b7-8bf7-db0cc77076c7"/>
-                <PID name="IndexQuerier" mc="Class" uid="6bcd78c8-98d6-4b0d-9c30-9545a0202a66"/>
-                <ATTRIBUTES>
-                  <ATT name="DependsOnId"></ATT>
-                  <ATT name="DependsOnName"></ATT>
-                  <ATT name="Name"></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES>
-                  <LINK relation="DependsOn">
-                    <REFOBJ>
-                      <ID name="analyzer" mc="AssociationEnd" uid="c117dd19-105f-4976-81fc-d45dad544df0"/>
-                      <PID name="IndexQuerier" mc="Class" uid="6bcd78c8-98d6-4b0d-9c30-9545a0202a66"/>
-                    </REFOBJ>
-                  </LINK>
-                  <LINK relation="Extension">
-                    <FOREIGNID name="JavaSetter" mc="Stereotype" uid="01ec23a8-0000-0130-0000-000000000000"/>
-                  </LINK>
-                </DEPENDENCIES>
-              </OBJECT>
-            </COMP>
-            <COMP relation="Descriptor">
-              <OBJECT>
-                <ID name="" mc="Note" uid="4af62fcb-5ce6-4dde-8c8f-c29708de1a4d"/>
-                <PID name="IndexQuerier" mc="Class" uid="6bcd78c8-98d6-4b0d-9c30-9545a0202a66"/>
-                <ATTRIBUTES>
-                  <ATT name="Content"><![CDATA[// Automatically generated method. Please delete this comment before entering specific code.
-this.analyzer = value;
 ]]></ATT>
                   <ATT name="MimeType"></ATT>
                   <ATT name="Name"></ATT>
@@ -579,7 +514,7 @@ TopDocs docs = searcher.search(query, reader.numDocs());
                 <ATTRIBUTES>
                   <ATT name="Content"><![CDATA[PhraseQuery query = new PhraseQuery();
 for (int i = start; i < (start + length); i++) 
-    query.add(new Term(IndexBuilder.CONTENT_FIELD_NAME, phrase.get(i)));
+    query.add(new Term(IndexBuilder.CONTENT_FIELD_NAME, phrase.get(i).toLowerCase()));
 TopDocs docs = searcher.search(query, reader.numDocs());
 ]]></ATT>
                   <ATT name="MimeType"></ATT>
@@ -916,7 +851,7 @@ if ((document != null) && (analyzer != null)) {
           <ATTRIBUTES>
             <ATT name="Aggregation">KindIsAssociation</ATT>
             <ATT name="IsChangeable">true</ATT>
-            <ATT name="Changeable">Write</ATT>
+            <ATT name="Changeable">AccesNone</ATT>
             <ATT name="IsDerived">false</ATT>
             <ATT name="IsOrdered">false</ATT>
             <ATT name="IsUnique">false</ATT>

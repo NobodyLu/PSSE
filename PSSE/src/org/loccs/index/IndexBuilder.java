@@ -7,7 +7,6 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import org.apache.commons.io.IOUtils;
 import org.apache.lucene.analysis.Analyzer;
-import org.apache.lucene.analysis.core.SimpleAnalyzer;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.document.Field;
 import org.apache.lucene.document.StringField;
@@ -31,22 +30,13 @@ public final class IndexBuilder {
 
     private Analyzer analyzer;
 
-    public IndexBuilder() {
+    public IndexBuilder(Analyzer analyzer) {
 //begin of modifiable zone(JavaSuper).....C/1d5fd5cb-67b0-42a1-a18a-1cd903f64495
 
 //end of modifiable zone(JavaSuper).......E/1d5fd5cb-67b0-42a1-a18a-1cd903f64495
 //begin of modifiable zone................T/bb421899-200c-4b52-aeb4-6a4a104bd523
-        analyzer = new SimpleAnalyzer();
+        this.analyzer = analyzer;
 //end of modifiable zone..................E/bb421899-200c-4b52-aeb4-6a4a104bd523
-    }
-
-    Analyzer getAnalyzer() {
-//begin of modifiable zone................T/b95919d3-0f94-4f1b-9e3f-7afc3a2eba8e
-        // Automatically generated method. Please delete this comment before entering specific code.
-//end of modifiable zone..................E/b95919d3-0f94-4f1b-9e3f-7afc3a2eba8e
-//begin of modifiable zone................T/6a6e0ad6-e7f0-4f9f-9f23-213bf5a9d6f4
-        return this.analyzer;
-//end of modifiable zone..................E/6a6e0ad6-e7f0-4f9f-9f23-213bf5a9d6f4
     }
 
     public void prepareIndexDirectory(String directory) throws java.io.IOException {
@@ -92,6 +82,20 @@ public final class IndexBuilder {
                 addFile(element.toString());
         }
 //end of modifiable zone..................E/55fd12ab-d1c3-4687-919f-584b003a80fc
+    }
+
+    public void addDirectory(String directory, int max) throws java.io.IOException {
+//begin of modifiable zone................T/47a91e59-ccd9-4292-a3f7-2f081b705a3f
+        Path path = Paths.get(directory);
+        DirectoryStream<Path> stream = Files.newDirectoryStream(path, "*.*");
+        int count = 0;
+        for (Path element: stream) {
+            if (!Files.isDirectory(element) && (count < max)) {
+                addFile(element.toString());
+                count++;
+            }
+        }
+//end of modifiable zone..................E/47a91e59-ccd9-4292-a3f7-2f081b705a3f
     }
 
     public void close() throws java.io.IOException {
