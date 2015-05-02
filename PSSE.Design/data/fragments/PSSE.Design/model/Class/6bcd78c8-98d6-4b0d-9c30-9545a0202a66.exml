@@ -9,6 +9,7 @@
     <FOREIGNID name="JavaClass" mc="Stereotype" uid="01ec23a8-0000-0258-0000-000000000000"/>
     <FOREIGNID name="JavaCode" mc="NoteType" uid="003800a8-0000-018e-0000-000000000000"/>
     <FOREIGNID name="JavaImport" mc="TagType" uid="003800a8-0000-0155-0000-000000000000"/>
+    <FOREIGNID name="JavaReturned" mc="NoteType" uid="003800a8-0000-0190-0000-000000000000"/>
     <FOREIGNID name="JavaSetter" mc="Stereotype" uid="01ec23a8-0000-0130-0000-000000000000"/>
     <FOREIGNID name="JavaSetter" mc="Stereotype" uid="01ec25e8-0000-00f5-0000-000000000000"/>
     <FOREIGNID name="JavaThrownException" mc="TagType" uid="003800a8-0000-017c-0000-000000000000"/>
@@ -102,6 +103,26 @@
                 </DEPENDENCIES>
               </OBJECT>
             </COMP>
+            <COMP relation="Descriptor">
+              <OBJECT>
+                <ID name="" mc="Note" uid="e7a6a039-924a-4679-8c3b-5cb2c556b3c6"/>
+                <PID name="IndexQuerier" mc="Class" uid="6bcd78c8-98d6-4b0d-9c30-9545a0202a66"/>
+                <ATTRIBUTES>
+                  <ATT name="Content"><![CDATA[fsDirectory = FSDirectory.open(Paths.get(directory));
+reader = DirectoryReader.open(fsDirectory);
+searcher = new IndexSearcher(reader);
+]]></ATT>
+                  <ATT name="MimeType"></ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Model">
+                    <FOREIGNID name="JavaCode" mc="NoteType" uid="003800a8-0000-018e-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
@@ -175,7 +196,8 @@
                 <PID name="IndexQuerier" mc="Class" uid="6bcd78c8-98d6-4b0d-9c30-9545a0202a66"/>
                 <ATTRIBUTES>
                   <ATT name="Content"><![CDATA[// Automatically generated method. Please delete this comment before entering specific code.
-this.analyzer = value;]]></ATT>
+this.analyzer = value;
+]]></ATT>
                   <ATT name="MimeType"></ATT>
                   <ATT name="Name"></ATT>
                   <ATT name="status">1970354901745664</ATT>
@@ -183,6 +205,64 @@ this.analyzer = value;]]></ATT>
                 <DEPENDENCIES>
                   <LINK relation="Model">
                     <FOREIGNID name="JavaCode" mc="NoteType" uid="003800a8-0000-018e-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="getDocumentCount" mc="Operation" uid="2ed5ee71-395f-4fcb-bde5-e3d58939073d"/>
+          <PID name="IndexQuerier" mc="Class" uid="6bcd78c8-98d6-4b0d-9c30-9545a0202a66"/>
+          <ATTRIBUTES>
+            <ATT name="Concurrency">false</ATT>
+            <ATT name="Final">false</ATT>
+            <ATT name="Passing">MethodOut</ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[getDocumentCount]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="Return">
+              <OBJECT>
+                <ID name="" mc="Parameter" uid="2ef9d3f1-fb34-4475-82d8-e05745c93faa"/>
+                <PID name="IndexQuerier" mc="Class" uid="6bcd78c8-98d6-4b0d-9c30-9545a0202a66"/>
+                <ATTRIBUTES>
+                  <ATT name="ParameterPassing">In</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="DefaultValue"></ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="IsException">false</ATT>
+                  <ATT name="IsStream">false</ATT>
+                  <ATT name="Effect">ReadEffect</ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <FOREIGNID name="integer" mc="DataType" uid="00000004-0000-0009-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="Descriptor">
+              <OBJECT>
+                <ID name="" mc="Note" uid="1cf0fb36-da27-4e0f-bd62-06f85553ad87"/>
+                <PID name="IndexQuerier" mc="Class" uid="6bcd78c8-98d6-4b0d-9c30-9545a0202a66"/>
+                <ATTRIBUTES>
+                  <ATT name="Content"><![CDATA[return reader.numDocs();]]></ATT>
+                  <ATT name="MimeType"></ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Model">
+                    <FOREIGNID name="JavaReturned" mc="NoteType" uid="003800a8-0000-0190-0000-000000000000"/>
                   </LINK>
                 </DEPENDENCIES>
               </OBJECT>
@@ -253,6 +333,32 @@ this.analyzer = value;]]></ATT>
                 </DEPENDENCIES>
               </OBJECT>
             </COMP>
+            <COMP relation="Tag">
+              <OBJECT>
+                <ID name="" mc="TaggedValue" uid="841ca8bb-cb69-40da-bc97-259cc4d65abd"/>
+                <PID name="IndexQuerier" mc="Class" uid="6bcd78c8-98d6-4b0d-9c30-9545a0202a66"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="Actual">
+                    <OBJECT>
+                      <ID name="" mc="TagParameter" uid="1ae2b680-48a4-471b-b7a1-df8c718500d1"/>
+                      <PID name="IndexQuerier" mc="Class" uid="6bcd78c8-98d6-4b0d-9c30-9545a0202a66"/>
+                      <ATTRIBUTES>
+                        <ATT name="Value"><![CDATA[java.io.IOException]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES></DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                  <LINK relation="Definition">
+                    <FOREIGNID name="JavaThrownException" mc="TagType" uid="003800a8-0000-017c-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
             <COMP relation="Descriptor">
               <OBJECT>
                 <ID name="" mc="Note" uid="4b1a689f-2eab-487a-bd70-f2d37e32d6d1"/>
@@ -266,6 +372,38 @@ this.analyzer = value;]]></ATT>
                 <DEPENDENCIES>
                   <LINK relation="Model">
                     <FOREIGNID name="description" mc="NoteType" uid="00000000-0000-3e81-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="" mc="Note" uid="e2cda6fd-fe92-4472-b797-6d1e18184e0d"/>
+                <PID name="IndexQuerier" mc="Class" uid="6bcd78c8-98d6-4b0d-9c30-9545a0202a66"/>
+                <ATTRIBUTES>
+                  <ATT name="Content"><![CDATA[Query query = new TermQuery(new Term(IndexBuilder.CONTENT_FIELD_NAME, word.toLowerCase()));
+TopDocs docs = searcher.search(query, reader.numDocs());
+]]></ATT>
+                  <ATT name="MimeType"></ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Model">
+                    <FOREIGNID name="JavaCode" mc="NoteType" uid="003800a8-0000-018e-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="" mc="Note" uid="4d724e8c-b90d-4ca6-a907-66ff6fbadeaf"/>
+                <PID name="IndexQuerier" mc="Class" uid="6bcd78c8-98d6-4b0d-9c30-9545a0202a66"/>
+                <ATTRIBUTES>
+                  <ATT name="Content"><![CDATA[return docs.scoreDocs.length;]]></ATT>
+                  <ATT name="MimeType"></ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Model">
+                    <FOREIGNID name="JavaReturned" mc="NoteType" uid="003800a8-0000-0190-0000-000000000000"/>
                   </LINK>
                 </DEPENDENCIES>
               </OBJECT>
@@ -408,6 +546,68 @@ this.analyzer = value;]]></ATT>
                 </DEPENDENCIES>
               </OBJECT>
             </COMP>
+            <COMP relation="Tag">
+              <OBJECT>
+                <ID name="" mc="TaggedValue" uid="0642150b-55b5-4cf2-9973-bbf39fbcb341"/>
+                <PID name="IndexQuerier" mc="Class" uid="6bcd78c8-98d6-4b0d-9c30-9545a0202a66"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="Actual">
+                    <OBJECT>
+                      <ID name="" mc="TagParameter" uid="3d6989d2-1d56-4e38-bbf4-eaf67921d1cf"/>
+                      <PID name="IndexQuerier" mc="Class" uid="6bcd78c8-98d6-4b0d-9c30-9545a0202a66"/>
+                      <ATTRIBUTES>
+                        <ATT name="Value"><![CDATA[java.io.IOException]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES></DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                  <LINK relation="Definition">
+                    <FOREIGNID name="JavaThrownException" mc="TagType" uid="003800a8-0000-017c-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="Descriptor">
+              <OBJECT>
+                <ID name="" mc="Note" uid="acd4e4d4-866e-4ddf-af8b-099dab63362f"/>
+                <PID name="IndexQuerier" mc="Class" uid="6bcd78c8-98d6-4b0d-9c30-9545a0202a66"/>
+                <ATTRIBUTES>
+                  <ATT name="Content"><![CDATA[PhraseQuery query = new PhraseQuery();
+for (int i = start; i < (start + length); i++) 
+    query.add(new Term(IndexBuilder.CONTENT_FIELD_NAME, phrase.get(i)));
+TopDocs docs = searcher.search(query, reader.numDocs());
+]]></ATT>
+                  <ATT name="MimeType"></ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Model">
+                    <FOREIGNID name="JavaCode" mc="NoteType" uid="003800a8-0000-018e-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="" mc="Note" uid="93a0d418-1945-4652-b37f-b7628b7944e1"/>
+                <PID name="IndexQuerier" mc="Class" uid="6bcd78c8-98d6-4b0d-9c30-9545a0202a66"/>
+                <ATTRIBUTES>
+                  <ATT name="Content"><![CDATA[return docs.scoreDocs.length;]]></ATT>
+                  <ATT name="MimeType"></ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Model">
+                    <FOREIGNID name="JavaReturned" mc="NoteType" uid="003800a8-0000-0190-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
@@ -472,6 +672,76 @@ this.analyzer = value;]]></ATT>
                       </DEPENDENCIES>
                     </OBJECT>
                   </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="Tag">
+              <OBJECT>
+                <ID name="" mc="TaggedValue" uid="bd93fc1b-06c8-445b-acca-c3f9e61cb836"/>
+                <PID name="IndexQuerier" mc="Class" uid="6bcd78c8-98d6-4b0d-9c30-9545a0202a66"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="Actual">
+                    <OBJECT>
+                      <ID name="" mc="TagParameter" uid="58f77ba8-7acd-4ba6-9b17-2f199f91273a"/>
+                      <PID name="IndexQuerier" mc="Class" uid="6bcd78c8-98d6-4b0d-9c30-9545a0202a66"/>
+                      <ATTRIBUTES>
+                        <ATT name="Value"><![CDATA[java.io.IOException]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES></DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                  <LINK relation="Definition">
+                    <FOREIGNID name="JavaThrownException" mc="TagType" uid="003800a8-0000-017c-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="Descriptor">
+              <OBJECT>
+                <ID name="" mc="Note" uid="2f3edb8a-3a63-4304-9ddb-34cd01498e7d"/>
+                <PID name="IndexQuerier" mc="Class" uid="6bcd78c8-98d6-4b0d-9c30-9545a0202a66"/>
+                <ATTRIBUTES>
+                  <ATT name="Content"><![CDATA[Vector<String> words = new Vector<String>();
+Fields fields = MultiFields.getFields(reader);
+if (fields != null) {
+    Terms terms = fields.terms(IndexBuilder.CONTENT_FIELD_NAME);
+    if (terms != null) {
+        TermsEnum termsEnum = terms.iterator(null);
+        BytesRef bytesRef;
+        while ((bytesRef = termsEnum.next()) != null) {
+            words.add(bytesRef.utf8ToString());
+        }
+    }            
+}
+]]></ATT>
+                  <ATT name="MimeType"></ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Model">
+                    <FOREIGNID name="JavaCode" mc="NoteType" uid="003800a8-0000-018e-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="" mc="Note" uid="72f6dfcc-8093-421b-b37d-7e60eff0fa01"/>
+                <PID name="IndexQuerier" mc="Class" uid="6bcd78c8-98d6-4b0d-9c30-9545a0202a66"/>
+                <ATTRIBUTES>
+                  <ATT name="Content"><![CDATA[return words;]]></ATT>
+                  <ATT name="MimeType"></ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Model">
+                    <FOREIGNID name="JavaReturned" mc="NoteType" uid="003800a8-0000-0190-0000-000000000000"/>
+                  </LINK>
                 </DEPENDENCIES>
               </OBJECT>
             </COMP>
@@ -564,6 +834,75 @@ this.analyzer = value;]]></ATT>
                       </DEPENDENCIES>
                     </OBJECT>
                   </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="Tag">
+              <OBJECT>
+                <ID name="" mc="TaggedValue" uid="fe5a85e0-eb99-4507-a9b3-a58493c2ad7a"/>
+                <PID name="IndexQuerier" mc="Class" uid="6bcd78c8-98d6-4b0d-9c30-9545a0202a66"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="Actual">
+                    <OBJECT>
+                      <ID name="" mc="TagParameter" uid="b25fd8eb-40b1-4fd1-964c-869c69590219"/>
+                      <PID name="IndexQuerier" mc="Class" uid="6bcd78c8-98d6-4b0d-9c30-9545a0202a66"/>
+                      <ATTRIBUTES>
+                        <ATT name="Value"><![CDATA[java.io.IOException]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES></DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                  <LINK relation="Definition">
+                    <FOREIGNID name="JavaThrownException" mc="TagType" uid="003800a8-0000-017c-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="Descriptor">
+              <OBJECT>
+                <ID name="" mc="Note" uid="6a08b042-1871-4b88-a8ff-79d8e9d1ab65"/>
+                <PID name="IndexQuerier" mc="Class" uid="6bcd78c8-98d6-4b0d-9c30-9545a0202a66"/>
+                <ATTRIBUTES>
+                  <ATT name="Content"><![CDATA[Vector<String> words = new Vector<String>();
+Document document = searcher.doc(id);
+if ((document != null) && (analyzer != null)) {
+    TokenStream stream = document.getField(IndexBuilder.CONTENT_FIELD_NAME).tokenStream(analyzer, null);
+    CharTermAttribute charTermAttribute = stream.addAttribute(CharTermAttribute.class);
+    stream.reset();
+    while (stream.incrementToken()) {
+        words.add(charTermAttribute.toString());
+    }
+    stream.close();            
+}
+]]></ATT>
+                  <ATT name="MimeType"></ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Model">
+                    <FOREIGNID name="JavaCode" mc="NoteType" uid="003800a8-0000-018e-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="" mc="Note" uid="b22c2f7c-0813-47ab-9600-cd2260ede7c9"/>
+                <PID name="IndexQuerier" mc="Class" uid="6bcd78c8-98d6-4b0d-9c30-9545a0202a66"/>
+                <ATTRIBUTES>
+                  <ATT name="Content"><![CDATA[return words;]]></ATT>
+                  <ATT name="MimeType"></ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Model">
+                    <FOREIGNID name="JavaReturned" mc="NoteType" uid="003800a8-0000-0190-0000-000000000000"/>
+                  </LINK>
                 </DEPENDENCIES>
               </OBJECT>
             </COMP>
@@ -846,6 +1185,141 @@ this.analyzer = value;]]></ATT>
                 <PID name="IndexQuerier" mc="Class" uid="6bcd78c8-98d6-4b0d-9c30-9545a0202a66"/>
                 <ATTRIBUTES>
                   <ATT name="Value"><![CDATA[java.util.Vector]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="" mc="TagParameter" uid="a8f317e0-3058-4eb0-8faa-52c7a5db41fb"/>
+                <PID name="IndexQuerier" mc="Class" uid="6bcd78c8-98d6-4b0d-9c30-9545a0202a66"/>
+                <ATTRIBUTES>
+                  <ATT name="Value"><![CDATA[java.nio.file.Paths]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="" mc="TagParameter" uid="30885399-6d1c-47f2-9fdd-b6590be1ec70"/>
+                <PID name="IndexQuerier" mc="Class" uid="6bcd78c8-98d6-4b0d-9c30-9545a0202a66"/>
+                <ATTRIBUTES>
+                  <ATT name="Value"><![CDATA[org.apache.lucene.document.Document]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="" mc="TagParameter" uid="5c95d45a-8621-4417-aaec-eee2a12bc360"/>
+                <PID name="IndexQuerier" mc="Class" uid="6bcd78c8-98d6-4b0d-9c30-9545a0202a66"/>
+                <ATTRIBUTES>
+                  <ATT name="Value"><![CDATA[org.apache.lucene.index.DirectoryReader]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="" mc="TagParameter" uid="b9a685c9-8ac4-46e6-b2ab-c826b91fe6eb"/>
+                <PID name="IndexQuerier" mc="Class" uid="6bcd78c8-98d6-4b0d-9c30-9545a0202a66"/>
+                <ATTRIBUTES>
+                  <ATT name="Value"><![CDATA[org.apache.lucene.index.Term]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="" mc="TagParameter" uid="ba600fb3-e638-406c-84f1-ac0004b68277"/>
+                <PID name="IndexQuerier" mc="Class" uid="6bcd78c8-98d6-4b0d-9c30-9545a0202a66"/>
+                <ATTRIBUTES>
+                  <ATT name="Value"><![CDATA[org.apache.lucene.index.Terms]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="" mc="TagParameter" uid="beedac20-3528-4c18-99f8-af334815123b"/>
+                <PID name="IndexQuerier" mc="Class" uid="6bcd78c8-98d6-4b0d-9c30-9545a0202a66"/>
+                <ATTRIBUTES>
+                  <ATT name="Value"><![CDATA[org.apache.lucene.index.TermsEnum]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="" mc="TagParameter" uid="5ef5a040-a08b-4795-8a13-9b6e1d3c3b18"/>
+                <PID name="IndexQuerier" mc="Class" uid="6bcd78c8-98d6-4b0d-9c30-9545a0202a66"/>
+                <ATTRIBUTES>
+                  <ATT name="Value"><![CDATA[org.apache.lucene.index.Fields]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="" mc="TagParameter" uid="bbe81061-3418-436c-b92d-28e52b80d149"/>
+                <PID name="IndexQuerier" mc="Class" uid="6bcd78c8-98d6-4b0d-9c30-9545a0202a66"/>
+                <ATTRIBUTES>
+                  <ATT name="Value"><![CDATA[org.apache.lucene.index.MultiFields]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="" mc="TagParameter" uid="e4052e06-ccec-4447-b855-69700b2e10d9"/>
+                <PID name="IndexQuerier" mc="Class" uid="6bcd78c8-98d6-4b0d-9c30-9545a0202a66"/>
+                <ATTRIBUTES>
+                  <ATT name="Value"><![CDATA[org.apache.lucene.search.Query]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="" mc="TagParameter" uid="84ab5651-551b-4066-9787-334b6b9c1509"/>
+                <PID name="IndexQuerier" mc="Class" uid="6bcd78c8-98d6-4b0d-9c30-9545a0202a66"/>
+                <ATTRIBUTES>
+                  <ATT name="Value"><![CDATA[org.apache.lucene.search.TermQuery]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="" mc="TagParameter" uid="c5f88bc6-c89a-42a8-9832-8913e9f9090b"/>
+                <PID name="IndexQuerier" mc="Class" uid="6bcd78c8-98d6-4b0d-9c30-9545a0202a66"/>
+                <ATTRIBUTES>
+                  <ATT name="Value"><![CDATA[org.apache.lucene.search.PhraseQuery]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="" mc="TagParameter" uid="b1d91b08-f619-4858-8c4b-0b606d4b03fc"/>
+                <PID name="IndexQuerier" mc="Class" uid="6bcd78c8-98d6-4b0d-9c30-9545a0202a66"/>
+                <ATTRIBUTES>
+                  <ATT name="Value"><![CDATA[org.apache.lucene.search.TopDocs]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="" mc="TagParameter" uid="f98947c7-df74-4915-a49d-b9e67fbfeb75"/>
+                <PID name="IndexQuerier" mc="Class" uid="6bcd78c8-98d6-4b0d-9c30-9545a0202a66"/>
+                <ATTRIBUTES>
+                  <ATT name="Value"><![CDATA[org.apache.lucene.util.BytesRef]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="" mc="TagParameter" uid="c1280b33-216c-4bd3-9fdd-886be46047f3"/>
+                <PID name="IndexQuerier" mc="Class" uid="6bcd78c8-98d6-4b0d-9c30-9545a0202a66"/>
+                <ATTRIBUTES>
+                  <ATT name="Value"><![CDATA[org.apache.lucene.analysis.TokenStream]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="" mc="TagParameter" uid="fedeb8e8-c71e-4920-83ed-d8ba4a7755ad"/>
+                <PID name="IndexQuerier" mc="Class" uid="6bcd78c8-98d6-4b0d-9c30-9545a0202a66"/>
+                <ATTRIBUTES>
+                  <ATT name="Value"><![CDATA[org.apache.lucene.analysis.tokenattributes.CharTermAttribute]]></ATT>
                   <ATT name="status">1970354901745664</ATT>
                 </ATTRIBUTES>
                 <DEPENDENCIES></DEPENDENCIES>
