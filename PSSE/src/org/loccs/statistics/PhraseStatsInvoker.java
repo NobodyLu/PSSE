@@ -18,8 +18,8 @@ public class PhraseStatsInvoker {
 	
 	private int documentPercentage = 0;
 	
-	private int minPhraseLength = 7;
-	private int maxPhraseLength = 7;
+	private int minPhraseLength = 15;
+	private int maxPhraseLength = 16;
 	
 	private String rootDirectory = "D:\\Research\\Evaluation\\PSSE\\Data"; 
 	
@@ -110,7 +110,7 @@ public class PhraseStatsInvoker {
 		setDocumentPercentage(100);
 		
 		try {
-			buildIndex();
+			//buildIndex();
 			
 			PhraseStats stats = new PhraseStats(rootDirectory + "\\Index\\" + statsObject, analyzer);
 			for (int i = minPhraseLength; i <= maxPhraseLength; i++) {
