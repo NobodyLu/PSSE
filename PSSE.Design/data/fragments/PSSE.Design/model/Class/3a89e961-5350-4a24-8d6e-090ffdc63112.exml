@@ -4,6 +4,7 @@
     <ID name="PhraseStats" mc="Class" uid="3a89e961-5350-4a24-8d6e-090ffdc63112"/>
     <EXTID name="Analyzer" mc="Class" uid="77780036-c03e-49a3-9193-7f3970e67f1e"/>
     <EXTID name="IndexQuerier" mc="Class" uid="6bcd78c8-98d6-4b0d-9c30-9545a0202a66"/>
+    <EXTID name="PhraseStatsResults" mc="Class" uid="4ecb7520-376f-430c-b325-2223a62dd806"/>
     <FOREIGNID name="JavaClass" mc="Stereotype" uid="01ec23a8-0000-0258-0000-000000000000"/>
     <FOREIGNID name="JavaCode" mc="NoteType" uid="003800a8-0000-018e-0000-000000000000"/>
     <FOREIGNID name="JavaImport" mc="TagType" uid="003800a8-0000-0155-0000-000000000000"/>
@@ -288,6 +289,137 @@ for (int i = 0; i < documentCount; i++) {
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
+          <ID name="getPhraseDetailCount" mc="Operation" uid="00818ce3-05f7-4c9d-835f-9462cfc8fc74"/>
+          <PID name="PhraseStats" mc="Class" uid="3a89e961-5350-4a24-8d6e-090ffdc63112"/>
+          <ATTRIBUTES>
+            <ATT name="Concurrency">false</ATT>
+            <ATT name="Final">false</ATT>
+            <ATT name="Passing">MethodOut</ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[getPhraseDetailCount]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="IO">
+              <OBJECT>
+                <ID name="length" mc="Parameter" uid="5e63fc03-5e39-47b1-96e8-edeb000ac182"/>
+                <PID name="PhraseStats" mc="Class" uid="3a89e961-5350-4a24-8d6e-090ffdc63112"/>
+                <ATTRIBUTES>
+                  <ATT name="ParameterPassing">In</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="DefaultValue"></ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="IsException">false</ATT>
+                  <ATT name="IsStream">false</ATT>
+                  <ATT name="Effect">ReadEffect</ATT>
+                  <ATT name="Name"><![CDATA[length]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <FOREIGNID name="integer" mc="DataType" uid="00000004-0000-0009-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="Return">
+              <OBJECT>
+                <ID name="" mc="Parameter" uid="7b32f51b-50e0-4d08-9d6f-e778765afd3c"/>
+                <PID name="PhraseStats" mc="Class" uid="3a89e961-5350-4a24-8d6e-090ffdc63112"/>
+                <ATTRIBUTES>
+                  <ATT name="ParameterPassing">In</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="DefaultValue"></ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="IsException">false</ATT>
+                  <ATT name="IsStream">false</ATT>
+                  <ATT name="Effect">ReadEffect</ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <ID name="PhraseStatsResults" mc="Class" uid="4ecb7520-376f-430c-b325-2223a62dd806"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="Tag">
+              <OBJECT>
+                <ID name="" mc="TaggedValue" uid="9d49e909-cb58-42bb-a53a-6510d38ee5a5"/>
+                <PID name="PhraseStats" mc="Class" uid="3a89e961-5350-4a24-8d6e-090ffdc63112"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="Actual">
+                    <OBJECT>
+                      <ID name="" mc="TagParameter" uid="74509360-b50d-4b69-84e0-33c5e8a22d9c"/>
+                      <PID name="PhraseStats" mc="Class" uid="3a89e961-5350-4a24-8d6e-090ffdc63112"/>
+                      <ATTRIBUTES>
+                        <ATT name="Value"><![CDATA[java.io.IOException]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES></DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                  <LINK relation="Definition">
+                    <FOREIGNID name="JavaThrownException" mc="TagType" uid="003800a8-0000-017c-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="Descriptor">
+              <OBJECT>
+                <ID name="" mc="Note" uid="d0b20205-024e-4f8c-befb-ccaac509965d"/>
+                <PID name="PhraseStats" mc="Class" uid="3a89e961-5350-4a24-8d6e-090ffdc63112"/>
+                <ATTRIBUTES>
+                  <ATT name="Content"><![CDATA[int documentCount = querier.getDocumentCount();
+PhraseStatsResults results = new PhraseStatsResults(length, documentCount);
+Set<String> phrases = new HashSet<String>();
+for (int i = 0; i < documentCount; i++) {
+    List<String> words = querier.getDocumentWordSequence(i);
+    getNewPhraseDetailCount(phrases, words, length, results);
+}
+]]></ATT>
+                  <ATT name="MimeType"></ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Model">
+                    <FOREIGNID name="JavaCode" mc="NoteType" uid="003800a8-0000-018e-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="" mc="Note" uid="5c318228-d047-4e3c-8de0-7c74309ef30e"/>
+                <PID name="PhraseStats" mc="Class" uid="3a89e961-5350-4a24-8d6e-090ffdc63112"/>
+                <ATTRIBUTES>
+                  <ATT name="Content"><![CDATA[return results;]]></ATT>
+                  <ATT name="MimeType"></ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Model">
+                    <FOREIGNID name="JavaReturned" mc="NoteType" uid="003800a8-0000-0190-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
           <ID name="getNewPhraseCount" mc="Operation" uid="eae19aa5-e143-4b73-9921-8ff1167a89d3"/>
           <PID name="PhraseStats" mc="Class" uid="3a89e961-5350-4a24-8d6e-090ffdc63112"/>
           <ATTRIBUTES>
@@ -424,32 +556,6 @@ for (int i = 0; i < documentCount; i++) {
                 </DEPENDENCIES>
               </OBJECT>
             </COMP>
-            <COMP relation="Tag">
-              <OBJECT>
-                <ID name="" mc="TaggedValue" uid="755ee40e-c66e-422e-8cd0-0b61469408b8"/>
-                <PID name="PhraseStats" mc="Class" uid="3a89e961-5350-4a24-8d6e-090ffdc63112"/>
-                <ATTRIBUTES>
-                  <ATT name="Name"></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES>
-                  <COMP relation="Actual">
-                    <OBJECT>
-                      <ID name="" mc="TagParameter" uid="f4ce3801-a10c-4cb0-9707-30b5a56e84a8"/>
-                      <PID name="PhraseStats" mc="Class" uid="3a89e961-5350-4a24-8d6e-090ffdc63112"/>
-                      <ATTRIBUTES>
-                        <ATT name="Value"><![CDATA[java.io.IOException]]></ATT>
-                        <ATT name="status">1970354901745664</ATT>
-                      </ATTRIBUTES>
-                      <DEPENDENCIES></DEPENDENCIES>
-                    </OBJECT>
-                  </COMP>
-                  <LINK relation="Definition">
-                    <FOREIGNID name="JavaThrownException" mc="TagType" uid="003800a8-0000-017c-0000-000000000000"/>
-                  </LINK>
-                </DEPENDENCIES>
-              </OBJECT>
-            </COMP>
             <COMP relation="Descriptor">
               <OBJECT>
                 <ID name="" mc="Note" uid="5acac355-aae7-408d-b776-8a3ec29e889e"/>
@@ -474,6 +580,219 @@ for (int i = 0; i < documentCount; i++) {
     String phrase = PhraseUtils.toString(words, i, length);
     if (!phrases.contains(phrase))
         phrases.add(phrase);
+}
+]]></ATT>
+                  <ATT name="MimeType"></ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Model">
+                    <FOREIGNID name="JavaCode" mc="NoteType" uid="003800a8-0000-018e-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="getNewPhraseDetailCount" mc="Operation" uid="4035afda-8f86-4598-820b-b78aa26ea25c"/>
+          <PID name="PhraseStats" mc="Class" uid="3a89e961-5350-4a24-8d6e-090ffdc63112"/>
+          <ATTRIBUTES>
+            <ATT name="Concurrency">false</ATT>
+            <ATT name="Final">false</ATT>
+            <ATT name="Passing">MethodOut</ATT>
+            <ATT name="Visibility">Private</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[getNewPhraseDetailCount]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="IO">
+              <OBJECT>
+                <ID name="phrases" mc="Parameter" uid="6d30fdee-0dad-4f81-b104-4a7dbb9ba39f"/>
+                <PID name="PhraseStats" mc="Class" uid="3a89e961-5350-4a24-8d6e-090ffdc63112"/>
+                <ATTRIBUTES>
+                  <ATT name="ParameterPassing">In</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="DefaultValue"></ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="IsException">false</ATT>
+                  <ATT name="IsStream">false</ATT>
+                  <ATT name="Effect">ReadEffect</ATT>
+                  <ATT name="Name"><![CDATA[phrases]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <FOREIGNID name="string" mc="DataType" uid="00000004-0000-000d-0000-000000000000"/>
+                  </LINK>
+                  <COMP relation="Tag">
+                    <OBJECT>
+                      <ID name="" mc="TaggedValue" uid="00906164-0e2a-4527-bd6e-1e50332c91aa"/>
+                      <PID name="PhraseStats" mc="Class" uid="3a89e961-5350-4a24-8d6e-090ffdc63112"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <COMP relation="Actual">
+                          <OBJECT>
+                            <ID name="" mc="TagParameter" uid="c9e5ab85-26a4-4312-a821-bd8d25ecf170"/>
+                            <PID name="PhraseStats" mc="Class" uid="3a89e961-5350-4a24-8d6e-090ffdc63112"/>
+                            <ATTRIBUTES>
+                              <ATT name="Value"><![CDATA[Set]]></ATT>
+                              <ATT name="status">1970354901745664</ATT>
+                            </ATTRIBUTES>
+                            <DEPENDENCIES></DEPENDENCIES>
+                          </OBJECT>
+                        </COMP>
+                        <LINK relation="Definition">
+                          <FOREIGNID name="type" mc="TagType" uid="00000000-0000-3767-0000-000000000000"/>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="words" mc="Parameter" uid="76b7c24d-35c7-473e-9595-5a37d2fccf79"/>
+                <PID name="PhraseStats" mc="Class" uid="3a89e961-5350-4a24-8d6e-090ffdc63112"/>
+                <ATTRIBUTES>
+                  <ATT name="ParameterPassing">In</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="DefaultValue"></ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="IsException">false</ATT>
+                  <ATT name="IsStream">false</ATT>
+                  <ATT name="Effect">ReadEffect</ATT>
+                  <ATT name="Name"><![CDATA[words]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <FOREIGNID name="string" mc="DataType" uid="00000004-0000-000d-0000-000000000000"/>
+                  </LINK>
+                  <COMP relation="Tag">
+                    <OBJECT>
+                      <ID name="" mc="TaggedValue" uid="7bd0cb1a-f190-4318-b8fc-a1e091ad0fab"/>
+                      <PID name="PhraseStats" mc="Class" uid="3a89e961-5350-4a24-8d6e-090ffdc63112"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <COMP relation="Actual">
+                          <OBJECT>
+                            <ID name="" mc="TagParameter" uid="bf6dc00b-6988-4082-92b6-0698dc5ca4bb"/>
+                            <PID name="PhraseStats" mc="Class" uid="3a89e961-5350-4a24-8d6e-090ffdc63112"/>
+                            <ATTRIBUTES>
+                              <ATT name="Value"><![CDATA[List]]></ATT>
+                              <ATT name="status">1970354901745664</ATT>
+                            </ATTRIBUTES>
+                            <DEPENDENCIES></DEPENDENCIES>
+                          </OBJECT>
+                        </COMP>
+                        <LINK relation="Definition">
+                          <FOREIGNID name="type" mc="TagType" uid="00000000-0000-3767-0000-000000000000"/>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="length" mc="Parameter" uid="7be28cee-c7f0-4412-b04f-a55348e4e507"/>
+                <PID name="PhraseStats" mc="Class" uid="3a89e961-5350-4a24-8d6e-090ffdc63112"/>
+                <ATTRIBUTES>
+                  <ATT name="ParameterPassing">In</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="DefaultValue"></ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="IsException">false</ATT>
+                  <ATT name="IsStream">false</ATT>
+                  <ATT name="Effect">ReadEffect</ATT>
+                  <ATT name="Name"><![CDATA[length]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <FOREIGNID name="integer" mc="DataType" uid="00000004-0000-0009-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="results" mc="Parameter" uid="ad0c2b26-7599-4ace-b597-293baaa69021"/>
+                <PID name="PhraseStats" mc="Class" uid="3a89e961-5350-4a24-8d6e-090ffdc63112"/>
+                <ATTRIBUTES>
+                  <ATT name="ParameterPassing">In</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="DefaultValue"></ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="IsException">false</ATT>
+                  <ATT name="IsStream">false</ATT>
+                  <ATT name="Effect">ReadEffect</ATT>
+                  <ATT name="Name"><![CDATA[results]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <ID name="PhraseStatsResults" mc="Class" uid="4ecb7520-376f-430c-b325-2223a62dd806"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="Tag">
+              <OBJECT>
+                <ID name="" mc="TaggedValue" uid="2b5abdb6-f54f-42ab-b54c-f239f406b168"/>
+                <PID name="PhraseStats" mc="Class" uid="3a89e961-5350-4a24-8d6e-090ffdc63112"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="Actual">
+                    <OBJECT>
+                      <ID name="" mc="TagParameter" uid="1253087f-d838-41fb-ba1c-83e57495b473"/>
+                      <PID name="PhraseStats" mc="Class" uid="3a89e961-5350-4a24-8d6e-090ffdc63112"/>
+                      <ATTRIBUTES>
+                        <ATT name="Value"><![CDATA[java.io.IOException]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES></DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                  <LINK relation="Definition">
+                    <FOREIGNID name="JavaThrownException" mc="TagType" uid="003800a8-0000-017c-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="Descriptor">
+              <OBJECT>
+                <ID name="" mc="Note" uid="1b51a349-0b5e-45b6-88e6-011154852468"/>
+                <PID name="PhraseStats" mc="Class" uid="3a89e961-5350-4a24-8d6e-090ffdc63112"/>
+                <ATTRIBUTES>
+                  <ATT name="Content"><![CDATA[for (int i = 0; i < words.size() - length + 1; i++) {
+    String phrase = PhraseUtils.toString(words, i, length);
+    if (!phrases.contains(phrase)) {
+        phrases.add(phrase);
+        int count = querier.searchPhraseForCount(words, i, length);
+        results.increaseDetailCount(count);
+    }
 }
 ]]></ATT>
                   <ATT name="MimeType"></ATT>
