@@ -25,13 +25,14 @@ public class IndexQuerierTest {
 		builder = new IndexBuilder(analyzer);
 		builder.prepareIndexDirectory("D:\\Research\\Evaluation\\PSSE\\Data\\Index\\debug");
 		builder.addDirectory("D:\\Research\\Evaluation\\PSSE\\Data\\Documents\\debug");
+		builder.close();
 		
 		querier = new IndexQuerier("D:\\Research\\Evaluation\\PSSE\\Data\\Index\\debug", analyzer);
 	}
 
 	@After
 	public void tearDown() throws Exception {
-		builder.close();
+
 	}
 
 	@Test
